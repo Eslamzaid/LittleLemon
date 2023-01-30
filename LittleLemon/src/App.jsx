@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Loading from "./Loading/Loading";
+import Loading from "./Funct/Loading/Loading";
 import "./App.css";
 
 function App() {
