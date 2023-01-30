@@ -1,5 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&family=IM+Fell+Great+Primer:ital@1&family=League+Gothic&family=Oxygen&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
   /* text-rendering: optimizeLegibility;
@@ -7,6 +8,11 @@
   -moz-osx-font-smoothing: grayscale; */
   /* color-scheme: light dark; */
   /* font-synthesis: none; */
+  font-family: 'BhuTuka Expanded One', cursive;
+  font-family: 'IM Fell Great Primer', serif;
+  font-family: 'League Gothic', sans-serif;
+  font-family: 'Oxygen', sans-serif;
+  font-family: 'Poppins', sans-serif;
 
   margin: 0px;
   padding: 0px;
