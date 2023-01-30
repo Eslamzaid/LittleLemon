@@ -1,0 +1,45 @@
+.parentL {
+    background-color: #F4CE14;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5vh;
+    z-index: 1000000;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tracking-in-expand {
+    animation: tracking-in-expand 3s ease-in-out;
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5rem;
+        opacity: 0;
+    }
+
+    45% {
+        letter-spacing: normal;
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    75% {
+        /* letter-spacing: -0.5rem; */
+        opacity: 0.5;
+    }
+
+    100% {
+        letter-spacing: -1rem;
+        opacity: 0;
+    }
+
+}
