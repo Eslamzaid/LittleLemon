@@ -4,7 +4,7 @@ import Header from "./Header/Header";
 function Layouts() {
   return (
     <>
-      <Header />
+        <Header />
     </>
   );
 }
