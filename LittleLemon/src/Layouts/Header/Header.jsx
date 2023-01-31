@@ -54,7 +54,7 @@ const Header = () => {
           </li>
           <div className="TheMiniFather">
             <li>
-              <Link id="TheLinksPh" to="/">
+              <Link id="TheLinksPh" className="MakeIt" to="/">
                 Home
               </Link>
             </li>

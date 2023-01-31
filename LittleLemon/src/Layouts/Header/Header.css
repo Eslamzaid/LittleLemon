@@ -48,15 +48,25 @@ nav ul li:not(:first-child) {
 
 .TheMiniFather {
     width: 20rem;
+    height: 40vh;
     position: relative;
-    bottom: 2em;
+    bottom: 3.5em;
     text-align: center;
+    background-color: var(--nice-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
 }
 
 /*? The child of the minifather view */
+.MakeIt{
+    margin: 7.5pc;
+    color: red;
+}
 #TheLinksPh {
     text-decoration: none;
-    color: black;
+    color: rgb(0, 0, 0);
     border: 1px solid transparent;
 }
 
@@ -83,7 +93,7 @@ nav ul li:not(:first-child) {
         flex-flow: column;
         display: flex;
         justify-content: start;
-        align-items: end;
+        align-items: flex-end;
         width: 90%;
         /* border: 1px solid black; */
     }
