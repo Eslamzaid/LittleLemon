@@ -68,7 +68,7 @@ nav ul li:not(:first-child) {
 }
 
 /*! Media quires  */
-/** This media is for             big screens */
+/** This media is for            big screens */
 @media screen and (max-width: 785px) {
 
     /*? The Desktop */
