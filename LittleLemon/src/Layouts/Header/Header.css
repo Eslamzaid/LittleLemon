@@ -1,0 +1,96 @@
+:root {
+    --nice-color: #F4CE15;
+}
+
+/*! The father of all */
+
+/**The              Desktop          view*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+/*? The element that come after the father */
+
+nav>.desktop-view {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    width: 80%;
+}
+
+
+/*? The Children */
+
+nav ul li:not(:first-child) {
+    margin: 1rem;
+}
+
+#TheLinks {
+    color: black;
+    text-decoration: none;
+}
+
+
+
+
+/** The            Phone          view */
+
+/*! The father of all */
+.phone-view {
+    display: none;
+    list-style: none;
+}
+
+/*! The father of the links mini father */
+
+.TheMiniFather {
+    width: 20rem;
+    position: relative;
+    bottom: 2em;
+    text-align: center;
+}
+
+/*? The child of the minifather view */
+#TheLinksPh {
+    text-decoration: none;
+    color: black;
+    border: 1px solid transparent;
+}
+
+/*? Hovers */
+#TheLinksPh:hover {
+    opacity: 75%;
+    transition: 0.3s;
+    border-bottom: 1px solid black;
+}
+
+/*! Media quires  */
+/** This media is for             big screens */
+@media screen and (max-width: 785px) {
+
+    /*? The Desktop */
+    .desktop-view {
+        display: none !important;
+    }
+
+
+    /*? The phone */
+
+    .phone-view {
+        flex-flow: column;
+        display: flex;
+        justify-content: start;
+        align-items: end;
+        width: 90%;
+        /* border: 1px solid black; */
+    }
+
+    .phone-view li:first-child {
+        align-self: flex-start;
+        margin: 1em;
+        /* border: 1px solid black; */
+    }
+}
