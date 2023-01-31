@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Funct/Loading/Loading";
+import Layouts from "./Layouts/Layouts";
 import Header from './Layouts/Header/Header'
 import "./App.css";
 
@@ -12,7 +13,7 @@ function App() {
     }, 2000);
   });
 
-  return <>{isLoading ? <Loading /> : <Header/>}</>;
+  return <>{isLoading ? <Loading /> : <Layouts/>}</>;
 }
 
 export default App;
