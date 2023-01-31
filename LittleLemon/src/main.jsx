@@ -11,6 +11,10 @@ import {
 } from "react-router-dom";
 import App from "./App";
 import Menu from "./RComponenets/Menu/Menu";
+// //Bootstrap CSS
+// import "bootstrap/dist/css/bootstrap.min.css";
+// // Bootstrap Bundle JS
+// import "bootstrap/dist/js/bootstrap.bundle.min";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +28,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/TheMenu",
-        element: <Menu/>,
+        element: <Menu />,
       },
     ],
   },

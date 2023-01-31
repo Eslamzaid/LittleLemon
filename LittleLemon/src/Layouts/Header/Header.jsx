@@ -8,10 +8,15 @@ const Header = () => {
   return (
     <>
       <nav>
-        <ul>
+        <ul class="container-fluid">
           <li>
             <Link to="/">
               <img src={theLogo} alt="Our restaurant logo" />
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              Home
             </Link>
           </li>
           <li>
