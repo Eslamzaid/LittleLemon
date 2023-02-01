@@ -47,16 +47,17 @@ nav ul li:not(:first-child) {
 /*! The father of the links mini father */
 
 .TheMiniFather {
-    width: 20rem;
-    height: 40vh;
+    width: 100%;
     position: relative;
-    bottom: 3.5em;
+    bottom: 0.1em;
+    padding: 2em 0em;
     text-align: center;
     background-color: var(--nice-color);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-flow: column;
+    /* border: 1px solid red; */
 }
 
 /*? The child of the minifather view */
@@ -92,13 +93,12 @@ nav ul li:not(:first-child) {
     .phone-view {
         flex-flow: column;
         display: flex;
-        justify-content: start;
-        align-items: flex-end;
+        align-items: center;
         width: 90%;
         /* border: 1px solid black; */
     }
 
-    .phone-view li:first-child {
+    #ThePhoto {
         align-self: flex-start;
         margin: 1em;
         /* border: 1px solid black; */

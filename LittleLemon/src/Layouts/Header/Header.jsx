@@ -3,6 +3,8 @@ import theLogo from "./../../assets/Logo-removebg-preview.png";
 import Menu from "../../RComponenets/Menu/Menu";
 import About from "../../RComponenets/About/About";
 import { Routes, Route, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
 const Header = () => {
@@ -46,8 +48,9 @@ const Header = () => {
             </Link>
           </li>
         </ul>
+          <FontAwesomeIcon icon={faBars} />
         <ul className="phone-view">
-          <li>
+          <li id="ThePhoto">
             <Link to="/">
               <img width="200rem" src={theLogo} alt="Our restaurant logo" />
             </Link>
