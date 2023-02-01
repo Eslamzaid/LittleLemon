@@ -3,7 +3,7 @@ import theLogo from "./../../assets/Logo-removebg-preview.png";
 import Menu from "../../RComponenets/Menu/Menu";
 import About from "../../RComponenets/About/About";
 import { useState } from "react";
-import { Routes, Route, Link, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
@@ -31,51 +31,87 @@ const Header = () => {
       <nav className={navBar ? "active" : "navtransition: 0.5s;"}>
         <ul className="desktop-view">
           <li>
-            <Link to="/">
+            <NavLink to="/">
               <img width="200rem" src={theLogo} alt="Our restaurant logo" />
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link id="TheLinks" to="/">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              to="/"
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <NavLink id="TheLinks" to="/AboutUs">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              to="/AboutUs"
+            >
               About
             </NavLink>
           </li>
           <li>
-            <Link id="TheLinks" to="/TheMenu">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              to="/TheMenu"
+            >
               Menu
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link id="TheLinks" to="/Reservations">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              to="/Reservations"
+            >
               Reservations
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link id="TheLinks" to="/Order">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              to="/Order"
+            >
               Order
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link id="TheLinks" to="/Login">
+            <NavLink
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              to="/Login"
+            >
               Login
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <div className="TheMegaP">
           <div className="TheParents">
-            <Link to="/">
+            <NavLink to="/">
               <img
                 id="ThePhoto"
                 width="200rem"
                 src={theLogo}
                 alt="Our restaurant logo"
               />
-            </Link>
+            </NavLink>
             {responsive ? (
               <FontAwesomeIcon
                 className="MakeItLeft"
@@ -94,34 +130,34 @@ const Header = () => {
             <ul className="phone-view">
               <div className="TheMiniFather">
                 <li>
-                  <Link id="TheLinksPh" className="MakeIt" to="/">
+                  <NavLink id="TheLinksPh" className="MakeIt" to="/">
                     Home
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link id="TheLinksPh" to="/AboutUs">
+                  <NavLink id="TheLinksPh" to="/AboutUs">
                     About
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link id="TheLinksPh" to="/TheMenu">
+                  <NavLink id="TheLinksPh" to="/TheMenu">
                     Menu
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link id="TheLinksPh" to="/Reservations">
+                  <NavLink id="TheLinksPh" to="/Reservations">
                     Reservations
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link id="TheLinksPh" to="/Order">
+                  <NavLink id="TheLinksPh" to="/Order">
                     Order
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link id="TheLinksPh" to="/Login">
+                  <NavLink id="TheLinksPh" to="/Login">
                     Login
-                  </Link>
+                  </NavLink>
                 </li>
               </div>
             </ul>
