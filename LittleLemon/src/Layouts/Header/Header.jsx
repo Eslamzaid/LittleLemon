@@ -9,7 +9,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
 const Header = () => {
-  const [responsive, setResponsive] = useState(true);
+  const [responsive, setResponsive] = useState(false);
 
   const handleOnClick = () => {
     setResponsive(!responsive);
@@ -55,63 +55,69 @@ const Header = () => {
             </Link>
           </li>
         </ul>
-        <div className="MakeItLeft"></div>
-        {responsive ? (
-          <FontAwesomeIcon
-            className="MakeItLeft"
-            icon={faXmark}
-            onClick={handleOnClick}
-          />
-        ) : (
-          <FontAwesomeIcon
-            className="MakeItLeft"
-            icon={faBars}
-            onClick={handleOnClick}
-          />
-        )}
-        {responsive ? (
-          <ul className="phone-view">
-            <li id="ThePhoto">
-              <Link to="/">
-                <img width="200rem" src={theLogo} alt="Our restaurant logo" />
-              </Link>
-            </li>
-            <div className="TheMiniFather">
-              <li>
-                <Link id="TheLinksPh" className="MakeIt" to="/">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link id="TheLinksPh" to="/AboutUs">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link id="TheLinksPh" to="/TheMenu">
-                  Menu
-                </Link>
-              </li>
-              <li>
-                <Link id="TheLinksPh" to="/Reservations">
-                  Reservations
-                </Link>
-              </li>
-              <li>
-                <Link id="TheLinksPh" to="/Order">
-                  Order
-                </Link>
-              </li>
-              <li>
-                <Link id="TheLinksPh" to="/Login">
-                  Login
-                </Link>
-              </li>
-            </div>
-          </ul>
-        ) : (
-          ""
-        )}
+        <div className="TheMegaP">
+          <div className="TheParents">
+            <Link to="/">
+              <img
+                id="ThePhoto"
+                width="200rem"
+                src={theLogo}
+                alt="Our restaurant logo"
+              />
+            </Link>
+            {responsive ? (
+              <FontAwesomeIcon
+                className="MakeItLeft"
+                icon={faXmark}
+                onClick={handleOnClick}
+              />
+            ) : (
+              <FontAwesomeIcon
+                className="MakeItLeft"
+                icon={faBars}
+                onClick={handleOnClick}
+              />
+            )}
+          </div>
+          {responsive ? (
+            <ul className="phone-view">
+              <div className="TheMiniFather">
+                <li>
+                  <Link id="TheLinksPh" className="MakeIt" to="/">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link id="TheLinksPh" to="/AboutUs">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link id="TheLinksPh" to="/TheMenu">
+                    Menu
+                  </Link>
+                </li>
+                <li>
+                  <Link id="TheLinksPh" to="/Reservations">
+                    Reservations
+                  </Link>
+                </li>
+                <li>
+                  <Link id="TheLinksPh" to="/Order">
+                    Order
+                  </Link>
+                </li>
+                <li>
+                  <Link id="TheLinksPh" to="/Login">
+                    Login
+                  </Link>
+                </li>
+              </div>
+            </ul>
+          ) : (
+            ""
+          )}
+        </div>
       </nav>
       <Routes>
         <Route path="/AboutUs" element={<About />} />

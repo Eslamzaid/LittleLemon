@@ -9,23 +9,29 @@
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 1rem;
 }
 
 /*? The element that come after the father */
 
 nav>.desktop-view {
+    width: 100%;
+    margin: 0rem 3rem;
     display: flex;
     list-style: none;
     justify-content: space-between;
-    width: 80%;
 }
 
 
 /*? The Children */
 
-nav ul li:not(:first-child) {
+nav ul li {
     margin: 1rem;
+}
+
+nav ul li:not(:first-child) {
+    margin-top: 2.1rem;
 }
 
 #TheLinks {
@@ -33,15 +39,7 @@ nav ul li:not(:first-child) {
     text-decoration: none;
 }
 
-.MakeItLeft {
-    display: flex;
-    /* border: 1px solid red; */
-    height: min-content;
-    width: 1.2em;
-    margin-right: 1em;
-    top: 3.3em;
-    position: relative;
-}
+.MakeItLeft {}
 
 
 /** The            Phone          view */
@@ -50,6 +48,17 @@ nav ul li:not(:first-child) {
 .phone-view {
     display: none;
     list-style: none;
+    /* border: 1px solid black; */
+}
+
+/*! The father of ALLLLLLLLLLLLLLLLLLLL */
+
+.TheMegaP {
+    display: none;
+}
+
+.TheParents {
+    display: none;
 }
 
 /*! The father of the links mini father */
@@ -69,10 +78,6 @@ nav ul li:not(:first-child) {
 }
 
 /*? The child of the minifather view */
-.MakeIt {
-    margin: 7.5pc;
-    color: red;
-}
 
 #TheLinksPh {
     text-decoration: none;
@@ -89,7 +94,7 @@ nav ul li:not(:first-child) {
 
 /*! Media quires  */
 /** This media is for    big screens */
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 793px) {
 
     /*? The Desktop */
     .desktop-view {
@@ -104,12 +109,32 @@ nav ul li:not(:first-child) {
         display: flex;
         align-items: flex-end;
         width: 90%;
-        border: 1px solid black;
+        /* border: 1px solid black; */
     }
 
     #ThePhoto {
         align-self: flex-start;
         margin: 1em;
         /* border: 1px solid black; */
+    }
+
+    .TheMegaP {
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        justify-content: end;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+
+
+    /*! The father of tops */
+    .TheParents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        /* border: 1px solid red; */
+
     }
 }
