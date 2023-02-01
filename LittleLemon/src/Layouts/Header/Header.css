@@ -1,0 +1,140 @@
+:root {
+    --nice-color: #F4CE15;
+}
+
+/*! The father of all */
+
+/**The              Desktop          view*/
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+/*? The element that come after the father */
+
+nav>.desktop-view {
+    width: 100%;
+    margin: 0rem 3rem;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+
+/*? The Children */
+
+nav ul li {
+    margin: 1rem;
+}
+
+nav ul li:not(:first-child) {
+    margin-top: 2.1rem;
+}
+
+#TheLinks {
+    color: black;
+    text-decoration: none;
+}
+
+.MakeItLeft {}
+
+
+/** The            Phone          view */
+
+/*! The father of all */
+.phone-view {
+    display: none;
+    list-style: none;
+    /* border: 1px solid black; */
+}
+
+/*! The father of ALLLLLLLLLLLLLLLLLLLL */
+
+.TheMegaP {
+    display: none;
+}
+
+.TheParents {
+    display: none;
+}
+
+/*! The father of the links mini father */
+
+.TheMiniFather {
+    width: 100%;
+    position: relative;
+    bottom: 0.1em;
+    padding: 2em 0em;
+    text-align: center;
+    background-color: var(--nice-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    /* border: 1px solid red; */
+}
+
+/*? The child of the minifather view */
+
+#TheLinksPh {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    border: 1px solid transparent;
+}
+
+/*? Hovers */
+#TheLinksPh:hover {
+    opacity: 75%;
+    transition: 0.3s;
+    border-bottom: 1px solid black;
+}
+
+/*! Media quires  */
+/** This media is for    big screens */
+@media screen and (max-width: 793px) {
+
+    /*? The Desktop */
+    .desktop-view {
+        display: none !important;
+    }
+
+
+    /*? The phone */
+
+    .phone-view {
+        flex-flow: column;
+        display: flex;
+        align-items: flex-end;
+        width: 90%;
+        /* border: 1px solid black; */
+    }
+
+    #ThePhoto {
+        align-self: flex-start;
+        margin: 1em;
+        /* border: 1px solid black; */
+    }
+
+    .TheMegaP {
+        display: flex;
+        width: 100%;
+        flex-flow: column;
+        justify-content: end;
+        align-items: center;
+        /* border: 1px solid black; */
+    }
+
+
+    /*! The father of tops */
+    .TheParents {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        /* border: 1px solid red; */
+
+    }
+}

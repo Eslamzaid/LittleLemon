@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Funct/Loading/Loading";
+import Layouts from "./Layouts/Layouts";
+import Header from "./Layouts/Header/Header";
 import "./App.css";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   //! The Loader
@@ -11,7 +14,7 @@ function App() {
     }, 2000);
   });
 
-  return <>{isLoading ? <Loading /> : <h1>Hi</h1>}</>;
+  return <>{isLoading ? <Loading /> : <Layouts />}</>;
 }
 
 export default App;
