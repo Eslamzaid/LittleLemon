@@ -10,6 +10,17 @@ import "./Header.css";
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
+  const [navBar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
 
   const handleOnClick = () => {
     setResponsive(!responsive);
@@ -17,7 +28,7 @@ const Header = () => {
 
   return (
     <>
-      <nav>
+      <nav className={navBar ? "active" : "navtransition: 0.5s;"}>
         <ul className="desktop-view">
           <li>
             <Link to="/">

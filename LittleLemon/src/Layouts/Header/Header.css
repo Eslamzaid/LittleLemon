@@ -8,9 +8,22 @@
 
 nav {
     display: flex;
+    position: sticky;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
+    top: 0;
+    z-index: 9999999999999999;
+    background-color: white;
+    transition: 0.2s ease-in-out;
+}
+
+nav.active {
+    transition: 0.2s ease-in-out;
+    padding: 1em;
+    -webkit-box-shadow: 0px 6px 8px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 8px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 8px -4px rgba(0, 0, 0, 0.75);
 }
 
 /*? The element that come after the father */
