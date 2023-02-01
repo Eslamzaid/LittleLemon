@@ -33,7 +33,15 @@ nav ul li:not(:first-child) {
     text-decoration: none;
 }
 
-
+.MakeItLeft {
+    display: flex;
+    /* border: 1px solid red; */
+    height: min-content;
+    width: 1.2em;
+    margin-right: 1em;
+    top: 3.3em;
+    position: relative;
+}
 
 
 /** The            Phone          view */
@@ -61,10 +69,11 @@ nav ul li:not(:first-child) {
 }
 
 /*? The child of the minifather view */
-.MakeIt{
+.MakeIt {
     margin: 7.5pc;
     color: red;
 }
+
 #TheLinksPh {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -93,9 +102,9 @@ nav ul li:not(:first-child) {
     .phone-view {
         flex-flow: column;
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         width: 90%;
-        /* border: 1px solid black; */
+        border: 1px solid black;
     }
 
     #ThePhoto {
