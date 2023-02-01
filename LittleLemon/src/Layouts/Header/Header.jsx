@@ -3,7 +3,7 @@ import theLogo from "./../../assets/Logo-removebg-preview.png";
 import Menu from "../../RComponenets/Menu/Menu";
 import About from "../../RComponenets/About/About";
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
@@ -41,9 +41,9 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link id="TheLinks" to="/AboutUs">
+            <NavLink id="TheLinks" to="/AboutUs">
               About
-            </Link>
+            </NavLink>
           </li>
           <li>
             <Link id="TheLinks" to="/TheMenu">
