@@ -30,77 +30,81 @@ const Header = () => {
     <>
       <nav className={navBar ? "active" : "navtransition: 0.5s;"}>
         <ul className="desktop-view">
-          <li>
-            <NavLink to="/">
-              <img width="200rem" src={theLogo} alt="Our restaurant logo" />
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-              id="TheLinks"
-              to="/"
-            >
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-              id="TheLinks"
-              to="/AboutUs"
-            >
-              About
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-              id="TheLinks"
-              to="/TheMenu"
-            >
-              Menu
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-              id="TheLinks"
-              to="/Reservations"
-            >
-              Reservations
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-              id="TheLinks"
-              to="/Order"
-            >
-              Order
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-              id="TheLinks"
-              to="/Login"
-            >
-              Login
-            </NavLink>
-          </li>
+          <div>
+            <li>
+              <NavLink to="/">
+                <img width="200rem" src={theLogo} alt="Our restaurant logo" />
+              </NavLink>
+            </li>
+          </div>
+          <div className="TheNavLinksFather">
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "lactive-class" : "not-active-class"
+                }
+                id="TheLinks"
+                to="/"
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "lactive-class" : "not-active-class"
+                }
+                id="TheLinks"
+                to="/AboutUs"
+              >
+                About
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "lactive-class" : "not-active-class"
+                }
+                id="TheLinks"
+                to="/TheMenu"
+              >
+                Menu
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "lactive-class" : "not-active-class"
+                }
+                id="TheLinks"
+                to="/Reservations"
+              >
+                Reservations
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "lactive-class" : "not-active-class"
+                }
+                id="TheLinks"
+                to="/Order"
+              >
+                Order
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive ? "lactive-class" : "not-active-class"
+                }
+                id="TheLinks"
+                to="/Login"
+              >
+                Login
+              </NavLink>
+            </li>
+          </div>
         </ul>
         <div className="TheMegaP">
           <div className="TheParents">

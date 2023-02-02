@@ -36,6 +36,20 @@ nav>.desktop-view {
     justify-content: space-between;
 }
 
+.TheNavLinksFather{
+    display: flex;
+    width: 60%;
+    justify-content: space-evenly;
+    align-items: top;
+    flex-wrap: wrap;
+    /* border: 1px solid black; */
+    /* margin-right: 11rem; */
+}
+.TheNavLinksFather li:first-child{
+    position: relative;
+    top: 1rem;
+    /* border: 1px solid red; */
+}
 
 /*? The Children ----------Nav links*/
 

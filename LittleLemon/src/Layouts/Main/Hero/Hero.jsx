@@ -8,9 +8,14 @@ function Hero() {
       <section className="TheFirstBoy">
         <div className="TheFirstGrand">
           <h2>
-            We are a family owned<br/> Mediterranean restaurant,<br/> focused on
-            traditional<br/> recipes served with a modern twist.
+            We are a family owned
+            <br /> Mediterranean restaurant,
+            <br /> focused on traditional
+            <br /> recipes served with a modern twist.
           </h2>
+          <p>
+            Oh yeahh...
+          </p>
           <button>Order Now</button>
         </div>
         <div className="TheSecondGrand">

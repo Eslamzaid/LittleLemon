@@ -19,24 +19,59 @@
 }
 
 /** The children */
-.TheFirstGrand{
+.TheFirstGrand {
+    height: 21rem;
     width: 50%;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
     /* border: 1px solid black; */
 }
 
-.TheSecondGrand{
+.TheSecondGrand {
+    width: fit-content;
     /* height: 45vh; */
     /* border: 1px solid black; */
-    width: fit-content;
 }
 
 /** The grand children */
 
-#TheBurgerImg{
+#TheBurgerImg {
     width: 35rem;
     margin-top: 2rem;
+    pointer-events: none;
 }
 
-.TheFirstGrand h2{
+.TheFirstGrand h2 {
+    font-size: 1.9rem;
+    margin: 1em 0em;
+}
 
+.TheFirstGrand p {
+    font-weight: 500;
+    font-size: 0.8em;
+    opacity: 0.6;
+    /* margin: 0.1em 0em; */
+}
+
+.TheFirstGrand button {
+    background-color: #495E57;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: 0.2s;
+    /* margin-top: 0.5em; */
+}
+
+.TheFirstGrand button:hover {
+    background-color: #F4CE14;
+    color: black;
+    transition: 0.2s;
+    border: 2px solid black;
 }
