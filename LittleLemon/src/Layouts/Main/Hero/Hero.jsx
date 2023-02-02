@@ -1,5 +1,12 @@
 import React from "react";
 import TheBurger from "./../../../assets/Main/TheBurger.png";
+import Booking from "./../../../assets/Icons/icons8-mobile-order-64.png";
+import FArrow from "./../../../assets/Icons/Arrow 1.png";
+import SArrow from "./../../../assets/Icons/Arrow 2.png";
+import BigArrow from "./../../../assets/Icons/BigArrow.png";
+import Prepare from "./../../../assets/Icons/icons8-weber-50.png";
+import Shipping from "./../../../assets/Icons/icons8-free-shipping-50.png";
+import Home from "./../../../assets/Icons/icons8-home-page-50.png";
 import "./Hero.css";
 
 function Hero() {
@@ -13,13 +20,40 @@ function Hero() {
             <br /> focused on traditional
             <br /> recipes served with a modern twist.
           </h2>
-          <p>
-            Oh yeahh...
-          </p>
+          <p>Oh yeahh...</p>
           <button>Order Now</button>
         </div>
         <div className="TheSecondGrand">
           <img id="TheBurgerImg" src={TheBurger} alt="Delicious Burger" />
+        </div>
+      </section>
+      <section className="TheSecondBoy">
+        <div>
+          <div>
+            <img src={Booking} alt="Book from the phone" />
+            <p>Booking from Mobile</p>
+          </div>
+          <div>
+            <img src={FArrow} alt="Simple arrow" />
+          </div>
+          <div>
+            <img src={Prepare} alt="A grilling mashine" />
+            <p>Preparing Your order</p>
+          </div>
+          <div>
+            <img src={SArrow} alt="A simple arrow" />
+          </div>
+          <div>
+            <img src={Shipping} alt="Shipping car" />
+            <p>Shipping</p>
+          </div>
+          <div>
+            <img src={BigArrow} alt="Big arrow" />
+          </div>
+          <div>
+          <img src={Home} alt="A simple home"/>
+          <p>Happy meal</p>
+          </div>
         </div>
       </section>
     </article>

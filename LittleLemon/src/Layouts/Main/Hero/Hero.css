@@ -8,6 +8,9 @@
     flex-direction: column;
 }
 
+
+/*************! The First part of the CSS ******************/
+
 /*? The second father */
 
 .TheFirstBoy {
@@ -75,3 +78,10 @@
     transition: 0.2s;
     border: 2px solid black;
 }
+
+
+/**************! The second part of the CSS *****************/
+
+/*? The second father */
+
+.TheSecondBoy {}
