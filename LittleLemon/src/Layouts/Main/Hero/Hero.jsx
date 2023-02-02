@@ -23,12 +23,12 @@ function Hero() {
           <p>Oh yeahh...</p>
           <button>Order Now</button>
         </div>
-        <div className="TheSecondGrand">
+        <div className="TheSecondGrandP1">
           <img id="TheBurgerImg" src={TheBurger} alt="Delicious Burger" />
         </div>
       </section>
       <section className="TheSecondBoy">
-        <div>
+        <div className="TheSecondGrand">
           <div>
             <img src={Booking} alt="Book from the phone" />
             <p>Booking from Mobile</p>

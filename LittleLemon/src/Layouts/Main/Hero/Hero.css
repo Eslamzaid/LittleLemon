@@ -6,6 +6,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin-top: 10rem;
+    /* border: 1px solid red; */
 }
 
 
@@ -33,11 +35,6 @@
     /* border: 1px solid black; */
 }
 
-.TheSecondGrand {
-    width: fit-content;
-    /* height: 45vh; */
-    /* border: 1px solid black; */
-}
 
 /** The grand children */
 
@@ -83,5 +80,20 @@
 /**************! The second part of the CSS *****************/
 
 /*? The second father */
+/* 
+.TheSecondBoy {
+    border: 1px solid black;    
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-.TheSecondBoy {}
+/** The children */
+
+.TheSecondGrand {
+    width: fit-content;
+    border: 1px solid black;    
+    /* height: 45vh; */
+    /* border: 1px solid black; */
+} */
