@@ -35,16 +35,19 @@
     margin: 1rem 0rem;
 }
 
-#THeTextDoc{
+#THeTextDoc {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 
 }
+
 .TheButton {
     border: none;
-    padding: 1rem;    
+    padding: 1rem;
     font-size: 1rem;
     background: none;
     background-color: #F4CE15;
     border-radius: 5px;
+    cursor: pointer;
 }
