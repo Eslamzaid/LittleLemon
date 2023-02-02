@@ -29,28 +29,28 @@ function Hero() {
       </section>
       <section className="TheSecondBoy">
         <div className="TheSecondGrand">
-          <div>
+          <div className="TheParts">
             <img src={Booking} alt="Book from the phone" />
             <p>Booking from Mobile</p>
           </div>
           <div>
             <img src={FArrow} alt="Simple arrow" />
           </div>
-          <div>
+          <div className="TheParts">
             <img src={Prepare} alt="A grilling mashine" />
             <p>Preparing Your order</p>
           </div>
           <div>
             <img src={SArrow} alt="A simple arrow" />
           </div>
-          <div>
+          <div className="TheParts">
             <img src={Shipping} alt="Shipping car" />
             <p>Shipping</p>
           </div>
           <div>
             <img src={BigArrow} alt="Big arrow" />
           </div>
-          <div>
+          <div className="TheParts">
           <img src={Home} alt="A simple home"/>
           <p>Happy meal</p>
           </div>

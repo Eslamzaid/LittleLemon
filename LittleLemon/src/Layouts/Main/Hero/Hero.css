@@ -1,7 +1,7 @@
 /* ! The father of all */
 
 .TheHero {
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -45,7 +45,7 @@
 }
 
 .TheFirstGrand h2 {
-    font-size: 1.9rem;
+    font-size: 1.7rem;
     margin: 1em 0em;
 }
 
@@ -80,20 +80,31 @@
 /**************! The second part of the CSS *****************/
 
 /*? The second father */
-/* 
+
 .TheSecondBoy {
-    border: 1px solid black;    
     width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F4CE14;
+    border-radius: 40px;
+    /* border: 1px solid black;     */
 }
 
 /** The children */
 
 .TheSecondGrand {
     width: fit-content;
-    border: 1px solid black;    
-    /* height: 45vh; */
-    /* border: 1px solid black; */
-} */
+    display: flex;  
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+} 
+
+/** The grand children */
+
+.TheParts{
+    text-align: center;
+    font-weight: 700;
+}
