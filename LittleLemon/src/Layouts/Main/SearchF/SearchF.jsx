@@ -38,17 +38,17 @@ function SearchF() {
           ></input>
         </div>
       </section>
-      <section>
+      <section className="SSection">
+        <button onClick={() => setItem(MenuD)}>All</button>
         <button onClick={() => filterMenu("breakfast")}>Breakfast</button>
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
-        <button onClick={() => setItem(MenuD)}>All</button>
         {/* <p>PImage</p> */}
       </section>
-      <section>
+      <section className="TSection">
         {item
-          .filter((itemm) => itemm.name.toLowerCase().includes(quiry)) 
+          .filter((itemm) => itemm.name.toLowerCase().includes(quiry) || itemm.name.includes(quiry)) 
          .map((ele) => {
             const { id, image, name, price, alt, fav } = ele;
             return (

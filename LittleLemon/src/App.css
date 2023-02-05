@@ -4,5 +4,6 @@
   box-sizing: border-box;
   cursor: url("./assets/lemon.png"), auto;
 }
-body{
+input:focus, textarea:focus, select:focus{
+  outline: none;
 }
