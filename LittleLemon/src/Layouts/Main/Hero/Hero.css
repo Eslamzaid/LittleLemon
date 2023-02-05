@@ -84,13 +84,13 @@
 
 .TheSecondBoy {
     width: 90%;
-
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #F4CE14;
     border-radius: 40px;
-    /* margin-right: 3rem; */
+    margin-top: 0.6rem;
+    margin-bottom: 3rem;
     /* border: 1px solid black;     */
 }
 

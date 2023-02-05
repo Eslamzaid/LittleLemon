@@ -1,14 +1,21 @@
-/* ! The father of all children */ 
-.TheFather{
+/* !! The father of all children */
+.TheFather {
     background-color: red;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     width: 70%;
     text-align: center;
 }
 
-/*? The section of the father */
+/*! The section of the father */
 
-/** First section */
-.FSection{
-    background-color: green;    
+/*? First section */
+.FSection {
+    background-color: green;
+    padding: 2rem 0rem;
+}
+
+/** The children of the first section */
+
+.FSection h1 {
+    font-size: 1.5rem;
 }
