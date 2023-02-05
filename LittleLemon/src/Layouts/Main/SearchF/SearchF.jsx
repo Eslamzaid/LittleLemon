@@ -12,8 +12,8 @@ function SearchF() {
     setItem(updateItems);
   };
   return (
-    <article>
-      <section>
+    <article className="TheFather">
+      <section className="FSection">
         <h1>Our menu</h1>
         <div>
           <button>TheSearch</button>

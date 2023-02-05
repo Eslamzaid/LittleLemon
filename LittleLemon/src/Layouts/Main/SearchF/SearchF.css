@@ -1,0 +1,14 @@
+/* ! The father of all children */ 
+.TheFather{
+    background-color: red;
+    margin-top: 2rem;
+    width: 70%;
+    text-align: center;
+}
+
+/*? The section of the father */
+
+/** First section */
+.FSection{
+    background-color: green;    
+}
