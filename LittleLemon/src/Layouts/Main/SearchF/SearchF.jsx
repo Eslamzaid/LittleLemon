@@ -3,6 +3,7 @@ import MenuD from "./SearchD";
 import "./SearchF.css";
 
 function SearchF() {
+  const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
   const filterMenu = (category) => {
     const updateItems = MenuD.filter((curElem) => {
@@ -15,8 +16,13 @@ function SearchF() {
     <article className="TheFather">
       <section className="FSection">
         <h1>Our menu</h1>
-        <div>
-          <button>TheSearch</button>
+        <div className="FSButton">
+          <input
+            type="text"
+            className="icon"
+            placeholder="Search"
+            onChange={(e) => setQuiry(e.target.value)}
+          ></input>
         </div>
       </section>
       <section>
@@ -25,19 +31,22 @@ function SearchF() {
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
         <button onClick={() => setItem(MenuD)}>All</button>
-        <p>PImage</p>
+        {/* <p>PImage</p> */}
       </section>
-
-      {item.map((ele) => {
-        const { id, image, name, price, alt } = ele;
-        return (
-          <div key={id}>
-            <h3>{name}</h3>
-            <img src={image} width="200px" alt={alt} />
-            <p>Price: {price}</p>
-          </div>
-        );
-      })}
+      <section>
+        {item
+          .filter((itemm) => itemm.name.toLowerCase().includes(quiry))
+          .map((ele) => {
+            const { id, image, name, price, alt } = ele;
+            return (
+              <div key={id}>
+                <h3>{name}</h3>
+                <img src={image} width="200px" alt={alt} />
+                <p>Price: {price}</p>
+              </div>
+            );
+          })}
+      </section>
     </article>
   );
 }
