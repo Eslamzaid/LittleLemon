@@ -33,7 +33,7 @@ const MenuD = [
         alt: "Egg and meat",
         name: "Egg and meat",
         category: "breakfast",
-        price: "12$"
+        price: "12$",
     },
     {
         id: 5,
@@ -42,25 +42,25 @@ const MenuD = [
         alt: "Kabsa",
         name: "Kabsa",
         category: "lunch",
-        price: "22$"
+        price: "22$",
     },
     {
         id: 6,
         fav: "./images/Favorite.png",
         image: "./images/TheChiSL.png",
-        alt: "Chicken and potato",
-        name: "Chicken and potato",
+        alt: "Chicken with potato",
+        name: "Chicken with potato",
         category: "lunch",
-        price: "21$"
+        price: "21$",
     },
     {
         id: 7,
         fav: "./images/Favorite.png",
         image: "./images/ChickenLegsL.png",
         alt: "Chicken legs",
-        name: "Chicken legs",
+        name: "Chicken wings",
         category: "lunch",
-        price: "25$"
+        price: "25$",
     },
     {
         id: 8,
@@ -69,7 +69,7 @@ const MenuD = [
         alt: "Avocado with eggs",
         name: "Avocado with eggs",
         category: "evening",
-        price: "18$"
+        price: "18$",
     },
     {
         id: 9,
@@ -78,7 +78,7 @@ const MenuD = [
         alt: "Potatoes",
         name: "Potatoes",
         category: "evening",
-        price: "16$"
+        price: "16$",
     },
     {
         id: 10,
@@ -87,7 +87,7 @@ const MenuD = [
         alt: "Nuts salad",
         name: "Nuts salad",
         category: "evening",
-        price: "14$"
+        price: "14$",
     },
     {
         id: 11,
@@ -96,7 +96,7 @@ const MenuD = [
         alt: "Salmon salad",
         name: "Salmon salad",
         category: "dinner",
-        price: "35$"
+        price: "35$",
     },
     {
         id: 12,
@@ -114,7 +114,7 @@ const MenuD = [
         alt: "Rish salad",
         name: "Rish salad",
         category: "dinner",
-        price: "40$"
+        price: "40$",
     }
 ]
 
