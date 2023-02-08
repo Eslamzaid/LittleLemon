@@ -1,13 +1,14 @@
-import React, { useReducer, useState } from "react";
+import React, { useEffect, useState } from "react";
 import MenuD from "./SearchD";
 import { useCart } from "react-use-cart";
+import { Routes, Route, NavLink, redirect, Link } from "react-router-dom";
 import "./SearchF.css";
 
 function SearchF() {
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
 
-  const { addItem } = useCart();
+  const { addItem, totalItems } = useCart();
 
   //! The Filters
   const filterMenu = (category) => {
@@ -37,6 +38,10 @@ function SearchF() {
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
+
+        <h2>
+          <Link to="/Order">the total is {totalItems}</Link>
+        </h2>
       </section>
       <section className="TSection">
         {item

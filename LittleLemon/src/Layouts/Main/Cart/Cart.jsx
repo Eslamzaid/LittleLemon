@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect, useReducer, useState } from "react";
 import { useCart } from "react-use-cart";
 
 function Cart() {
+  const [isLoading, setIsLoading] = useState(true);
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+  }, isLoading);
   const {
     isEmpty,
     totalUniqueItems,

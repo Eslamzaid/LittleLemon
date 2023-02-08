@@ -17,5 +17,3 @@ function App() {
 
 export default App;
 
-//TODO 1- Add responsive to the error-page
-//TODO 2- Edit the nav when scrolling , remove the margin from it

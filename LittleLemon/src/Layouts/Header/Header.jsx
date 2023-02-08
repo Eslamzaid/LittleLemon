@@ -2,12 +2,14 @@ import React from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
 import Menu from "../../RComponenets/Menu/Menu";
 import About from "../../RComponenets/About/About";
+import Main from "../Main/Main";
+import Cart from "../Main/Cart/Cart";
 import { useState } from "react";
-import { Routes, Route, NavLink , redirect} from "react-router-dom";
+import { Routes, Route, NavLink, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { CartProvider } from "react-use-cart";
 import "./Header.css";
-import Main from "../Main/Main";
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
@@ -174,7 +176,8 @@ const Header = () => {
       <Routes>
         <Route path="/AboutUs" element={<About />} />
         <Route path="/TheMenu" element={<Menu />} />
-        <Route path="/" element={<Main/>} />
+        <Route path="/Order" element={<Cart />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </>
   );
