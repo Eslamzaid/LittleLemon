@@ -6,6 +6,7 @@
 
 /**The              Desktop          view*/
 
+
 nav {
     display: flex;
     position: sticky;
@@ -36,7 +37,7 @@ nav>.desktop-view {
     justify-content: space-between;
 }
 
-.TheNavLinksFather{
+.TheNavLinksFather {
     display: flex;
     width: 60%;
     justify-content: space-evenly;
@@ -45,7 +46,8 @@ nav>.desktop-view {
     /* border: 1px solid black; */
     /* margin-right: 11rem; */
 }
-.TheNavLinksFather li:first-child{
+
+.TheNavLinksFather li:first-child {
     position: relative;
     top: 1rem;
     /* border: 1px solid red; */
@@ -61,7 +63,7 @@ nav ul li:not(:first-child) {
     margin-top: 2.1rem;
 }
 
-#TheLinks:hover{
+#TheLinks:hover {
     opacity: 1;
     border-bottom: 1px solid black;
     padding: 0.2em;
@@ -76,13 +78,12 @@ nav ul li:not(:first-child) {
     cursor: pointer;
 }
 
-.not-active-class{
-}
+.not-active-class {}
 
-.lactive-class{
-    -webkit-box-shadow: 0px 10px 0px 0px rgba(245,208,22,1);
--moz-box-shadow: 0px 10px 0px 0px rgba(245,208,22,1);
-box-shadow: 0px 10px 0px 0px rgba(245,208,22,1);
+.lactive-class {
+    -webkit-box-shadow: 0px 10px 0px 0px rgba(245, 208, 22, 1);
+    -moz-box-shadow: 0px 10px 0px 0px rgba(245, 208, 22, 1);
+    box-shadow: 0px 10px 0px 0px rgba(245, 208, 22, 1);
     color: blue;
 }
 

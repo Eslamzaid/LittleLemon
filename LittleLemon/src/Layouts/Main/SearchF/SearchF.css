@@ -37,7 +37,7 @@
     /* border: 1px solid red; */
 }
 
-.FSButton input::placeholder{
+.FSButton input::placeholder {
     color: black;
     font-weight: 100;
 }
@@ -46,32 +46,56 @@
 .icon {
     background: url("./../../../assets/TheSeach.png") no-repeat 0.2rem;
     background-size: 25px;
-  }
+}
 
 
 /*? Third section */
 /** The children of the second section */
-.SSection{
-    /* background-color: red; */
+.SSection {
     display: flex;
-    gap: 2rem;
+    align-items: baseline;
+    justify-content: left;
+    gap: 0.5rem;
     padding: 1rem 0rem;
     border-bottom: 1px solid black;
 }
 
 .SSection button {
-    background-color: none;
     border: none;
     background-color: transparent;
-    /* background-color: red; */
     padding: 1.5rem 1.5rem;
 }
 
-.SSection button:focus{
+.SSection button:focus {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0rem;
     transition: 0.2s;
+}
+
+.SSection div {
+    margin-left: auto;
+    width: max-content;
+    cursor: pointer;
+    /* background-color: red; */
+}
+
+.TheLin {
+    display: flex;
+    align-items: end;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.TheLin h3 {
+    cursor: pointer;
+}
+
+#Shopping {
+    cursor: pointer;
+    width: 2rem;
 }
 
 /*? Second section */
@@ -79,13 +103,25 @@
 /** The children of the third section */
 
 
-.TSection{
+.TSection {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: minmax(10vh);
     min-height: 40vh;
 }
 
-#Theimgs{
+#Theimgs {
     pointer-events: none;
+}
+
+.Cards{
+    border: 1px solid black;
+}
+
+.BottomPart{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
 }

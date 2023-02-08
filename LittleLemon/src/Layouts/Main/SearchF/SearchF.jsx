@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import MenuD from "./SearchD";
 import { useCart } from "react-use-cart";
-import { Routes, Route, NavLink, redirect, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import Sho from "./../../../assets/Icons/shopping.png";
+import Plus from "./../../../assets/Icons/Plus.png";
 import "./SearchF.css";
 
 function SearchF() {
@@ -38,10 +40,12 @@ function SearchF() {
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
-
-        <h2>
-          <Link to="/Order">the total is {totalItems}</Link>
-        </h2>
+        <div>
+          <Link to="/Order" className="TheLin">
+            <h3>({totalItems})</h3>
+            <img src={Sho} id="Shopping" />
+          </Link>
+        </div>
       </section>
       <section className="TSection">
         {item
@@ -53,16 +57,18 @@ function SearchF() {
           .map((ele) => {
             const { id, image, name, price, alt, amount } = ele;
             return (
-              <div key={id}>
+              <div key={id} className="Cards">
                 <div>
                   <img src={image} width="200px" alt={alt} id="Theimgs" />
                 </div>
-                <div>
-                  <h3>{name}</h3>
-                  <p>Price: {price}</p>
-                </div>
-                <div>
-                  <button onClick={() => addItem(ele)}>Add to cart</button>
+                <div className="BottomPart">
+                  <div>
+                    <h3>{name}</h3>
+                    <p>Price: {price}</p>
+                  </div>
+                  <div>
+                    <button onClick={() => addItem(ele)}><img src={Plus}/></button>
+                  </div>
                 </div>
               </div>
             );

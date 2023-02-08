@@ -11,6 +11,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { CartProvider, useCart } from "react-use-cart";
 import "./Header.css";
 
+
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
   const [navBar, setNavbar] = useState(false);
