@@ -1,13 +1,15 @@
 import React, { useReducer, useState } from "react";
-import Teset from "./../../../assets/Icons/Arrow 2.png";
 import MenuD from "./SearchD";
+import { useCart } from "react-use-cart";
 import "./SearchF.css";
 
 function SearchF() {
-  
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
 
+  const { addItem } = useCart();
+
+  //! The Filters
   const filterMenu = (category) => {
     const updateItems = MenuD.filter((curElem) => {
       return curElem.category === category;
@@ -44,7 +46,7 @@ function SearchF() {
               itemm.name.includes(quiry)
           )
           .map((ele) => {
-            const { id, image, name, price, alt, amount,h } = ele;
+            const { id, image, name, price, alt, amount } = ele;
             return (
               <div key={id}>
                 <div>
@@ -55,6 +57,7 @@ function SearchF() {
                   <p>Price: {price}</p>
                 </div>
                 <div>
+                  <button onClick={() => addItem(ele)}>Add to cart</button>
                 </div>
               </div>
             );

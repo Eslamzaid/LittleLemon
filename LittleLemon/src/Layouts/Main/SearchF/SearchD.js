@@ -6,7 +6,7 @@ const MenuD = [
         alt: "T-Sandwich",
         name: 'T-Sandwich',
         category: 'breakfast',
-        price: '9$',
+        price: 9,
         amount: 0,
     },
     {
@@ -16,7 +16,7 @@ const MenuD = [
         alt: "Avocado sandwich",
         name: 'Avocado sandwich',
         category: 'breakfast',
-        price: '11$',
+        price: 11,
         amount: 0,
     },
     {
@@ -26,7 +26,7 @@ const MenuD = [
         alt: "Waffles",
         name: 'Waffles',
         category: 'breakfast',
-        price: '12$',
+        price: 12,
         amount: 0,
     },
     {
@@ -36,7 +36,7 @@ const MenuD = [
         alt: "Egg and meat",
         name: "Egg and meat",
         category: "breakfast",
-        price: "12$",
+        price: 12,
         amount: 0,
     },
     {
@@ -46,7 +46,7 @@ const MenuD = [
         alt: "Kabsa",
         name: "Kabsa",
         category: "lunch",
-        price: "22$",
+        price: 22,
         amount: 0,
     },
     {
@@ -56,7 +56,7 @@ const MenuD = [
         alt: "Chicken with potato",
         name: "Chicken with potato",
         category: "lunch",
-        price: "21$",
+        price: 21,
         amount: 0,
     },
     {
@@ -66,7 +66,7 @@ const MenuD = [
         alt: "Chicken legs",
         name: "Chicken wings",
         category: "lunch",
-        price: "25$",
+        price: 25,
         amount: 0,
     },
     {
@@ -76,7 +76,7 @@ const MenuD = [
         alt: "Avocado with eggs",
         name: "Avocado with eggs",
         category: "evening",
-        price: "18$",
+        price: 18,
         amount: 0,
     },
     {
@@ -86,7 +86,7 @@ const MenuD = [
         alt: "Potatoes",
         name: "Potatoes",
         category: "evening",
-        price: "16$",
+        price: 16,
         amount: 0,
     },
     {
@@ -96,7 +96,7 @@ const MenuD = [
         alt: "Nuts salad",
         name: "Nuts salad",
         category: "evening",
-        price: "14$",
+        price: 14,
         amount: 0,
     },
     {
@@ -106,7 +106,7 @@ const MenuD = [
         alt: "Salmon salad",
         name: "Salmon salad",
         category: "dinner",
-        price: "35$",
+        price: 35,
         amount: 0,
     },
     {
@@ -116,7 +116,7 @@ const MenuD = [
         alt: "Shawarma",
         name: "Shawarma",
         category: "dinner",
-        price: "10$",
+        price: 10,
         amount: 0,
     },
     {
@@ -126,7 +126,7 @@ const MenuD = [
         alt: "Rish salad",
         name: "Rish salad",
         category: "dinner",
-        price: "40$",
+        price: 40,
         amount: 0,
     }
 ]
