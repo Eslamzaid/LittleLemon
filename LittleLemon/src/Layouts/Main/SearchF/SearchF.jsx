@@ -4,6 +4,7 @@ import MenuD from "./SearchD";
 import "./SearchF.css";
 
 function SearchF() {
+  
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
 
@@ -43,7 +44,7 @@ function SearchF() {
               itemm.name.includes(quiry)
           )
           .map((ele) => {
-            const { id, image, name, price, alt, fav } = ele;
+            const { id, image, name, price, alt, amount,h } = ele;
             return (
               <div key={id}>
                 <div>
@@ -52,6 +53,8 @@ function SearchF() {
                 <div>
                   <h3>{name}</h3>
                   <p>Price: {price}</p>
+                </div>
+                <div>
                 </div>
               </div>
             );

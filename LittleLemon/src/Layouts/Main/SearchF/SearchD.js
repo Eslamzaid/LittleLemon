@@ -7,6 +7,7 @@ const MenuD = [
         name: 'T-Sandwich',
         category: 'breakfast',
         price: '9$',
+        amount: 0,
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ const MenuD = [
         name: 'Avocado sandwich',
         category: 'breakfast',
         price: '11$',
+        amount: 0,
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const MenuD = [
         name: 'Waffles',
         category: 'breakfast',
         price: '12$',
+        amount: 0,
     },
     {
         id: 4,
@@ -34,6 +37,7 @@ const MenuD = [
         name: "Egg and meat",
         category: "breakfast",
         price: "12$",
+        amount: 0,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ const MenuD = [
         name: "Kabsa",
         category: "lunch",
         price: "22$",
+        amount: 0,
     },
     {
         id: 6,
@@ -52,6 +57,7 @@ const MenuD = [
         name: "Chicken with potato",
         category: "lunch",
         price: "21$",
+        amount: 0,
     },
     {
         id: 7,
@@ -61,6 +67,7 @@ const MenuD = [
         name: "Chicken wings",
         category: "lunch",
         price: "25$",
+        amount: 0,
     },
     {
         id: 8,
@@ -70,6 +77,7 @@ const MenuD = [
         name: "Avocado with eggs",
         category: "evening",
         price: "18$",
+        amount: 0,
     },
     {
         id: 9,
@@ -79,6 +87,7 @@ const MenuD = [
         name: "Potatoes",
         category: "evening",
         price: "16$",
+        amount: 0,
     },
     {
         id: 10,
@@ -88,6 +97,7 @@ const MenuD = [
         name: "Nuts salad",
         category: "evening",
         price: "14$",
+        amount: 0,
     },
     {
         id: 11,
@@ -97,6 +107,7 @@ const MenuD = [
         name: "Salmon salad",
         category: "dinner",
         price: "35$",
+        amount: 0,
     },
     {
         id: 12,
@@ -106,6 +117,7 @@ const MenuD = [
         name: "Shawarma",
         category: "dinner",
         price: "10$",
+        amount: 0,
     },
     {
         id: 13,
@@ -115,6 +127,7 @@ const MenuD = [
         name: "Rish salad",
         category: "dinner",
         price: "40$",
+        amount: 0,
     }
 ]
 
