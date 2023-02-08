@@ -47,7 +47,7 @@ function SearchF() {
             return (
               <div key={id}>
                 <div>
-                  <img src={image} width="200px" alt={alt} id="Theimgs"/>
+                  <img src={image} width="200px" alt={alt} id="Theimgs" />
                 </div>
                 <div>
                   <h3>{name}</h3>
