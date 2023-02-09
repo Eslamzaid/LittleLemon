@@ -7,13 +7,13 @@ import About from "./RComponenets/About/About";
 import Menu from "./RComponenets/Menu/Menu";
 import Header from "./Layouts/Header/Header";
 import Main from "./Layouts/Main/Main";
-
+import Cart from "./Layouts/Main/Cart/Cart";
 import {
-  BrowserRouter,
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 import "./index.css";
+import SearchF from "./Layouts/Main/SearchF/SearchF";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +32,10 @@ const router = createBrowserRouter([
       {
         path: "/TheMenu",
         element: <Menu />,
+      },
+      {
+        path: "/Order",
+        element: <Cart/>
       },
     ],
   },

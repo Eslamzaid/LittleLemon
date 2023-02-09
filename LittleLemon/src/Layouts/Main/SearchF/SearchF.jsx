@@ -1,14 +1,28 @@
-import React, { useReducer, useState } from "react";
-import Teset from "./../../../assets/Icons/Arrow 2.png";
+import React, { useState } from "react";
 import MenuD from "./SearchD";
+import { useCart } from "react-use-cart";
+import { Link } from "react-router-dom";
+import Sho from "./../../../assets/Icons/shopping.png";
+import Plus from "./../../../assets/Icons/Plus.png";
 import "./SearchF.css";
+import PopUp from "../PopUp/PopUp";
 
 function SearchF() {
-  
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
+  const [tru, setTrue] = useState(false);
+
+  const {
+    addItem,
+    totalItems,
+    totalUniqueItems,
+    updateItemQuantity,
+    removeItem,
+    items,
+  } = useCart();
 
   const filterMenu = (category) => {
+    //! The Filters
     const updateItems = MenuD.filter((curElem) => {
       return curElem.category === category;
     });
@@ -35,6 +49,18 @@ function SearchF() {
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
+        <div className="theLin">
+          <PopUp trigger={tru} manger={setTrue} />
+          <div
+            className="TheLin"
+            onClick={() => setTrue(() => !tru)}
+            role="button"
+            aria-pressed={`${tru}`}
+          >
+            <h3>{totalItems == 0 ? "(0)" : `(${totalItems})`}</h3>
+            <img src={Sho} id="Shopping" />
+          </div>
+        </div>
       </section>
       <section className="TSection">
         {item
@@ -44,17 +70,22 @@ function SearchF() {
               itemm.name.includes(quiry)
           )
           .map((ele) => {
-            const { id, image, name, price, alt, amount,h } = ele;
+            const { id, image, name, price, alt, amount, wid } = ele;
             return (
-              <div key={id}>
+              <div key={id} className="Cards">
                 <div>
-                  <img src={image} width="200px" alt={alt} id="Theimgs" />
+                  <img src={image} width={`${wid}`} alt={alt} id="Theimgs" />
                 </div>
-                <div>
-                  <h3>{name}</h3>
-                  <p>Price: {price}</p>
-                </div>
-                <div>
+                <div className="BottomPart">
+                  <div className="BottomPartFirst">
+                    <h3>{name}</h3>
+                    <p>Price: ${price}.00</p>
+                  </div>
+                  <div className="BottomPartSecond">
+                    <button onClick={() => addItem(ele)}>
+                      <img src={Plus} alt="Add to cart" id="Plus" />
+                    </button>
+                  </div>
                 </div>
               </div>
             );

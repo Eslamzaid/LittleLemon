@@ -2,16 +2,21 @@ import React from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
 import Menu from "../../RComponenets/Menu/Menu";
 import About from "../../RComponenets/About/About";
+import Main from "../Main/Main";
+import Cart from "../Main/Cart/Cart";
 import { useState } from "react";
-import { Routes, Route, NavLink , redirect} from "react-router-dom";
+import { Routes, Route, NavLink, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { CartProvider, useCart } from "react-use-cart";
 import "./Header.css";
-import Main from "../Main/Main";
+
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
   const [navBar, setNavbar] = useState(false);
+
+  const { addItem, totalItems } = useCart();
 
   const changeBackground = () => {
     if (window.scrollY >= 100) {
@@ -91,7 +96,7 @@ const Header = () => {
                 id="TheLinks"
                 to="/Order"
               >
-                Order
+                Order{totalItems}
               </NavLink>
             </li>
             <li>
@@ -174,7 +179,8 @@ const Header = () => {
       <Routes>
         <Route path="/AboutUs" element={<About />} />
         <Route path="/TheMenu" element={<Menu />} />
-        <Route path="/" element={<Main/>} />
+        <Route path="/Order" element={<Cart />} />
+        <Route path="/" element={<Main />} />
       </Routes>
     </>
   );

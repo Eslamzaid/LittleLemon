@@ -1,3 +1,8 @@
+:root{
+    --bac: #F4CE14;
+    --trad: 4em;
+}
+
 /* !! The father of all children */
 .TheFather {
     margin-top: 2.5rem;
@@ -37,7 +42,7 @@
     /* border: 1px solid red; */
 }
 
-.FSButton input::placeholder{
+.FSButton input::placeholder {
     color: black;
     font-weight: 100;
 }
@@ -46,32 +51,65 @@
 .icon {
     background: url("./../../../assets/TheSeach.png") no-repeat 0.2rem;
     background-size: 25px;
-  }
+}
 
 
 /*? Third section */
 /** The children of the second section */
-.SSection{
-    /* background-color: red; */
+.SSection {
     display: flex;
-    gap: 2rem;
+    align-items: baseline;
+    justify-content: left;
+    gap: 0.5rem;
     padding: 1rem 0rem;
     border-bottom: 1px solid black;
 }
 
 .SSection button {
-    background-color: none;
     border: none;
     background-color: transparent;
-    /* background-color: red; */
     padding: 1.5rem 1.5rem;
 }
 
-.SSection button:focus{
+.SSection > button:focus {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0rem;
     transition: 0.2s;
+}
+
+.SSection div {
+    margin-left: auto;
+    width: 6rem;
+    cursor: pointer;
+}
+
+.TheLin {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+[aria-pressed="false"]{
+    background-color: white;
+    border: 1px solid transparent;
+}
+
+[aria-pressed="true"] {
+    border: 1px solid black;
+}
+
+div h3 {
+    cursor: pointer;
+}
+
+#Shopping {
+    cursor: pointer;
+    width: 2rem;
 }
 
 /*? Second section */
@@ -79,13 +117,54 @@
 /** The children of the third section */
 
 
-.TSection{
+.TSection {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: minmax(10vh);
-    min-height: 40vh;
+    grid-template-columns: repeat(4, 0.3fr);
+    grid-template-rows: minmax(1fr);
+    border-top-left-radius: var(--trad);
+    border-top-right-radius: var(--trad);
+    overflow: hidden;
+    min-height: 25vh;
+    gap: 1rem;
+    margin-bottom: 10pc;
+    margin-top: 2pc;
 }
 
-#Theimgs{
+#Theimgs {
     pointer-events: none;
+    width: 200px;
+}
+
+#Plus{
+    cursor: pointer;
+}
+
+.Cards{
+    background-color: white;
+    margin: 1rem;
+    border-radius: 1em;
+    border: 1px solid black;
+}
+
+.BottomPart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-self: flex-end;
+    border-top: 1px solid black;
+}
+
+.BottomPartFirst {
+    text-align: center;
+    margin-left: 1rem;
+}
+
+.BottomPartSecond > button{
+    background-color: transparent;
+    border: none;
+    margin-right: 1rem;
+    /* border-left: 1px solid black;    */
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid black;
 }
