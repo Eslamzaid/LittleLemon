@@ -94,17 +94,6 @@ const Header = () => {
                   isActive ? "lactive-class" : "not-active-class"
                 }
                 id="TheLinks"
-                to="/Order"
-              >
-                Order{totalItems}
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "lactive-class" : "not-active-class"
-                }
-                id="TheLinks"
                 to="/Login"
               >
                 Login
