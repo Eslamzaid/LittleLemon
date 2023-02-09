@@ -57,7 +57,10 @@ function SearchF() {
             role="button"
             aria-pressed={`${tru}`}
           >
-            <h3>{totalItems == 0 ? "(0)" : `(${totalItems})`}</h3>
+            <div className="LeftSide">
+              <h3>{totalItems == 0 ? 'Cart is empty': 'Check out'}</h3>
+              <h3>{totalItems == 0 ? "(0)" : `(${totalItems})`}</h3>
+            </div>
             <img src={Sho} id="Shopping" />
           </div>
         </div>

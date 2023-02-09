@@ -15,7 +15,7 @@
 
 .SecondFather {
     position: relative;
-    padding: 32px;
+    padding:5rem;
     height: fit-content;
     max-height: 80%;
     overflow-y: scroll;
@@ -35,15 +35,3 @@
 #CloseBTN{
     cursor: pointer;
 }
-
-/* 
-.TheFatherOfAll {
-        background-color: white;
-        height: fit-content;
-        position: absolute;
-        left: 0%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-} */
