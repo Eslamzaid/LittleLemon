@@ -12,8 +12,14 @@ function SearchF() {
   const [item, setItem] = useState(MenuD);
   const [tru, setTrue] = useState(false);
 
-  const { addItem, totalItems, updateItemQuantity, removeItem, items } =
-    useCart();
+  const {
+    addItem,
+    totalItems,
+    totalUniqueItems,
+    updateItemQuantity,
+    removeItem,
+    items,
+  } = useCart();
 
   const filterMenu = (category) => {
     //! The Filters
@@ -64,20 +70,20 @@ function SearchF() {
               itemm.name.includes(quiry)
           )
           .map((ele) => {
-            const { id, image, name, price, alt, amount } = ele;
+            const { id, image, name, price, alt, amount, wid } = ele;
             return (
               <div key={id} className="Cards">
                 <div>
-                  <img src={image} width="200px" alt={alt} id="Theimgs" />
+                  <img src={image} width={`${wid}`} alt={alt} id="Theimgs" />
                 </div>
                 <div className="BottomPart">
-                  <div>
+                  <div className="BottomPartFirst">
                     <h3>{name}</h3>
-                    <p>Price: {price}</p>
+                    <p>Price: ${price}.00</p>
                   </div>
-                  <div>
+                  <div className="BottomPartSecond">
                     <button onClick={() => addItem(ele)}>
-                      <img src={Plus} />
+                      <img src={Plus} alt="Add to cart" id="Plus" />
                     </button>
                   </div>
                 </div>

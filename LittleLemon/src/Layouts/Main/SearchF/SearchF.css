@@ -1,3 +1,8 @@
+:root {
+    --bac: #F4CE14;
+    --trad: 4em;
+}
+
 /* !! The father of all children */
 .TheFather {
     margin-top: 2.5rem;
@@ -66,7 +71,7 @@
     padding: 1.5rem 1.5rem;
 }
 
-.SSection > button:focus {
+.SSection>button:focus {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0rem;
@@ -86,15 +91,16 @@
     list-style: none;
     text-decoration: none;
     color: black;
+    background-color: red;
     cursor: pointer;
 }
 
-[aria-pressed="false"   ]{
+[aria-pressed="false"] {
     background-color: red;
 }
 
 [aria-pressed="true"] {
-    background-color: yellow;
+    background-color: var(--bac);
 }
 
 div h3 {
@@ -113,23 +119,54 @@ div h3 {
 
 .TSection {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 0.3fr);
     grid-template-rows: minmax(10vh);
-    min-height: 40vh;
+    border-top-left-radius: var(--trad);
+    border-top-right-radius: var(--trad);
+    overflow: hidden;
+    min-height: 45vh;
+    gap: 1rem;
+    background-color: var(--bac);
+    margin-bottom: 10pc;
+    margin-top: 2pc;
+
 }
 
 #Theimgs {
     pointer-events: none;
+    width: 200px;
 }
 
-.Cards{
+#Plus {
+    cursor: pointer;
+}
+
+.Cards {
+    background-color: white;
+    margin: 1rem;
+    border-radius: 1em;
     border: 1px solid black;
 }
 
-.BottomPart{
-    border: 1px solid black;
+.BottomPart {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem 3rem;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+    border-top: 1px solid black;
 }
+
+.BottomPartFirst {
+    border-right: 1px solid black;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.BottomPartSecond>button {
+    background-color: transparent;
+    border: none;
+}
+
+/*? The Buttons */
+
