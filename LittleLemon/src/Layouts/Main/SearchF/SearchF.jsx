@@ -49,7 +49,7 @@ function SearchF() {
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
-        <div>
+        <div className="theLin">
           <PopUp trigger={tru} manger={setTrue} />
           <div
             className="TheLin"
