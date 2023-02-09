@@ -1,13 +1,7 @@
-import React, { useEffect, useReducer, useState } from "react";
+import React from "react";
 import { useCart } from "react-use-cart";
 
 function Cart() {
-  const [isLoading, setIsLoading] = useState(true);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 2000);
-  }, isLoading);
   const {
     isEmpty,
     totalUniqueItems,
@@ -43,8 +37,9 @@ function Cart() {
                       <img src={item.image} style={{ height: "6rem" }} />
                     </td>
                     <td>{item.name}</td>
-                    <td>{item.price}</td>
+                    <td>${item.price}</td>
                     <td>Quantity ({item.quantity})</td>
+                    <td>Total{item.itemTotal}</td>
                     <td>
                       <button
                         onClick={() =>

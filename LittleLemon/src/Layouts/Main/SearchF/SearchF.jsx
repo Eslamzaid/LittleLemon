@@ -5,15 +5,18 @@ import { Link } from "react-router-dom";
 import Sho from "./../../../assets/Icons/shopping.png";
 import Plus from "./../../../assets/Icons/Plus.png";
 import "./SearchF.css";
+import PopUp from "../PopUp/PopUp";
 
 function SearchF() {
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
+  const [tru, setTrue] = useState(false);
 
-  const { addItem, totalItems } = useCart();
+  const { addItem, totalItems, updateItemQuantity, removeItem, items } =
+    useCart();
 
-  //! The Filters
   const filterMenu = (category) => {
+    //! The Filters
     const updateItems = MenuD.filter((curElem) => {
       return curElem.category === category;
     });
@@ -41,10 +44,16 @@ function SearchF() {
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
         <div>
-          <Link to="/Order" className="TheLin">
-            <h3>({totalItems})</h3>
+          <PopUp trigger={tru} manger={setTrue} />
+          <div
+            className="TheLin"
+            onClick={() => setTrue(() => !tru)}
+            role="button"
+            aria-pressed={`${tru}`}
+          >
+            <h3>{totalItems == 0 ? "(0)" : `(${totalItems})`}</h3>
             <img src={Sho} id="Shopping" />
-          </Link>
+          </div>
         </div>
       </section>
       <section className="TSection">
@@ -67,7 +76,9 @@ function SearchF() {
                     <p>Price: {price}</p>
                   </div>
                   <div>
-                    <button onClick={() => addItem(ele)}><img src={Plus}/></button>
+                    <button onClick={() => addItem(ele)}>
+                      <img src={Plus} />
+                    </button>
                   </div>
                 </div>
               </div>
