@@ -4,6 +4,54 @@
     font-size: larger;
 }
 
-#NoOrder > span {
+.Special {
     color: #F4CE14;
+}
+
+.table {
+    padding: 1rem;
+}
+
+#TheNameOfDish {
+    width: 2.5rem;
+    padding: 0rem 3rem;
+}
+
+#TheQuintity {
+    padding: 0rem 1rem;
+}
+
+#theTotal {
+    padding: 0rem 1rem;
+}
+
+.IncDec {
+    width: 1rem;
+    cursor: pointer;
+}
+
+.Fasty {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.cancelB {
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+
+}
+
+.ClearingCart {
+    border: 1px solid black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.swal-overlay {
+    z-index: 1000000000000000000000000;
+}
+
+.theYello{
+    background-color: #F4CE14;
 }

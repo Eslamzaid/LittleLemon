@@ -9,7 +9,7 @@ import Shipping from "./../../../assets/Icons/icons8-free-shipping-50.png";
 import Home from "./../../../assets/Icons/icons8-home-page-50.png";
 import "./Hero.css";
 
-function Hero() {
+function Hero(props) {
   return (
     <article className="TheHero">
       <section className="TheFirstBoy">
@@ -21,7 +21,7 @@ function Hero() {
             <br /> recipes served with a modern twist.
           </h2>
           <p>Oh yeahh...</p>
-          <button>Order Now</button>
+          <button onClick={props.connectMenu}>Order Now</button>
         </div>
         <div className="TheSecondGrandP1">
           <img id="TheBurgerImg" src={TheBurger} alt="Delicious Burger" />

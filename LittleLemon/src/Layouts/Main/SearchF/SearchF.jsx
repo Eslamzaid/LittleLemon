@@ -7,7 +7,7 @@ import Plus from "./../../../assets/Icons/Plus.png";
 import "./SearchF.css";
 import PopUp from "../PopUp/PopUp";
 
-function SearchF() {
+function SearchF(props) {
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
   const [tru, setTrue] = useState(false);
@@ -34,6 +34,7 @@ function SearchF() {
     <article className="TheFather">
       <section className="FSection">
         <h1>Our menu</h1>
+        <button ref={props.connect} className="invisible"></button>
         <div className="FSButton">
           <input
             type="text"
@@ -58,7 +59,7 @@ function SearchF() {
             aria-pressed={`${tru}`}
           >
             <div className="LeftSide">
-              <h3>{totalItems == 0 ? 'Cart is empty': 'Check out'}</h3>
+              <h3>{totalItems == 0 ? "Cart is empty" : "Check out"}</h3>
               <h3>{totalItems == 0 ? "(0)" : `(${totalItems})`}</h3>
             </div>
             <img src={Sho} id="Shopping" />
