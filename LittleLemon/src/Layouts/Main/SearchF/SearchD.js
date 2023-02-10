@@ -64,6 +64,24 @@ const MenuD = [
     },
     {
         id: 8,
+        image: "./images/Burger1.png",
+        alt: "Big burger",
+        name: "Mega burger",
+        category: "evening",
+        price: 33,
+        wid: '200px'
+    },
+    {
+        id: 9,
+        image: "./images/Burger2.png",
+        alt: "Burger",
+        name: "Eiffel Burger",
+        category: "evening",
+        price: 18,
+        wid: '200px'
+    },
+    {
+        id: 10,
         image: "./images/AvoBurE.png",
         alt: "Avocado with eggs",
         name: "Avocado with eggs",
@@ -72,7 +90,7 @@ const MenuD = [
         wid: '200px'
     },
     {
-        id: 9,
+        id: 11,
         image: "./images/PotatoE.png",
         alt: "Potatoes",
         name: "Potatoes",
@@ -81,7 +99,7 @@ const MenuD = [
         wid: '200px'
     },
     {
-        id: 10,
+        id: 12,
         image: "./images/SaladNE.png",
         alt: "Nuts salad",
         name: "Nuts salad",
@@ -90,7 +108,7 @@ const MenuD = [
         wid: '200px'
     },
     {
-        id: 11,
+        id: 13,
         image: "./images/SalamonD.png",
         alt: "Salmon salad",
         name: "Salmon salad",
@@ -99,7 +117,7 @@ const MenuD = [
         wid: '200px'
     },
     {
-        id: 12,
+        id: 14,
         image: "./images/ShawarmaD.png",
         alt: "Shawarma",
         name: "Shawarma",
@@ -108,7 +126,7 @@ const MenuD = [
         wid: '200px'
     },
     {
-        id: 13,
+        id: 15,
         image: "./images/RishSaladD.png",
         alt: "Rish salad",
         name: "Rish salad",

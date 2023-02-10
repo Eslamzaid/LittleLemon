@@ -130,7 +130,7 @@
 .TSection {
     display: grid;
     grid-template-columns: repeat(4, 0.3fr);
-    grid-template-rows: minmax(1fr);
+    grid-template-rows: minmax(1fr) ;
     border-top-left-radius: var(--trad);
     border-top-right-radius: var(--trad);
     overflow: hidden;
@@ -142,7 +142,7 @@
 
 #Theimgs {
     pointer-events: none;
-    width: 200px;
+    /* width: 12rem; */
 }
 
 #Plus{
@@ -151,17 +151,22 @@
 
 .Cards{
     background-color: white;
-    margin: 1rem;
+    margin: 1rem 1rem;
     border-radius: 1em;
     border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .BottomPart{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    justify-self: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
     border-top: 1px solid black;
+    height: 5rem;
+
 }
 
 .BottomPartFirst {
