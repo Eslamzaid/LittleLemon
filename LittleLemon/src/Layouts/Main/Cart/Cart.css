@@ -1,0 +1,9 @@
+/*! No order */
+#NoOrder {
+    font-weight: 800;
+    font-size: larger;
+}
+
+#NoOrder > span {
+    color: #F4CE14;
+}

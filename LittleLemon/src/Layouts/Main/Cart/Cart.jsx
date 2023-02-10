@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "react-use-cart";
+import './Cart.css'
 
 function Cart() {
   const {
@@ -15,18 +16,18 @@ function Cart() {
   if (isEmpty)
     return (
       <div>
-        <h1>Your cart is Empty</h1>
+        <h1 id="NoOrder">Your cart is <span>Empty</span></h1>
       </div>
     );
   return (
     <section>
       <div>
-        <h2>THe total is ({totalItems})</h2>
+        <h2>{totalItems == 1 ? `${(totalItems)} dish` : `${(totalItems)} dishes`}</h2>
       </div>
       <div>
         <div>
           <h5>
-            Cart ({totalUniqueItems}) total Items: ({totalItems})
+            {totalUniqueItems > 1 ? `(total different dishes ${(totalUniqueItems)})` : ''}
           </h5>
           <table>
             <tbody>
