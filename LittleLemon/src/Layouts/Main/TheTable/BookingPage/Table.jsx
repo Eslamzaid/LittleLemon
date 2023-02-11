@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { submitAPI, fetchAPI } from "./Sources";
+import { submitAPI, fetchAPI } from "../Sources";
 import { useState } from "react";
 import "./Table.css";
 
