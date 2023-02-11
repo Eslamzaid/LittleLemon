@@ -1,10 +1,10 @@
 import React from 'react'
-import OrderTable from './BookingPage/Table'
+import BookingForm from './BookingPage/BookingForm'
 
 function BookingPage() {
     return (
         <div>
-            <OrderTable/>
+            <BookingForm/>
         </div>
     )
 }

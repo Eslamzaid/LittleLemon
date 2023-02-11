@@ -3,7 +3,7 @@ import { submitAPI, fetchAPI } from "../Sources";
 import { useState } from "react";
 import "./Table.css";
 
-function OrderTable() {
+function BookingForm() {
   const [table, setTable] = useState();
 
   return (
@@ -36,4 +36,4 @@ function OrderTable() {
   );
 }
 
-export default OrderTable;
+export default BookingForm;
