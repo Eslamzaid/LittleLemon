@@ -8,7 +8,7 @@
     margin-top: 2.5rem;
     width: 70%;
     text-align: center;
-    max-width: 200rem;
+    max-width: 100rem;
     /* background-color: red; */
 }
 
@@ -158,11 +158,12 @@
     cursor: pointer;
     width: 250px;
     overflow: hidden;
+    transition:  0.2s;
 }
 
 #Theimgs:hover{
     width: 500px;
-    transition: 0.2s;
+    transition: ease-in 0.2s;
 }
 
 #Plus {
