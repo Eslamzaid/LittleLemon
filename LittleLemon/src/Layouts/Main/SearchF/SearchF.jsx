@@ -12,14 +12,7 @@ function SearchF(props) {
   const [item, setItem] = useState(MenuD);
   const [tru, setTrue] = useState(false);
 
-  const {
-    addItem,
-    totalItems,
-    totalUniqueItems,
-    updateItemQuantity,
-    removeItem,
-    items,
-  } = useCart();
+  const { addItem, totalItems } = useCart();
 
   const filterMenu = (category) => {
     //! The Filters

@@ -8,6 +8,7 @@
     flex-direction: column;
     /* margin-top: 10rem; */
     /* border: 1px solid gray; */
+    max-width: 200rem;
 }
 
 

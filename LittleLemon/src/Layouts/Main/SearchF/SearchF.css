@@ -8,8 +8,11 @@
     margin-top: 2.5rem;
     width: 70%;
     text-align: center;
+    max-width: 200rem;
     /* background-color: red; */
 }
+
+
 
 /*! The section of the father */
 
@@ -98,7 +101,7 @@
 }
 
 .TheLin:hover {
-    background-color: #ffffff;
+    background-color: #f5d327;
     transition: ease-in-out 0.2s;
 }
 
@@ -108,7 +111,7 @@
 
 .LeftSideCu:hover {
     transition: ease-in-out 0.2s;
-    background-color: #ffffff;
+    background-color: #f5d327;
 }
 
 [aria-pressed="false"] {

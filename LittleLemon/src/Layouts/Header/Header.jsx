@@ -1,16 +1,13 @@
 import React from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
-import Menu from "../../RComponenets/Menu/Menu";
 import About from "../../RComponenets/About/About";
 import Main from "../Main/Main";
-import Cart from "../Main/Cart/Cart";
 import { useState } from "react";
 import { Routes, Route, NavLink, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { CartProvider, useCart } from "react-use-cart";
+import { useCart } from "react-use-cart";
 import "./Header.css";
-
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
