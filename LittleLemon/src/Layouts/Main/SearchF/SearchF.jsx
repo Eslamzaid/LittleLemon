@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import MenuD from "./SearchD";
-import { useCart } from "react-use-cart";
-import { Link } from "react-router-dom";
 import Sho from "./../../../assets/Icons/shopping.png";
 import Plus from "./../../../assets/Icons/Plus.png";
-import "./SearchF.css";
 import PopUp from "../PopUp/PopUp";
+import { useCart } from "react-use-cart";
+import "./SearchF.css";
 
 function SearchF(props) {
   const [quiry, setQuiry] = useState("");
@@ -71,11 +70,11 @@ function SearchF(props) {
               itemm.name.includes(quiry)
           )
           .map((ele) => {
-            const { id, image, name, price, alt, amount, wid } = ele;
+            const { id, image, name, price, alt } = ele;
             return (
               <div key={id} className="Cards">
                 <div className="FirstPart">
-                  <img src={image} alt={alt} id="Theimgs" />
+                  <img src={image} alt={alt} id="Theimgs"/>
                 </div>
                 <div className="BottomPart">
                   <div className="BottomPartFirst">

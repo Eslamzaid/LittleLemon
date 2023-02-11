@@ -6,14 +6,12 @@ import { useState } from "react";
 import { Routes, Route, NavLink, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
-import { useCart } from "react-use-cart";
 import "./Header.css";
 
 const Header = () => {
   const [responsive, setResponsive] = useState(false);
   const [navBar, setNavbar] = useState(false);
 
-  const { addItem, totalItems } = useCart();
 
   const changeBackground = () => {
     if (window.scrollY >= 100) {
