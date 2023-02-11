@@ -6,7 +6,6 @@ const MenuD = [
         name: 'T-Sandwich',
         category: 'breakfast',
         price: 9,
-        wid: '200px'
     },
     {
         id: 2,
@@ -15,7 +14,6 @@ const MenuD = [
         name: 'Avocado sandwich',
         category: 'breakfast',
         price: 11,
-        wid: '200px'
     },
     {
         id: 3,
@@ -24,7 +22,6 @@ const MenuD = [
         name: 'Waffles',
         category: 'breakfast',
         price: 12,
-        wid: '200px'
     },
     {
         id: 4,
@@ -33,7 +30,6 @@ const MenuD = [
         name: "Egg and meat",
         category: "breakfast",
         price: 12,
-        wid: '200px'
     },
     {
         id: 5,
@@ -42,7 +38,6 @@ const MenuD = [
         name: "Kabsa",
         category: "lunch",
         price: 22,
-        wid: '200px'
     },
     {
         id: 6,
@@ -51,7 +46,6 @@ const MenuD = [
         name: "Chicken with potato",
         category: "lunch",
         price: 21,
-        wid: '200px'
     },
     {
         id: 7,
@@ -60,7 +54,6 @@ const MenuD = [
         name: "Chicken wings",
         category: "lunch",
         price: 25,
-        wid: '200px'
     },
     {
         id: 8,
@@ -69,7 +62,6 @@ const MenuD = [
         name: "Mega burger",
         category: "evening",
         price: 33,
-        wid: '200px'
     },
     {
         id: 9,
@@ -78,16 +70,14 @@ const MenuD = [
         name: "Eiffel Burger",
         category: "evening",
         price: 18,
-        wid: '200px'
     },
     {
         id: 10,
-        image: "./images/AvoBurE.png",
+        image: "./images/AvoRemo.png",
         alt: "Avocado with eggs",
         name: "Avocado with eggs",
         category: "evening",
         price: 18,
-        wid: '200px'
     },
     {
         id: 11,
@@ -96,7 +86,6 @@ const MenuD = [
         name: "Potatoes",
         category: "evening",
         price: 16,
-        wid: '200px'
     },
     {
         id: 12,
@@ -105,7 +94,6 @@ const MenuD = [
         name: "Nuts salad",
         category: "evening",
         price: 14,
-        wid: '200px'
     },
     {
         id: 13,
@@ -114,7 +102,6 @@ const MenuD = [
         name: "Salmon salad",
         category: "dinner",
         price: 35,
-        wid: '200px'
     },
     {
         id: 14,
@@ -123,7 +110,6 @@ const MenuD = [
         name: "Shawarma",
         category: "dinner",
         price: 10,
-        wid: '200px'
     },
     {
         id: 15,
@@ -132,7 +118,6 @@ const MenuD = [
         name: "Rish salad",
         category: "dinner",
         price: 40,
-        wid: '200px'
     },
 ]
 

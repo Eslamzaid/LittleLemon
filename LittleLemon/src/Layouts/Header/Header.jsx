@@ -72,31 +72,9 @@ const Header = () => {
                   isActive ? "lactive-class" : "not-active-class"
                 }
                 id="TheLinks"
-                to="/TheMenu"
-              >
-                Menu
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "lactive-class" : "not-active-class"
-                }
-                id="TheLinks"
                 to="/Reservations"
               >
                 Reservations
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "lactive-class" : "not-active-class"
-                }
-                id="TheLinks"
-                to="/Login"
-              >
-                Login
               </NavLink>
             </li>
           </div>
@@ -139,23 +117,8 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink id="TheLinksPh" to="/TheMenu">
-                    Menu
-                  </NavLink>
-                </li>
-                <li>
                   <NavLink id="TheLinksPh" to="/Reservations">
                     Reservations
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink id="TheLinksPh" to="/Order">
-                    Order
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink id="TheLinksPh" to="/Login">
-                    Login
                   </NavLink>
                 </li>
               </div>
@@ -166,10 +129,8 @@ const Header = () => {
         </div>
       </nav>
       <Routes>
-        <Route path="/AboutUs" element={<About />} />
-        <Route path="/TheMenu" element={<Menu />} />
-        <Route path="/Order" element={<Cart />} />
         <Route path="/" element={<Main />} />
+        <Route path="/AboutUs" element={<About />} />
       </Routes>
     </>
   );

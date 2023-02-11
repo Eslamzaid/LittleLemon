@@ -1,4 +1,4 @@
-:root{
+:root {
     --bac: #F4CE14;
     --trad: 4em;
 }
@@ -71,14 +71,14 @@
     padding: 1.5rem 1.5rem;
 }
 
-.SSection > button:focus {
+.SSection>button:focus {
     font-size: 1.5rem;
     font-weight: 700;
     padding: 0rem;
     transition: 0.2s;
 }
 
-.SSection > div {
+.SSection>div {
     margin-left: auto;
     width: 15rem;
     height: fit-content;
@@ -94,13 +94,24 @@
     text-decoration: none;
     color: black;
     cursor: pointer;
+    transition: ease-in-out 0.2s;
 }
 
-.LeftSide{
-    display: flex;
+.TheLin:hover {
+    background-color: #ffffff;
+    transition: ease-in-out 0.2s;
 }
 
-[aria-pressed="false"]{
+.LeftSideCu {
+    cursor: pointer;
+}
+
+.LeftSideCu:hover {
+    transition: ease-in-out 0.2s;
+    background-color: #ffffff;
+}
+
+[aria-pressed="false"] {
     background-color: white;
     border: 1px solid transparent;
     cursor: pointer;
@@ -130,7 +141,7 @@
 .TSection {
     display: grid;
     grid-template-columns: repeat(4, 0.3fr);
-    grid-template-rows: minmax(1fr) ;
+    grid-template-rows: minmax(1fr);
     border-top-left-radius: var(--trad);
     border-top-right-radius: var(--trad);
     overflow: hidden;
@@ -142,14 +153,14 @@
 
 #Theimgs {
     pointer-events: none;
-    /* width: 12rem; */
+    width: 250px;
 }
 
-#Plus{
+#Plus {
     cursor: pointer;
 }
 
-.Cards{
+.Cards {
     background-color: white;
     margin: 1rem 1rem;
     border-radius: 1em;
@@ -159,7 +170,15 @@
     justify-content: space-between;
 }
 
-.BottomPart{
+.FirstPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black;
+    height: 100%;
+}
+
+.BottomPart {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -174,7 +193,7 @@
     margin-left: 2rem;
 }
 
-.BottomPartSecond > button{
+.BottomPartSecond>button {
     background-color: transparent;
     border: none;
     margin-right: 1rem;
@@ -184,6 +203,6 @@
     border-left: 1px solid black;
 }
 
-.invisible{
+.invisible {
     border: none;
 }

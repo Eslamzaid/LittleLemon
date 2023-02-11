@@ -59,8 +59,12 @@ function SearchF(props) {
             aria-pressed={`${tru}`}
           >
             <div className="LeftSide">
-              <h3>{totalItems == 0 ? "Cart is empty" : "Check out"}</h3>
-              <h3>{totalItems == 0 ? "(0)" : `(${totalItems})`}</h3>
+              <h3 className="LeftSideCu">
+                {totalItems == 0 ? "Cart is empty" : "Check out"}
+              </h3>
+              <h3 className="LeftSideCu">
+                {totalItems == 0 ? "" : `(${totalItems})`}
+              </h3>
             </div>
             <img src={Sho} id="Shopping" />
           </div>
@@ -77,8 +81,8 @@ function SearchF(props) {
             const { id, image, name, price, alt, amount, wid } = ele;
             return (
               <div key={id} className="Cards">
-                <div>
-                  <img src={image} width={`${wid}`} alt={alt} id="Theimgs" />
+                <div className="FirstPart">
+                  <img src={image} alt={alt} id="Theimgs" />
                 </div>
                 <div className="BottomPart">
                   <div className="BottomPartFirst">
