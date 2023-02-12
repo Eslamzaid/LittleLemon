@@ -3,9 +3,9 @@ import BookingForm from './BookingPage/BookingForm'
 
 function BookingPage() {
     return (
-        <div>
+        <article>
             <BookingForm/>
-        </div>
+        </article>
     )
 }
 
