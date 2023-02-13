@@ -2,26 +2,32 @@ const MenuD = [
     {
         time: 1,
         when: 'am',
+        cato: 'firstDay'
     },
     {
         time: 2,
         when: 'am',
+        cato: 'firstDay'
     },
     {
         time: 3,
         when: 'am',
+        cato: 'firstDay'
     },
     {
         time: 4,
         when: 'am',
+        cato: 'firstDay'
     },
     {
         time: 5,
         when: 'am',
+        cato: 'SecondDay'
     },
     {
         time: 6,
         when: 'am',
+        cato: 'SecondDay'
     },
     {
         time: 2,

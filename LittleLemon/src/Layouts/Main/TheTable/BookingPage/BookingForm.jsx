@@ -1,51 +1,99 @@
 import React, { useState } from "react";
 import MenuD from "./../Sources";
-import DatePicker from "react-date-picker";
+import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
+import ThePizza from "./../../../../assets/Main/thePizza.png";
+import BlackChare from "./../../../../assets/Main/BlackChare.png";
+import WhiteChare from "./../../../../assets/Main/WhiteChare (1).png";
+import WeirdChare from "./../../../../assets/Main/WeirdChare.png";
+import BlackArrow from "./../../../../assets/Icons/BlackArrow.png";
+import Special from "./../../../../assets/Icons/Untitled design (11) 1.png";
+import WhiteArrow from "./../../../../assets/Icons/WhiteArrow.png";
+import Info from "./../../../../assets/Icons/Info.png";
 import "./Table.css";
 
 function BookingForm() {
   const [time, setTime] = useState(MenuD);
-  const [value, onChange] = useState(new Date());
-  const date = new Date();
-  const daHours = date.getHours();
-  const daMin = date.getMinutes();
-  const daSec = date.getSeconds();
-  const deDay = date.getDay();
-  const deMon = date.getMonth();
-  const deYear = date.getFullYear();
+  const [date, setDate] = useState();
+  const datee = new Date(2023, 2, 13);
+  const daHours = datee.getHours();
+  const daMin = datee.getMinutes();
+  const daSec = datee.getSeconds();
+  const deDay = datee.getDay();
+  const deMon = datee.getMonth();
+  const deYear = datee.getFullYear();
   return (
-    <section className="fathofAll">
-      <h1>Book a table</h1>
-      <DatePicker
-        required
-        calendarType="Arabic"
-        defaultView="month"
-        onChange={onChange}
-        value={value}
-      />
-      {/* {value == 'Mon Feb 13 2023 11:37:28 GMT+0300 (Arabian Standard Time)' ? <h1>Yes</h1> : <h1>No</h1>} */}
-      {value == `` ? <h1>Yes</h1> : <h1>No</h1>}
-      {console.log(value)}
-      <div className="calender">
-        <form>
-          <label htmlFor="Thecal">Pick a date</label>
-          <input id="Thecal" type="date" />
-        </form>
-      </div>
-      <div>
-        {time.map((ele, ind) => {
-          const { time, when } = ele;
-          // console.log(time);
-          return (
-            <div key={ind}>
-              <h1>
-                {time} {when}
-              </h1>
+    <article className="fathofAll">
+      <section className="FirstSection">
+        <img src={ThePotatoes} alt="Potato" />
+        <div className="TheTextt">
+          <h2>Book Your Table Now</h2>
+          <p>Personalize your journey</p>
+        </div>
+        <img src={ThePizza} alt="Pizza" />
+      </section>
+
+      {/*! Second Part */}
+      <section className="SecondSection">
+        <div className="FGroup">
+          <img src={Info} alt="Information" id="MakeItLeft" />
+          <div className="OuterShell">
+            <div className="TheContent1">
+              <img src={BlackChare} alt="Black chare" className="ChairImg" />
+              <div className="TheText">
+                <h2 id="TheH2">
+                  VVIP <img src={Special} alt="White chare" id="SppnImg" />
+                </h2>
+
+                <p className="ThenoicyP">
+                  VVIP or V.V.I.P.) is also used, especially with reference to
+                  VIPs with very high rank or spending power. It is used
+                  especially when anyone can buy VIP treatment,{" "}
+                </p>
+              </div>
             </div>
-          );
-        })}
-      </div>
-    </section>
+            <button className="TheBigButton">
+              <span id="ContinueText">Continue</span>
+              <img src={WhiteArrow} alt="Black arrow" />
+            </button>
+          </div>
+        </div>
+        <div className="TheContent2">
+          <img src={Info} alt="Information" id="MakeItLeft" />
+          <div>
+            <img src={WeirdChare} alt="White chare" />
+            <div>
+              <h2>VIP</h2>
+              <p>
+                VVIP or V.V.I.P.) is also used, especially with reference to
+                VIPs with very high rank or spending power. It is used
+                especially when anyone can buy VIP treatment,{" "}
+              </p>
+            </div>
+            <button>
+              <img src={BlackArrow} />
+            </button>
+          </div>
+        </div>
+        <div className="TheContent3">
+          <img src={Info} alt="Information" id="MakeItLeft" />
+          <div>
+            <img src={WhiteChare} alt="Pale color chare" />
+            <div>
+              <h2>Premium</h2>
+              <p>
+                VVIP or V.V.I.P.) is also used, especially with reference to
+                VIPs with very high rank or spending power. It is used
+                especially when anyone can buy VIP treatment,{" "}
+              </p>
+            </div>
+            <button>
+              <img src={BlackArrow} />
+            </button>
+          </div>
+        </div>
+      </section>
+      <section></section>
+    </article>
   );
 }
 

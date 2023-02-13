@@ -2,6 +2,111 @@
 
 .fathofAll{
     margin: 10rem 0rem;
+    border: 1px solid red;
+}
+
+/** The First section of the first group */
+
+.FirstSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid purple;
+    background-color: #E8C46A;
+}   
+
+.FirstSection > img:first-of-type{
+    width: 12em;
+    position: relative;
+    rotate: 50deg;
+    left: -9vh;
+    top: 3em;
+    opacity: 0.8;
+}
+
+.TheTextt{
+    padding: 2em;
     text-align: center;
 }
 
+.TheTextt > h2 {
+    font-size: xx-large;   
+    font-weight: 600;
+}
+
+.TheTextt > p {
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+/** Second section of the first group  */
+
+.SecondSection{
+    background-color: #E8C46A;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem ;
+    gap: 5em;
+}
+
+.OuterShell{
+    border: 1px solid black;
+    padding: 1.2em;
+}
+
+.FGroup{
+    /* border: 1px solid black; */
+}
+
+/*? First Group  */
+
+.ChairImg{
+    position: relative;
+    width: 9em;
+    bottom: 0.2em;
+}
+
+#MakeItLeft{
+    float: right;
+}
+
+.TheContent1{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35em;
+    margin-top: 5vb;
+}
+
+.TheText {
+    margin-right: 2rem;
+}
+
+#TheH2{
+    font-size: 4.4em;
+    text-align: left;
+}
+
+#SppnImg{
+    position: relative;
+    top: 10px;
+}
+
+
+.ThenoicyP{
+    color: #707070;
+    opacity: 0.8;
+    text-align: left;
+    width: 20.5em;
+    font-size: 0.9rem;
+}
+
+.TheBigButton{
+    background-color: black;
+}
+
+#ContinueText{
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+}
