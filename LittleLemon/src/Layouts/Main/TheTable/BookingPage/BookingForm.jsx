@@ -12,15 +12,9 @@ import Info from "./../../../../assets/Icons/Info.png";
 import "./Table.css";
 
 function BookingForm() {
-  const [time, setTime] = useState(MenuD);
-  const [date, setDate] = useState();
-  const datee = new Date(2023, 2, 13);
-  const daHours = datee.getHours();
-  const daMin = datee.getMinutes();
-  const daSec = datee.getSeconds();
-  const deDay = datee.getDay();
-  const deMon = datee.getMonth();
-  const deYear = datee.getFullYear();
+  const [VVIP, setVVIP] = useState(false);
+  const [VIP, setVIP] = useState(false);
+  const [Pre, setPre] = useState(false);
   return (
     <article className="fathofAll">
       <section className="FirstSection">
@@ -35,15 +29,19 @@ function BookingForm() {
       {/*! Second Part */}
       <section className="SecondSection">
         <div className="FGroup">
-          <img src={Info} alt="Information" id="MakeItLeft" />
           <div className="OuterShell">
+            <img src={Info} alt="Information" id="MakeItLeft" />
+            <div className="HideMeBut">
+              Very important person, A very important person or personage is a
+              person who is accorded special privileges due to their high social
+              status, influence or importance.
+            </div>
             <div className="TheContent1">
               <img src={BlackChare} alt="Black chare" className="ChairImg" />
               <div className="TheText">
                 <h2 id="TheH2">
                   VVIP <img src={Special} alt="White chare" id="SppnImg" />
                 </h2>
-
                 <p className="ThenoicyP">
                   VVIP or V.V.I.P.) is also used, especially with reference to
                   VIPs with very high rank or spending power. It is used
@@ -53,41 +51,54 @@ function BookingForm() {
             </div>
             <button className="TheBigButton">
               <span id="ContinueText">Continue</span>
-              <img src={WhiteArrow} alt="Black arrow" />
+              <img src={WhiteArrow} alt="Black arrow" id="BlackArrow" />
             </button>
           </div>
         </div>
-        <div className="TheContent2">
-          <img src={Info} alt="Information" id="MakeItLeft" />
-          <div>
-            <img src={WeirdChare} alt="White chare" />
-            <div>
-              <h2>VIP</h2>
-              <p>
-                VVIP or V.V.I.P.) is also used, especially with reference to
-                VIPs with very high rank or spending power. It is used
-                especially when anyone can buy VIP treatment,{" "}
-              </p>
+        <div className="FGroup">
+          <div className="OuterShell">
+            <img src={Info} alt="Information" id="MakeItLeft" />
+            <div className="HideMeBut2">
+              VIP or very important person, usually of being famous or
+              influential.
             </div>
-            <button>
-              <img src={BlackArrow} />
+            <div className="TheContent1">
+              <img src={WeirdChare} alt="Pale chare" className="ChairImg" />
+              <div className="TheText">
+                <h2 id="TheH2">VIP</h2>
+                <p className="ThenoicyP">
+                  VVIP or V.V.I.P.) is also used, especially with reference to
+                  VIPs with very high rank or spending power. It is used
+                  especially when anyone can buy VIP treatment,{" "}
+                </p>
+              </div>
+            </div>
+            <button className="TheBigButton2">
+              <span id="ContinueText2">Continue</span>
+              <img src={BlackArrow} alt="Black arrow" id="WhiteandWeirdChare" />
             </button>
           </div>
         </div>
-        <div className="TheContent3">
-          <img src={Info} alt="Information" id="MakeItLeft" />
-          <div>
-            <img src={WhiteChare} alt="Pale color chare" />
-            <div>
-              <h2>Premium</h2>
-              <p>
-                VVIP or V.V.I.P.) is also used, especially with reference to
-                VIPs with very high rank or spending power. It is used
-                especially when anyone can buy VIP treatment,{" "}
-              </p>
+        <div className="FGroup">
+          <div className="OuterShell">
+            <img src={Info} alt="Information" id="MakeItLeft" />
+            <div className="HideMeBut3">
+              This will fit <strong>all</strong> your regular needs
             </div>
-            <button>
-              <img src={BlackArrow} />
+            <div className="TheContent1">
+              <img src={WhiteChare} alt="Black chare" className="ChairImg" />
+              <div className="TheText">
+                <h2 id="TheH2">Premium</h2>
+                <p className="ThenoicyP">
+                  VVIP or V.V.I.P.) is also used, especially with reference to
+                  VIPs with very high rank or spending power. It is used
+                  especially when anyone can buy VIP treatment,{" "}
+                </p>
+              </div>
+            </div>
+            <button className="TheBigButton2">
+              <span id="ContinueText2">Continue</span>
+              <img src={BlackArrow} alt="White arrow" id="WhiteandWeirdChare" />
             </button>
           </div>
         </div>

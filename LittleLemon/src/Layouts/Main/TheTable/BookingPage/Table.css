@@ -1,21 +1,19 @@
 /*! Father of all */
 
-.fathofAll{
+.fathofAll {
     margin: 10rem 0rem;
-    border: 1px solid red;
 }
 
 /** The First section of the first group */
 
-.FirstSection{
+.FirstSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid purple;
     background-color: #E8C46A;
-}   
+}
 
-.FirstSection > img:first-of-type{
+.FirstSection>img:first-of-type {
     width: 12em;
     position: relative;
     rotate: 50deg;
@@ -24,53 +22,54 @@
     opacity: 0.8;
 }
 
-.TheTextt{
+.TheTextt {
     padding: 2em;
     text-align: center;
 }
 
-.TheTextt > h2 {
-    font-size: xx-large;   
+.TheTextt>h2 {
+    font-size: 3em;
     font-weight: 600;
 }
 
-.TheTextt > p {
+.TheTextt>p {
     color: #FFFFFF;
     opacity: 0.7;
 }
 
 /** Second section of the first group  */
 
-.SecondSection{
+.SecondSection {
     background-color: #E8C46A;
     display: flex;
     justify-content: space-evenly;
-    padding: 1rem ;
+    align-items: center;
+    padding: 1rem;
     gap: 5em;
+    height: 25em;
 }
 
-.OuterShell{
+.OuterShell {
+    text-align: center;
     border: 1px solid black;
-    padding: 1.2em;
 }
 
-.FGroup{
-    /* border: 1px solid black; */
-}
 
 /*? First Group  */
 
-.ChairImg{
+.ChairImg {
     position: relative;
     width: 9em;
     bottom: 0.2em;
 }
 
-#MakeItLeft{
+#MakeItLeft {
     float: right;
+    margin: 0.5em;
+    cursor: help;
 }
 
-.TheContent1{
+.TheContent1 {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -82,18 +81,18 @@
     margin-right: 2rem;
 }
 
-#TheH2{
+#TheH2 {
     font-size: 4.4em;
     text-align: left;
 }
 
-#SppnImg{
+#SppnImg {
     position: relative;
     top: 10px;
 }
 
 
-.ThenoicyP{
+.ThenoicyP {
     color: #707070;
     opacity: 0.8;
     text-align: left;
@@ -101,12 +100,120 @@
     font-size: 0.9rem;
 }
 
-.TheBigButton{
+.TheBigButton {
     background-color: black;
+    margin: 1rem 0em;
+    padding: 0.5em;
+    width: 78%;
+    text-align: center;
+    cursor: pointer;
 }
 
-#ContinueText{
-    color: white;
-    font-size: xx-large;
+.TheBigButton2 {
+    background-color: white;
+    margin: 1rem 0em;
+    padding: 1em;
+    width: 78%;
     text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+#ContinueText2 {
+    font-size: x-large;
+    font-weight: 550;
+    /* position: relative;
+    bottom: 0.2em; */
+    cursor: pointer;
+}
+
+#WhiteandWeirdChare {
+    margin-left: 1em;
+    position: relative;
+    top: 0.2em;
+    cursor: pointer;
+}
+
+
+#ContinueText {
+    color: white;
+    font-size: x-large;
+    font-weight: 550;
+    position: relative;
+    bottom: 0.2em;
+    cursor: pointer;
+}
+
+#BlackArrow {
+    position: relative;
+    top: 0.45em;
+    cursor: pointer;
+}
+
+#MakeItLeft {
+    position: relative;
+    /* border-bottom: 1px dotted black; */
+    width: 1.8em;
+}
+
+
+.HideMeBut {
+    display: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    width: 20em;
+    z-index: 10000;
+    position: absolute;
+    left: 45.1em;
+    padding: 1em;
+    font-size: small;
+    transition: ease-in 1s;
+}
+
+#MakeItLeft:hover+.HideMeBut {
+    display: block;
+    transition: ease-in 1s;
+}
+
+.HideMeBut2 {
+    display: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    width: 20em;
+    z-index: 10000;
+    position: absolute;
+    left: 95.2em;
+    padding: 1em;
+    font-size: small;
+    transition: ease-in 1s;
+}
+
+#MakeItLeft:hover+.HideMeBut2 {
+    display: block;
+    transition: ease-in 1s;
+}
+
+.HideMeBut3 {
+    display: none;
+    background-color: white;
+    -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.4);
+    width: 20em;
+    z-index: 10000;
+    position: absolute;
+    right: 15px;
+    bottom: -238.3em;
+    padding: 1em;
+    font-size: small;
+    transition: ease-in 1s;
+}
+
+#MakeItLeft:hover+.HideMeBut3 {
+    display: block;
+    transition: ease-in 1s;
 }
