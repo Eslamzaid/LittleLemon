@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import ReactHover from "react-hover";
-import MenuD from "./../Sources";
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
@@ -10,18 +8,13 @@ import BlackArrow from "./../../../../assets/Icons/BlackArrow.png";
 import Special from "./../../../../assets/Icons/Untitled design (11) 1.png";
 import WhiteArrow from "./../../../../assets/Icons/WhiteArrow.png";
 import Info from "./../../../../assets/Icons/Info.png";
+import Tippy from '@tippyjs/react/headless'
 import "./Table.css";
 
 function BookingForm() {
   const [VVIP, setVVIP] = useState(false);
   const [VIP, setVIP] = useState(false);
   const [Pre, setPre] = useState(false);
-
-  const optionsCursorTrueWithMargin = {
-    followCursor:true,
-    shiftX:20,
-    shiftY:0
-}
 
   return (
     <article className="fathofAll">
@@ -38,13 +31,12 @@ function BookingForm() {
       <section className="SecondSection">
         <div className="FGroup">
           <div className="OuterShell">
-            
             <img src={Info} alt="Information" id="MakeItLeft" />
-            <div className="HideMeBut">
+            {/* <div className="HideMeBut">
               Very important person, A very important person or personage is a
               person who is accorded special privileges due to their high social
               status, influence or importance.
-            </div>
+            </div> */}
             <div className="TheContent1">
               <img src={BlackChare} alt="Black chare" className="ChairImg" />
               <div className="TheText">
@@ -67,10 +59,10 @@ function BookingForm() {
         <div className="FGroup">
           <div className="OuterShell">
             <img src={Info} alt="Information" id="MakeItLeft" />
-            <div className="HideMeBut2">
+            {/* <div className="HideMeBut2">
               VIP or very important person, usually of being famous or
               influential.
-            </div>
+            </div> */}
             <div className="TheContent1">
               <img src={WeirdChare} alt="Pale chare" className="ChairImg" />
               <div className="TheText">
@@ -91,9 +83,9 @@ function BookingForm() {
         <div className="FGroup">
           <div className="OuterShell">
             <img src={Info} alt="Information" id="MakeItLeft" />
-            <div className="HideMeBut3">
+            {/* <div className="HideMeBut3">
               This will fit <strong>all</strong> your regular needs
-            </div>
+            </div> */}
             <div className="TheContent1">
               <img src={WhiteChare} alt="Black chare" className="ChairImg" />
               <div className="TheText">
