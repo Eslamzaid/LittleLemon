@@ -367,17 +367,45 @@ function BookingForm(props) {
             <table className="TheSmallTable2">
               <tbody>
                 <tr>
-                  <td>Fast</td>
-                  <td>Hot and tasty</td>
+                  <td>
+                    <img
+                      src={Check}
+                      className="accordion-flush"
+                      alt="Fast shipping"
+                    />
+                    Fast
+                  </td>
+                  <td>
+                    <img
+                      src={Check}
+                      className="accordion-flush"
+                      alt="Fast shipping"
+                    />
+                    Hot and tasty
+                  </td>
                 </tr>
                 <tr>
-                  <td>Free</td>
-                  <td>City to city</td>
+                  <td>
+                    <img
+                      src={Check}
+                      className="accordion-flush"
+                      alt="Fast shipping"
+                    />
+                    Free
+                  </td>
+                  <td>
+                    <imgw
+                      src={Check}
+                      className="accordion-flush"
+                      alt="Fast shipping"
+                    />
+                    City to city
+                  </td>
                 </tr>
               </tbody>
             </table>
-            <button onClick={props.sendItUp}>
-              <img src={ToUp} alt="Go up" />
+            <button className="TheLastButtton" onClick={props.sendItUp}>
+              <img src={ToUp} id="SOWhat" alt="Go up" />
             </button>
           </div>
         </div>

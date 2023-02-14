@@ -1,6 +1,7 @@
 /*! Father of all */
 
 .fathofAll {
+    margin-bottom: 10em;
     overflow: hidden;
 }
 
@@ -69,7 +70,7 @@
 .ChairImg {
     transition: ease-in-out 0.2s;
     position: relative;
-    width: 9em;
+    width: 7em;
     bottom: 0.2em;
 }
 
@@ -88,16 +89,16 @@
 }
 
 .TheText {
-    margin-right: 2rem;
+    margin-right: 1.7rem;
 }
 
 #TheH2 {
-    font-size: 4.4em;
+    font-size: 4em;
     text-align: left;
 }
 
 #TheH22 {
-    font-size: 4.4em;
+    font-size: 4em;
     text-align: left;
     color: white;
 }
@@ -112,7 +113,7 @@
     color: #707070;
     opacity: 0.8;
     text-align: left;
-    width: 20.5em;
+    width: 20em;
     font-size: 0.9rem;
 }
 
@@ -219,6 +220,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 40em;
+    margin-top: 2em;
 }
 
 .TheLastFirstDiv {
@@ -229,7 +231,7 @@
     justify-content: space-between;
     text-align: center;
     padding: 1em;
-
+    margin-bottom: 1em;
 }
 
 .TheLastFirstDiv>h3 {
@@ -427,7 +429,7 @@
     cursor: pointer;
 }
 
-#SomeCursorsPls{
+#SomeCursorsPls {
     background-color: red;
     cursor: pointer;
 }
@@ -445,7 +447,40 @@
 
 /*? Third section  */
 
-.FSSeciont{
+.FSSeciont {
     text-align: center;
     border: 1px solid black;
+
+}
+
+.TheSmallTable2 {
+    /* margin: 3em 0em; */
+    text-align: center;
+    width: 100%;
+    padding-left: 4em;
+    text-align: center;
+    /* background-color: red; */
+    height: 10em;
+    font-size: large;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.accordion-flush {
+    position: relative;
+    top: 2mm;
+    right: 2mm;
+}
+
+.TheLastButtton {
+    border: none;
+    background-color: white;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+#SOWhat {
+    width: 2em;
+    margin-top: 1em;
+    cursor: pointer;
 }
