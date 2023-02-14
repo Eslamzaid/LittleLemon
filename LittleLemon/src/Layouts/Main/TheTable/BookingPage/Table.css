@@ -38,6 +38,7 @@
     color: #FFFFFF;
     opacity: 0.7;
 }
+
 /** Second section of the first group  */
 
 .SecondSection {
@@ -155,4 +156,29 @@
     position: relative;
     width: 1.8em;
 }
+
+.box {
+    width: 30em;
+    background-color: rgb(243, 239, 239);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.boox {
+    width: 30em;
+    background-color: rgb(243, 239, 239);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+.booox {
+    width: 30em;
+    text-align: center;
+    background-color: rgb(243, 239, 239);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+
+/*! Third section  */
 

@@ -8,14 +8,34 @@ import BlackArrow from "./../../../../assets/Icons/BlackArrow.png";
 import Special from "./../../../../assets/Icons/Untitled design (11) 1.png";
 import WhiteArrow from "./../../../../assets/Icons/WhiteArrow.png";
 import Info from "./../../../../assets/Icons/Info.png";
-import Tippy from '@tippyjs/react/headless'
+import Cooker from "./../../../../assets/Main/Cooker.png";
+import CarHome from "./../../../../assets/Main/CarHome.png";
+import LittleLemon from "./../../../../assets/Icons/SmallLemon.png";
+import Tippy from "@tippyjs/react/headless";
 import "./Table.css";
 
 function BookingForm() {
-  const [VVIP, setVVIP] = useState(false);
-  const [VIP, setVIP] = useState(false);
-  const [Pre, setPre] = useState(false);
+  var [VVIP, setVVIP] = useState(false);
+  var [VIP, setVIP] = useState(false);
+  var [Pre, setPre] = useState(false);
 
+  const handleClick1 = () => {
+    setVVIP(() => (VVIP = true));
+    setVIP(() => (VIP = false));
+    setPre(() => (Pre = false));
+  };
+  const handleClick2 = () => {
+    setVVIP(() => (VVIP = false));
+    setVIP(() => (VIP = true));
+    setPre(() => (Pre = false));
+  };
+  const handleClick3 = () => {
+    setVVIP(() => (VVIP = false));
+    setVIP(() => (VIP = false));
+    setPre(() => (Pre = true));
+  };
+
+  console.log(VVIP, VIP, Pre)
   return (
     <article className="fathofAll">
       <section className="FirstSection">
@@ -31,12 +51,17 @@ function BookingForm() {
       <section className="SecondSection">
         <div className="FGroup">
           <div className="OuterShell">
-            <img src={Info} alt="Information" id="MakeItLeft" />
-            {/* <div className="HideMeBut">
-              Very important person, A very important person or personage is a
-              person who is accorded special privileges due to their high social
-              status, influence or importance.
-            </div> */}
+            <Tippy
+              render={(attrs) => (
+                <div className="box" tabIndex="-1" {...attrs}>
+                  Very important person, A very important person or personage is
+                  a person who is accorded special privileges due to their high
+                  social status, influence or importance.
+                </div>
+              )}
+            >
+              <img src={Info} alt="Information" id="MakeItLeft" />
+            </Tippy>
             <div className="TheContent1">
               <img src={BlackChare} alt="Black chare" className="ChairImg" />
               <div className="TheText">
@@ -50,7 +75,7 @@ function BookingForm() {
                 </p>
               </div>
             </div>
-            <button className="TheBigButton">
+            <button className="TheBigButton" onClick={handleClick1}>
               <span id="ContinueText">Continue</span>
               <img src={WhiteArrow} alt="Black arrow" id="BlackArrow" />
             </button>
@@ -58,11 +83,16 @@ function BookingForm() {
         </div>
         <div className="FGroup">
           <div className="OuterShell">
-            <img src={Info} alt="Information" id="MakeItLeft" />
-            {/* <div className="HideMeBut2">
-              VIP or very important person, usually of being famous or
-              influential.
-            </div> */}
+            <Tippy
+              render={(atttrs) => (
+                <div className="boox" tabIndex="-2" {...atttrs}>
+                  VIP or very important person, usually of being famous or
+                  influential.
+                </div>
+              )}
+            >
+              <img src={Info} alt="Information" id="MakeItLeft" />
+            </Tippy>
             <div className="TheContent1">
               <img src={WeirdChare} alt="Pale chare" className="ChairImg" />
               <div className="TheText">
@@ -70,11 +100,11 @@ function BookingForm() {
                 <p className="ThenoicyP">
                   VVIP or V.V.I.P.) is also used, especially with reference to
                   VIPs with very high rank or spending power. It is used
-                  especially when anyone can buy VIP treatment,{" "}
+                  especially when anyone can buy VIP treatment.{" "}
                 </p>
               </div>
             </div>
-            <button className="TheBigButton2">
+            <button className="TheBigButton2" onClick={handleClick2}>
               <span id="ContinueText2">Continue</span>
               <img src={BlackArrow} alt="Black arrow" id="WhiteandWeirdChare" />
             </button>
@@ -82,10 +112,15 @@ function BookingForm() {
         </div>
         <div className="FGroup">
           <div className="OuterShell">
-            <img src={Info} alt="Information" id="MakeItLeft" />
-            {/* <div className="HideMeBut3">
-              This will fit <strong>all</strong> your regular needs
-            </div> */}
+            <Tippy
+              render={(attttrs) => (
+                <div className="booox" tabIndex="-3" {...attttrs}>
+                  This will fit <strong>all</strong> your regular needs
+                </div>
+              )}
+            >
+              <img src={Info} alt="Information" id="MakeItLeft" />
+            </Tippy>
             <div className="TheContent1">
               <img src={WhiteChare} alt="Black chare" className="ChairImg" />
               <div className="TheText">
@@ -97,14 +132,23 @@ function BookingForm() {
                 </p>
               </div>
             </div>
-            <button className="TheBigButton2">
+            <button className="TheBigButton2" onClick={handleClick3}>
               <span id="ContinueText2">Continue</span>
               <img src={BlackArrow} alt="White arrow" id="WhiteandWeirdChare" />
             </button>
           </div>
         </div>
       </section>
-      <section></section>
+
+      {/*! Third section  */}
+      <section>
+        <h3>Book a table</h3>
+        <div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </section>
     </article>
   );
 }
