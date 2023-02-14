@@ -2,10 +2,10 @@ import React from 'react'
 import BookingForm from './BookingPage/BookingForm'
 import './BookingPage.css'
 
-function BookingPage() {
+function BookingPage(props) {
     return (
         <article className='TheEnorumusFather'>
-            <BookingForm/>
+            <BookingForm sendItUp={props.connectMenu}/>
         </article>
     )
 }

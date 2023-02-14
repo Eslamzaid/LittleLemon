@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { Children, useEffect, useState } from "react";
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
 import WhiteChare from "./../../../../assets/Main/WhiteChare (1).png";
-import WeirdChare from "./../../../../assets/Main/WeirdChare.png";
 import BlackArrow from "./../../../../assets/Icons/BlackArrow.png";
 import Special from "./../../../../assets/Icons/Untitled design (11) 1.png";
 import WhiteArrow from "./../../../../assets/Icons/WhiteArrow.png";
@@ -12,13 +11,40 @@ import BlackIcon from "./../../../../assets/Icons/BlackIcon.png";
 import Cooker from "./../../../../assets/Main/Cooker.png";
 import CarHome from "./../../../../assets/Main/CarHome.png";
 import LittleLemon from "./../../../../assets/Icons/SmallLemon.png";
+import X from "./../../../../assets/Icons/Addiction.png";
+import M from "./../../../../assets/Icons/Substraction.png";
+import ToUp from "./../../../../assets/Icons/ToUp.png";
+import Check from "./../../../../assets/Icons/Group.png";
 import Tippy from "@tippyjs/react/headless";
 import "./Table.css";
 
-function BookingForm() {
+function BookingForm(props) {
   var [VVIP, setVVIP] = useState(false);
   var [VIP, setVIP] = useState(false);
   var [Pre, setPre] = useState(false);
+  const [numGuests, setNumGuests] = useState(1);
+  const date = new Date();
+  const hanleInc = () => {
+    // e.preventdefault()
+    if (numGuests >= 12) {
+      setNumGuests(12);
+    } else {
+      setNumGuests(() => numGuests + 1);
+    }
+  };
+
+  const hanleDec = () => {
+    // e.preventdefault()
+    if (numGuests <= 1) {
+      setNumGuests(1);
+    } else {
+      setNumGuests(() => numGuests - 1);
+    }
+  };
+
+  const handleSumbit = (e) => {
+    e.preventDefault();
+  };
 
   const handleClick1 = () => {
     setVVIP(() => !VVIP);
@@ -36,7 +62,6 @@ function BookingForm() {
     setPre(() => !Pre);
   };
 
-  console.log(VVIP, VIP, Pre);
   return (
     <article className="fathofAll">
       <section className="FirstSection">
@@ -178,12 +203,183 @@ function BookingForm() {
       </section>
 
       {/*! Third section  */}
-      <section>
-        <h3>Book a table</h3>
-        <div>
-          <div></div>
-          <div></div>
-          <div></div>
+      <section className="TheLast">
+        <div className="TheLastFirstDiv">
+          <h3>Book a table</h3>
+          <img src={LittleLemon} alt="Little lemon" id="smallLemon" />
+        </div>
+        <div className="TheContainer">
+          <div className="FirstOf1">
+            <img src={Cooker} alt="A woman cooking" />
+            <h2>Our core values</h2>
+            <p>We care about</p>
+            <table className="TheSmallTable">
+              <tbody>
+                <tr>
+                  <td>Integrity</td>
+                  <td>Boldness</td>
+                </tr>
+                <tr>
+                  <td>Honesty</td>
+                  <td>Trust</td>
+                </tr>
+                <tr>
+                  <td>Accountability</td>
+                  <td>immaculation</td>
+                </tr>
+                <tr>
+                  <td>Passion</td>
+                  <td>Fun</td>
+                </tr>
+              </tbody>
+            </table>
+            <div className="TheStepFatherOfButton">
+              <button id="TheReadMoreBu">READ MORE</button>
+            </div>
+          </div>
+          {/*             Second part               */}
+          <div>
+            <form onSubmit={handleSumbit} className="TheSeconddPart">
+              <div className="NumGuests">
+                <label htmlFor="people" className="HowMany">
+                  How many People:
+                </label>
+                <div className="JustCheck">
+                  <button
+                    type="button"
+                    className="TheIncDecButton"
+                    id="TheInce"
+                    onClick={hanleInc}
+                  >
+                    <img
+                      width="23px"
+                      src={X}
+                      alt="Add guest"
+                      id="MakeMeACursonr"
+                    />
+                  </button>
+                  <input
+                    id="people"
+                    readOnly
+                    required
+                    value={numGuests}
+                  ></input>
+                  <button
+                    className="TheIncDecButton"
+                    type="button"
+                    onClick={hanleDec}
+                  >
+                    <img src={M} alt="Add guest" id="MakeMeACursonr" />
+                  </button>
+                </div>
+              </div>
+              <div className="PickUpADate">
+                <label id="Date" htmlFor="Date">
+                  Date
+                </label>
+                <input
+                  required
+                  className="TheInputDate"
+                  type="date"
+                  min="2023-02-15"
+                  max="2023-04-01"
+                  name="Date"
+                />
+              </div>
+              {/* The time */}
+              <div className="ChooseTime">
+                <label className="TheTime" htmlFor="Time">
+                  Time
+                </label>
+                <input
+                  className="TheTiemINput"
+                  required
+                  type="time"
+                  min="09:00"
+                  max="18:00"
+                />
+              </div>
+              <div className="TheOccastion">
+                <label htmlFor="Anni" className="occasion">
+                  Your lovely occasion
+                </label>
+                <div>
+                  <input
+                    required
+                    type="radio"
+                    id="occa1"
+                    className="BeCool"
+                    name="occa"
+                  />
+                  <label htmlFor="occa1" id="MakeMeACursonr">
+                    Birthday
+                  </label>
+                </div>
+                <div>
+                  <input
+                    required
+                    type="radio"
+                    id="occa2"
+                    className="BeCool"
+                    name="occa"
+                  />
+                  <label htmlFor="occa2" id="MakeMeACursonr">
+                    Anniversary
+                  </label>
+                </div>
+                <div>
+                  <input
+                    required
+                    type="radio"
+                    id="occa3"
+                    className="BeCool"
+                    name="occa"
+                  />
+                  <label htmlFor="occa3" id="someleft">
+                    Other
+                  </label>
+                </div>
+              </div>
+              <div className="TheOptions">
+                <label htmlFor="reason" id="someleftt">
+                  You come for
+                </label>
+                <select required className="THeSelectedOpetions">
+                  <option value="" disabled selected hidden>
+                    Select
+                  </option>
+                  <option id="SomeCursorsPls">Breakfast</option>
+                  <option id="SomeCursorsPls">Lunch</option>
+                  <option id="SomeCursorsPls">Dinner</option>
+                  <option id="SomeCursorsPls">All</option>
+                </select>
+              </div>
+              <button className="TheFinalButtonInComp">
+                Confirm your table
+              </button>
+            </form>
+          </div>
+          {/* Last thing */}
+          <div className="FSSeciont">
+            <img src={CarHome} alt="Order Online" />
+            <h3>Order Online</h3>
+            <p>Fast and affordable order from any place and time</p>
+            <table className="TheSmallTable2">
+              <tbody>
+                <tr>
+                  <td>Fast</td>
+                  <td>Hot and tasty</td>
+                </tr>
+                <tr>
+                  <td>Free</td>
+                  <td>City to city</td>
+                </tr>
+              </tbody>
+            </table>
+            <button onClick={props.sendItUp}>
+              <img src={ToUp} alt="Go up" />
+            </button>
+          </div>
         </div>
       </section>
     </article>

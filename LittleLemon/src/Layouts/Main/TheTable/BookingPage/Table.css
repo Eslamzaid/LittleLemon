@@ -1,7 +1,6 @@
 /*! Father of all */
 
 .fathofAll {
-    margin: 10rem 0rem;
     overflow: hidden;
 }
 
@@ -147,8 +146,6 @@
 #ContinueText2 {
     font-size: x-large;
     font-weight: 550;
-    /* position: relative;
-    bottom: 0.2em; */
     cursor: pointer;
 }
 
@@ -213,3 +210,242 @@
 
 
 /*! Third section  */
+
+
+/*? Father of all */
+
+.TheLast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40em;
+}
+
+.TheLastFirstDiv {
+    width: 56.5%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1em;
+
+}
+
+.TheLastFirstDiv>h3 {
+    font-size: xx-large;
+}
+
+#smallLemon {
+    align-self: flex-end;
+    width: 2em;
+}
+
+
+.TheContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    width: 90%;
+    gap: 3em;
+}
+
+.FirstOf1 {
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.TheSmallTable {
+    margin: 3em 0em;
+    text-align: center;
+    width: 100%;
+    padding-left: 1em;
+    height: 10em;
+    font-size: large;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+
+.TheStepFatherOfButton {
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 0.5em;
+}
+
+#TheReadMoreBu {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+
+/** Second part   */
+
+.TheSeconddPart {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 35em;
+    border: 1px solid black;
+}
+
+.HowMany {
+    margin-left: 1em;
+}
+
+.NumGuests {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+}
+
+.JustCheck {
+    border-left: 1px solid black;
+    width: 8.4em;
+    padding: 0.8em 0em;
+}
+
+#people {
+    background-color: transparent;
+    border: none;
+    width: 1.2em;
+    text-align: center;
+    font-size: 1.2em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    position: relative;
+    bottom: 4px;
+}
+
+.TheIncDecButton {
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+#MakeMeACursonr {
+    cursor: pointer;
+}
+
+/*? The Date */
+
+.PickUpADate {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+#Date {
+    margin-left: 1em;
+}
+
+.TheInputDate {
+    border: none;
+    border-left: 1px solid;
+    width: 10em;
+    padding: 0.9em;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*? Choose time  */
+
+.ChooseTime {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+.TheTime {
+    margin-left: 1em;
+}
+
+.TheTiemINput {
+    border: none;
+    border-left: 1px solid;
+    width: 10em;
+    padding: 0.9em;
+    height: 100%;
+    cursor: pointer;
+}
+
+.TheOccastion {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+.BeCool {
+    cursor: pointer;
+}
+
+.occasion {
+    margin-left: 1em;
+}
+
+#someleft {
+    margin-right: 2em;
+    cursor: pointer;
+}
+
+.TheOptions {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+#someleftt {
+    margin-left: 1em;
+}
+
+.THeSelectedOpetions {
+    border: none;
+    border-left: 1px solid;
+    width: 10em;
+    width: 10em;
+    padding: 0.9em;
+    height: 100%;
+    cursor: pointer;
+}
+
+#SomeCursorsPls{
+    background-color: red;
+    cursor: pointer;
+}
+
+.TheFinalButtonInComp {
+    border: none;
+    border: 1px solid black;
+    background-color: white;
+    width: 80%;
+    font-size: x-large;
+    padding: 0.5em 0em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/*? Third section  */
+
+.FSSeciont{
+    text-align: center;
+    border: 1px solid black;
+}
