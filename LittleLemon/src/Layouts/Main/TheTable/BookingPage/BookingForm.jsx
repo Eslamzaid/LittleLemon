@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactHover from "react-hover";
 import MenuD from "./../Sources";
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
@@ -15,6 +16,13 @@ function BookingForm() {
   const [VVIP, setVVIP] = useState(false);
   const [VIP, setVIP] = useState(false);
   const [Pre, setPre] = useState(false);
+
+  const optionsCursorTrueWithMargin = {
+    followCursor:true,
+    shiftX:20,
+    shiftY:0
+}
+
   return (
     <article className="fathofAll">
       <section className="FirstSection">
@@ -30,6 +38,7 @@ function BookingForm() {
       <section className="SecondSection">
         <div className="FGroup">
           <div className="OuterShell">
+            
             <img src={Info} alt="Information" id="MakeItLeft" />
             <div className="HideMeBut">
               Very important person, A very important person or personage is a
