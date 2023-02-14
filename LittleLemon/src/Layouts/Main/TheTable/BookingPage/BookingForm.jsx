@@ -8,6 +8,7 @@ import BlackArrow from "./../../../../assets/Icons/BlackArrow.png";
 import Special from "./../../../../assets/Icons/Untitled design (11) 1.png";
 import WhiteArrow from "./../../../../assets/Icons/WhiteArrow.png";
 import Info from "./../../../../assets/Icons/Info.png";
+import BlackIcon from "./../../../../assets/Icons/BlackIcon.png";
 import Cooker from "./../../../../assets/Main/Cooker.png";
 import CarHome from "./../../../../assets/Main/CarHome.png";
 import LittleLemon from "./../../../../assets/Icons/SmallLemon.png";
@@ -20,22 +21,22 @@ function BookingForm() {
   var [Pre, setPre] = useState(false);
 
   const handleClick1 = () => {
-    setVVIP(() => (VVIP = true));
+    setVVIP(() => !VVIP);
     setVIP(() => (VIP = false));
     setPre(() => (Pre = false));
   };
   const handleClick2 = () => {
     setVVIP(() => (VVIP = false));
-    setVIP(() => (VIP = true));
+    setVIP(() => !VIP);
     setPre(() => (Pre = false));
   };
   const handleClick3 = () => {
     setVVIP(() => (VVIP = false));
     setVIP(() => (VIP = false));
-    setPre(() => (Pre = true));
+    setPre(() => !Pre);
   };
 
-  console.log(VVIP, VIP, Pre)
+  console.log(VVIP, VIP, Pre);
   return (
     <article className="fathofAll">
       <section className="FirstSection">
@@ -50,7 +51,7 @@ function BookingForm() {
       {/*! Second Part */}
       <section className="SecondSection">
         <div className="FGroup">
-          <div className="OuterShell">
+          <div className={VVIP ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(attrs) => (
                 <div className="box" tabIndex="-1" {...attrs}>
@@ -60,15 +61,23 @@ function BookingForm() {
                 </div>
               )}
             >
-              <img src={Info} alt="Information" id="MakeItLeft" />
+              <img
+                src={VVIP ? Info : BlackIcon}
+                alt="Information"
+                id="MakeItLeft"
+              />
             </Tippy>
             <div className="TheContent1">
-              <img src={BlackChare} alt="Black chare" className="ChairImg" />
+              <img
+                src={VVIP ? WhiteChare : BlackChare}
+                alt="Black chare"
+                className="ChairImg"
+              />
               <div className="TheText">
-                <h2 id="TheH2">
+                <h2 id={VVIP ? "TheH22" : "TheH2"}>
                   VVIP <img src={Special} alt="White chare" id="SppnImg" />
                 </h2>
-                <p className="ThenoicyP">
+                <p className={VVIP ? "ThenoicyPP" : "ThenoicyP"}>
                   VVIP or V.V.I.P.) is also used, especially with reference to
                   VIPs with very high rank or spending power. It is used
                   especially when anyone can buy VIP treatment,{" "}
@@ -76,13 +85,17 @@ function BookingForm() {
               </div>
             </div>
             <button className="TheBigButton" onClick={handleClick1}>
-              <span id="ContinueText">Continue</span>
-              <img src={WhiteArrow} alt="Black arrow" id="BlackArrow" />
+              <span id="ContinueText">{VVIP ? "chosen" : "I want this"}</span>
+              <img
+                src={WhiteArrow}
+                alt="Black arrow"
+                id={VVIP ? "WhiteandWeirdCh" : "WhiteandWeirdChare"}
+              />
             </button>
           </div>
         </div>
         <div className="FGroup">
-          <div className="OuterShell">
+          <div className={VIP ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(atttrs) => (
                 <div className="boox" tabIndex="-2" {...atttrs}>
@@ -91,27 +104,39 @@ function BookingForm() {
                 </div>
               )}
             >
-              <img src={Info} alt="Information" id="MakeItLeft" />
+              <img
+                src={VIP ? Info : BlackIcon}
+                alt="Information"
+                id="MakeItLeft"
+              />
             </Tippy>
             <div className="TheContent1">
-              <img src={WeirdChare} alt="Pale chare" className="ChairImg" />
+              <img
+                src={VIP ? WhiteChare : BlackChare}
+                alt="Pale chare"
+                className="ChairImg"
+              />
               <div className="TheText">
-                <h2 id="TheH2">VIP</h2>
-                <p className="ThenoicyP">
-                  VVIP or V.V.I.P.) is also used, especially with reference to
-                  VIPs with very high rank or spending power. It is used
-                  especially when anyone can buy VIP treatment.{" "}
+                <h2 id={VIP ? "TheH22" : "TheH2"}>VIP</h2>
+                <p className={VIP ? "ThenoicyPP" : "ThenoicyP"}>
+                  VIP is the right choice if you want to enjoy with your family
+                  or friends, it will provide you with all the Premium features
+                  and FREE ticket for the JERA museum.
                 </p>
               </div>
             </div>
             <button className="TheBigButton2" onClick={handleClick2}>
-              <span id="ContinueText2">Continue</span>
-              <img src={BlackArrow} alt="Black arrow" id="WhiteandWeirdChare" />
+              <span id="ContinueText2">{VIP ? "chosen" : "I want this"}</span>
+              <img
+                src={BlackArrow}
+                alt="Black arrow"
+                id={VIP ? "WhiteandWeirdCh" : "WhiteandWeirdChare"}
+              />
             </button>
           </div>
         </div>
         <div className="FGroup">
-          <div className="OuterShell">
+          <div className={Pre ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(attttrs) => (
                 <div className="booox" tabIndex="-3" {...attttrs}>
@@ -119,22 +144,34 @@ function BookingForm() {
                 </div>
               )}
             >
-              <img src={Info} alt="Information" id="MakeItLeft" />
+              <img
+                src={Pre ? Info : BlackIcon}
+                alt="Information"
+                id="MakeItLeft"
+              />
             </Tippy>
             <div className="TheContent1">
-              <img src={WhiteChare} alt="Black chare" className="ChairImg" />
+              <img
+                src={Pre ? WhiteChare : BlackChare}
+                alt="Black chare"
+                className="ChairImg"
+              />
               <div className="TheText">
-                <h2 id="TheH2">Premium</h2>
-                <p className="ThenoicyP">
-                  VVIP or V.V.I.P.) is also used, especially with reference to
-                  VIPs with very high rank or spending power. It is used
-                  especially when anyone can buy VIP treatment,{" "}
+                <h2 id={Pre ? "TheH22" : "TheH2"}>Premium</h2>
+                <p className={Pre ? "ThenoicyPP" : "ThenoicyP"}>
+                  Premium will fit all your needs, car parking, hotel, three
+                  tickets for the opera and a lot more, if you are flying solo
+                  it will be the right choice.
                 </p>
               </div>
             </div>
             <button className="TheBigButton2" onClick={handleClick3}>
-              <span id="ContinueText2">Continue</span>
-              <img src={BlackArrow} alt="White arrow" id="WhiteandWeirdChare" />
+              <span id="ContinueText2">{Pre ? "chosen" : "I want this"}</span>
+              <img
+                src={BlackArrow}
+                alt="White arrow"
+                id={Pre ? "WhiteandWeirdCh" : "WhiteandWeirdChare"}
+              />
             </button>
           </div>
         </div>
