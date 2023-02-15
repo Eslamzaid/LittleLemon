@@ -15,6 +15,8 @@ import X from "./../../../../assets/Icons/Addiction.png";
 import M from "./../../../../assets/Icons/Substraction.png";
 import ToUp from "./../../../../assets/Icons/ToUp.png";
 import Check from "./../../../../assets/Icons/Group.png";
+import Check2 from "./../../../../assets/Icons/check.png";
+import Square from "./../../../../assets/Icons/square.png";
 import Tippy from "@tippyjs/react/headless";
 import "./Table.css";
 
@@ -34,33 +36,22 @@ const reducer1 = (state, action) => {
 const reducer2 = (state2, action2) => {
   if (action2.type === "Guests") return { guests: state2.guests + 30 };
   if (action2.type === "GuestsM")
-  return {
+    return {
       guests: state2.guests >= 60 ? state2.guests - 30 : (state2.guests = 30),
     };
-  };
-  
-const reducer3 = (state3, action3) => {
-  if(action3.type === "PleaseWork") return { Occa : Occa = false}
-  if (action3.type === "TypeBirth")
-    return { Occa: Occa ? (state3.Occa = 60) : (state3.Occa = 0) };
-
-  if (action3.type === "TypeAnni") return { Occa: state3.Occa + 80 };
-  if (action3.type === "TypeOther") return { Occa: state3.Occa + 80 };
 };
+
 function BookingForm(props) {
   var [VVIP, setVVIP] = useState(false);
   var [VIP, setVIP] = useState(false);
   var [Pre, setPre] = useState(false);
   const [numGuests, setNumGuests] = useState(1);
-
   const initalTotal = { total: 0 };
   const [state, dispatch] = useReducer(reducer1, initalTotal);
 
   const initalTotal2 = { guests: 30 };
   const [state2, dispatch2] = useReducer(reducer2, initalTotal2);
 
-  const initalTotal3 = { Occa: 1 };
-  const [state3, dispatch3] = useReducer(reducer3, initalTotal3);
 
   const hanleInc = () => {
     if (numGuests >= 12) {
@@ -93,7 +84,7 @@ function BookingForm(props) {
     setVVIP(() => (VVIP = false));
     setVIP(() => !VIP);
     setPre(() => (Pre = false));
-    if (state.total == 1000) {
+    if (state.total == 1000 || state.total == 250) {
       dispatch({ type: "VIPM" });
     }
   };
@@ -101,7 +92,15 @@ function BookingForm(props) {
     setVVIP(() => (VVIP = false));
     setVIP(() => (VIP = false));
     setPre(() => !Pre);
+    if (state.total == 1000 || state.total == 500) {
+      dispatch({ type: "PreM" });
+    }
   };
+
+
+  const hanleSum = () => {
+    
+  }
 
 
   return (
@@ -114,7 +113,6 @@ function BookingForm(props) {
         </div>
         <img src={ThePizza} alt="Pizza" />
       </section>
-
       {/*! Second Part */}
       <section className="SecondSection">
         <div className="FGroup">
@@ -151,7 +149,6 @@ function BookingForm(props) {
                 </p>
               </div>
             </div>
-            {console.log(VVIP)}
             <button
               className="TheBigButton"
               // onClick={VVIP ? () => state.total < 1000 ? dispatch({type: "VVIP"})  : dispatch({type: "VVIPM"}) : handleClick1}
@@ -164,7 +161,6 @@ function BookingForm(props) {
                   : handleClick1
               }
             >
-              {console.log(VVIP)}
               <span id="ContinueText">
                 {VVIP
                   ? state.total < 1000 && VVIP == true
@@ -216,7 +212,7 @@ function BookingForm(props) {
               onClick={
                 VIP
                   ? () =>
-                      state.total < 530
+                      state.total < 500
                         ? dispatch({ type: "VIP" })
                         : dispatch({ type: "VIPM" })
                   : handleClick2
@@ -290,7 +286,6 @@ function BookingForm(props) {
           </div>
         </div>
       </section>
-
       {/*! Third section  */}
       <section className="TheLast">
         <div className="TheLastFirstDiv">
@@ -393,16 +388,14 @@ function BookingForm(props) {
                   Your lovely occasion
                 </label>
                 <div>
-                  <input
+                <input
                     required
                     type="radio"
-                    id="occa1"
+                    id="occa3"
                     className="BeCool"
                     name="occa"
                   />
-                  <label htmlFor="occa1" id="MakeMeACursonr">
-                    Birthday
-                  </label>
+                  <label htmlFor="occa2">Birthday</label>
                 </div>
                 <div>
                   <input
@@ -410,7 +403,7 @@ function BookingForm(props) {
                     type="radio"
                     id="occa2"
                     className="BeCool"
-                    name="occa"
+                    name="occas"
                   />
                   <label htmlFor="occa2" id="MakeMeACursonr">
                     Anniversary
@@ -443,7 +436,7 @@ function BookingForm(props) {
                   <option id="SomeCursorsPls">All</option>
                 </select>
               </div>
-              <button className="TheFinalButtonInComp">
+              <button role="button" onClick={hanleSum} className="TheFinalButtonInComp">
                 Confirm your table
               </button>
             </form>
@@ -500,7 +493,6 @@ function BookingForm(props) {
           <h1>{state.total}</h1>
           <h1>{state2.guests}</h1>
           <h1>{state2.guests + state.total}</h1>
-          <h1>{state3.Occa}</h1>
         </div>
       </section>
     </article>
