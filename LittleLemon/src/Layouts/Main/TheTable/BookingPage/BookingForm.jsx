@@ -1,4 +1,5 @@
-import React, { Children, useEffect, useState } from "react";
+import React, { useReducer, useState } from "react";
+
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
@@ -18,23 +19,42 @@ import Check from "./../../../../assets/Icons/Group.png";
 import Tippy from "@tippyjs/react/headless";
 import "./Table.css";
 
+const reducer = (state, action) => {
+  if (action.type === "Guests") return { total: state.total + 30 };
+  if (action.type === "TypeBirth") return { total: state.total + 60 };
+  if (action.type === "TypeAnni") return { total: state.total + 100 };
+  if (action.type === "TypeOther") return { total: state.total + 80 };
+  if (action.type === "Breakfast") return { total: state.total + 60 };
+  if (action.type === "Lunch") return { total: state.total + 70 };
+  if (action.type === "Dinner") return { total: state.total + 80 };
+  if (action.type === "All") return { total: state.total + 100 };
+  if (action.type === "VVIP") return { total: state.total + 1000 };
+  if (action.type === "VVIPM") return { total: (state.total = 30) };
+  if (action.type === "VIP") return { total: state.total + 500 };
+  if (action.type === "VIPM") return { total: (state.total = 30) };
+  if (action.type === "Pre") return { total: state.total + 250 };
+  if (action.type === "PreM") return { total: (state.total = 30) };
+};
+
 function BookingForm(props) {
   var [VVIP, setVVIP] = useState(false);
   var [VIP, setVIP] = useState(false);
   var [Pre, setPre] = useState(false);
+
+  const initalTotal = { total: 30 };
+  const [state, dispatch] = useReducer(reducer, initalTotal);
+
   const [numGuests, setNumGuests] = useState(1);
-  const date = new Date();
   const hanleInc = () => {
-    // e.preventdefault()
     if (numGuests >= 12) {
       setNumGuests(12);
     } else {
       setNumGuests(() => numGuests + 1);
     }
   };
+  console.log(VVIP);
 
   const hanleDec = () => {
-    // e.preventdefault()
     if (numGuests <= 1) {
       setNumGuests(1);
     } else {
@@ -50,16 +70,28 @@ function BookingForm(props) {
     setVVIP(() => !VVIP);
     setVIP(() => (VIP = false));
     setPre(() => (Pre = false));
+    if (state.total < 1030) {
+      dispatch({ type: "VVIPM" });
+    }
   };
   const handleClick2 = () => {
     setVVIP(() => (VVIP = false));
     setVIP(() => !VIP);
     setPre(() => (Pre = false));
+    if (state.total == 1030) {
+      dispatch({ type: "VIPM" });
+    }
+    // if (state.total == 530 || state.total < 1530 ) {
+    //   dispatch({ type: "VIPM" });
+    // }
   };
   const handleClick3 = () => {
     setVVIP(() => (VVIP = false));
     setVIP(() => (VIP = false));
     setPre(() => !Pre);
+    if (state.total == 530 || state.total == 1530 || state.total == 280) {
+      dispatch({ type: "PreM" });
+    }
   };
 
   return (
@@ -109,8 +141,27 @@ function BookingForm(props) {
                 </p>
               </div>
             </div>
-            <button className="TheBigButton" onClick={handleClick1}>
-              <span id="ContinueText">{VVIP ? "chosen" : "I want this"}</span>
+            {console.log(VVIP)}
+            <button
+              className="TheBigButton"
+              // onClick={VVIP ? () => state.total < 1000 ? dispatch({type: "VVIP"})  : dispatch({type: "VVIPM"}) : handleClick1}
+              onClick={
+                VVIP
+                  ? () =>
+                      state.total < 1000
+                        ? dispatch({ type: "VVIP" })
+                        : dispatch({ type: "VVIPM" })
+                  : handleClick1
+              }
+            >
+              {console.log(VVIP)}
+              <span id="ContinueText">
+                {VVIP
+                  ? state.total < 1000 && VVIP == true
+                    ? "Sure?"
+                    : "Booked"
+                  : "I want this"}
+              </span>
               <img
                 src={WhiteArrow}
                 alt="Black arrow"
@@ -150,8 +201,20 @@ function BookingForm(props) {
                 </p>
               </div>
             </div>
-            <button className="TheBigButton2" onClick={handleClick2}>
-              <span id="ContinueText2">{VIP ? "chosen" : "I want this"}</span>
+            <button
+              className="TheBigButton2"
+              onClick={
+                VIP
+                  ? () =>
+                      state.total < 530
+                        ? dispatch({ type: "VIP" })
+                        : dispatch({ type: "VIPM" })
+                  : handleClick2
+              }
+            >
+              <span id="ContinueText2">
+                {VIP ? (state.total < 530 ? "Sure?" : "Booked") : "I want this"}
+              </span>
               <img
                 src={BlackArrow}
                 alt="Black arrow"
@@ -190,8 +253,24 @@ function BookingForm(props) {
                 </p>
               </div>
             </div>
-            <button className="TheBigButton2" onClick={handleClick3}>
-              <span id="ContinueText2">{Pre ? "chosen" : "I want this"}</span>
+            <button
+              className="TheBigButton2"
+              onClick={
+                Pre
+                  ? () =>
+                      state.total < 280
+                        ? dispatch({ type: "Pre" })
+                        : handleClick3 && dispatch({ type: "PreM" })
+                  : handleClick3
+              }
+            >
+              <span id="ContinueText2">
+                {Pre
+                  ? state.total < 280 && Pre
+                    ? "Sure?"
+                    : "Booked"
+                  : "I want this"}
+              </span>
               <img
                 src={BlackArrow}
                 alt="White arrow"
@@ -282,7 +361,7 @@ function BookingForm(props) {
                   className="TheInputDate"
                   type="date"
                   min="2023-02-15"
-                  max="2023-04-01"
+                  max="2023-05-01"
                   name="Date"
                 />
               </div>
@@ -394,7 +473,7 @@ function BookingForm(props) {
                     Free
                   </td>
                   <td>
-                    <imgw
+                    <img
                       src={Check}
                       className="accordion-flush"
                       alt="Fast shipping"
@@ -408,6 +487,7 @@ function BookingForm(props) {
               <img src={ToUp} id="SOWhat" alt="Go up" />
             </button>
           </div>
+          <h1>{state.total}</h1>
         </div>
       </section>
     </article>

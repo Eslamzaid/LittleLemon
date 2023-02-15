@@ -430,7 +430,6 @@
 }
 
 #SomeCursorsPls {
-    background-color: red;
     cursor: pointer;
 }
 
@@ -454,12 +453,10 @@
 }
 
 .TheSmallTable2 {
-    /* margin: 3em 0em; */
     text-align: center;
     width: 100%;
     padding-left: 4em;
     text-align: center;
-    /* background-color: red; */
     height: 10em;
     font-size: large;
     font-weight: 700;
