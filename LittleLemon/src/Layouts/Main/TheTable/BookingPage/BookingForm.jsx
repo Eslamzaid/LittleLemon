@@ -1,5 +1,4 @@
 import React, { useReducer, useState } from "react";
-
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
@@ -19,58 +18,74 @@ import Check from "./../../../../assets/Icons/Group.png";
 import Tippy from "@tippyjs/react/headless";
 import "./Table.css";
 
-const reducer = (state, action) => {
-  if (action.type === "Guests") return { total: state.total + 30 };
-  if (action.type === "TypeBirth") return { total: state.total + 60 };
-  if (action.type === "TypeAnni") return { total: state.total + 100 };
-  if (action.type === "TypeOther") return { total: state.total + 80 };
-  if (action.type === "Breakfast") return { total: state.total + 60 };
-  if (action.type === "Lunch") return { total: state.total + 70 };
-  if (action.type === "Dinner") return { total: state.total + 80 };
-  if (action.type === "All") return { total: state.total + 100 };
+const reducer1 = (state, action) => {
+  // if (action.type === "Breakfast") return { total: state.total + 60 };
+  // if (action.type === "Lunch") return { total: state.total + 70 };
+  // if (action.type === "Dinner") return { total: state.total + 80 };
+  // if (action.type === "All") return { total: state.total + 100 };
   if (action.type === "VVIP") return { total: state.total + 1000 };
-  if (action.type === "VVIPM") return { total: (state.total = 30) };
+  if (action.type === "VVIPM") return { total: (state.total = 0) };
   if (action.type === "VIP") return { total: state.total + 500 };
-  if (action.type === "VIPM") return { total: (state.total = 30) };
+  if (action.type === "VIPM") return { total: (state.total = 0) };
   if (action.type === "Pre") return { total: state.total + 250 };
-  if (action.type === "PreM") return { total: (state.total = 30) };
+  if (action.type === "PreM") return { total: (state.total = 0) };
 };
 
+const reducer2 = (state2, action2) => {
+  if (action2.type === "Guests") return { guests: state2.guests + 30 };
+  if (action2.type === "GuestsM")
+  return {
+      guests: state2.guests >= 60 ? state2.guests - 30 : (state2.guests = 30),
+    };
+  };
+  
+const reducer3 = (state3, action3) => {
+  if(action3.type === "PleaseWork") return { Occa : Occa = false}
+  if (action3.type === "TypeBirth")
+    return { Occa: Occa ? (state3.Occa = 60) : (state3.Occa = 0) };
+
+  if (action3.type === "TypeAnni") return { Occa: state3.Occa + 80 };
+  if (action3.type === "TypeOther") return { Occa: state3.Occa + 80 };
+};
 function BookingForm(props) {
   var [VVIP, setVVIP] = useState(false);
   var [VIP, setVIP] = useState(false);
   var [Pre, setPre] = useState(false);
-
-  const initalTotal = { total: 30 };
-  const [state, dispatch] = useReducer(reducer, initalTotal);
-
   const [numGuests, setNumGuests] = useState(1);
+
+  const initalTotal = { total: 0 };
+  const [state, dispatch] = useReducer(reducer1, initalTotal);
+
+  const initalTotal2 = { guests: 30 };
+  const [state2, dispatch2] = useReducer(reducer2, initalTotal2);
+
+  const initalTotal3 = { Occa: 1 };
+  const [state3, dispatch3] = useReducer(reducer3, initalTotal3);
+
   const hanleInc = () => {
     if (numGuests >= 12) {
       setNumGuests(12);
     } else {
       setNumGuests(() => numGuests + 1);
     }
+    dispatch2({ type: "Guests" });
   };
-  console.log(VVIP);
-
   const hanleDec = () => {
-    if (numGuests <= 1) {
+    if (numGuests == 1) {
       setNumGuests(1);
     } else {
       setNumGuests(() => numGuests - 1);
     }
+    dispatch2({ type: "GuestsM" });
   };
-
   const handleSumbit = (e) => {
     e.preventDefault();
   };
-
   const handleClick1 = () => {
     setVVIP(() => !VVIP);
     setVIP(() => (VIP = false));
     setPre(() => (Pre = false));
-    if (state.total < 1030) {
+    if (state.total < 1000) {
       dispatch({ type: "VVIPM" });
     }
   };
@@ -78,21 +93,16 @@ function BookingForm(props) {
     setVVIP(() => (VVIP = false));
     setVIP(() => !VIP);
     setPre(() => (Pre = false));
-    if (state.total == 1030) {
+    if (state.total == 1000) {
       dispatch({ type: "VIPM" });
     }
-    // if (state.total == 530 || state.total < 1530 ) {
-    //   dispatch({ type: "VIPM" });
-    // }
   };
   const handleClick3 = () => {
     setVVIP(() => (VVIP = false));
     setVIP(() => (VIP = false));
     setPre(() => !Pre);
-    if (state.total == 530 || state.total == 1530 || state.total == 280) {
-      dispatch({ type: "PreM" });
-    }
   };
+
 
   return (
     <article className="fathofAll">
@@ -258,7 +268,7 @@ function BookingForm(props) {
               onClick={
                 Pre
                   ? () =>
-                      state.total < 280
+                      state.total < 250
                         ? dispatch({ type: "Pre" })
                         : handleClick3 && dispatch({ type: "PreM" })
                   : handleClick3
@@ -266,7 +276,7 @@ function BookingForm(props) {
             >
               <span id="ContinueText2">
                 {Pre
-                  ? state.total < 280 && Pre
+                  ? state.total < 250 && Pre
                     ? "Sure?"
                     : "Booked"
                   : "I want this"}
@@ -488,6 +498,9 @@ function BookingForm(props) {
             </button>
           </div>
           <h1>{state.total}</h1>
+          <h1>{state2.guests}</h1>
+          <h1>{state2.guests + state.total}</h1>
+          <h1>{state3.Occa}</h1>
         </div>
       </section>
     </article>
