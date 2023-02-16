@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useRef, useState } from "react";
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
@@ -15,16 +15,10 @@ import X from "./../../../../assets/Icons/Addiction.png";
 import M from "./../../../../assets/Icons/Substraction.png";
 import ToUp from "./../../../../assets/Icons/ToUp.png";
 import Check from "./../../../../assets/Icons/Group.png";
-import Check2 from "./../../../../assets/Icons/check.png";
-import Square from "./../../../../assets/Icons/square.png";
 import Tippy from "@tippyjs/react/headless";
 import "./Table.css";
 
 const reducer1 = (state, action) => {
-  // if (action.type === "Breakfast") return { total: state.total + 60 };
-  // if (action.type === "Lunch") return { total: state.total + 70 };
-  // if (action.type === "Dinner") return { total: state.total + 80 };
-  // if (action.type === "All") return { total: state.total + 100 };
   if (action.type === "VVIP") return { total: state.total + 1000 };
   if (action.type === "VVIPM") return { total: (state.total = 0) };
   if (action.type === "VIP") return { total: state.total + 500 };
@@ -45,13 +39,42 @@ function BookingForm(props) {
   var [VVIP, setVVIP] = useState(false);
   var [VIP, setVIP] = useState(false);
   var [Pre, setPre] = useState(false);
+  const [message, setMessage] = useState("");
+  const [message2, setMessage2] = useState("");
+
+  const [radioValue, setRadioValue] = useState(0);
+  const onChange = (ev) => {
+    //save your value here with state variable
+    console.log(ev.target.value);
+    setRadioValue(ev.target.value);
+  };
+
+  const getInitialState = () => {
+    const value = "Select";
+    return value;
+  };
+
+  const [value, setValue] = useState(getInitialState);
+
+  const handleChangeSelect = (e) => {
+    setValue(e.target.value);
+  };
+
+  const handleChange = (event) => {
+    // 👇 Get input value from "event"
+    setMessage(event.target.value);
+  };
+  const handleChange2 = (event) => {
+    // 👇 Get input value from "event"
+    setMessage2(event.target.value);
+  };
+
   const [numGuests, setNumGuests] = useState(1);
   const initalTotal = { total: 0 };
   const [state, dispatch] = useReducer(reducer1, initalTotal);
 
   const initalTotal2 = { guests: 30 };
   const [state2, dispatch2] = useReducer(reducer2, initalTotal2);
-
 
   const hanleInc = () => {
     if (numGuests >= 12) {
@@ -96,12 +119,6 @@ function BookingForm(props) {
       dispatch({ type: "PreM" });
     }
   };
-
-
-  const hanleSum = () => {
-    
-  }
-
 
   return (
     <article className="fathofAll">
@@ -219,7 +236,7 @@ function BookingForm(props) {
               }
             >
               <span id="ContinueText2">
-                {VIP ? (state.total < 530 ? "Sure?" : "Booked") : "I want this"}
+                {VIP ? (state.total < 500 ? "Sure?" : "Booked") : "I want this"}
               </span>
               <img
                 src={BlackArrow}
@@ -368,7 +385,9 @@ function BookingForm(props) {
                   min="2023-02-15"
                   max="2023-05-01"
                   name="Date"
+                  onChange={handleChange}
                 />
+                {console.log(message)}
               </div>
               {/* The time */}
               <div className="ChooseTime">
@@ -381,21 +400,27 @@ function BookingForm(props) {
                   type="time"
                   min="09:00"
                   max="18:00"
+                  onChange={handleChange2}
                 />
+                {console.log(message2)}
               </div>
               <div className="TheOccastion">
                 <label htmlFor="Anni" className="occasion">
-                  Your lovely occasion
+                  Occasion
                 </label>
                 <div>
-                <input
+                  <input
                     required
                     type="radio"
-                    id="occa3"
+                    id="occa1"
                     className="BeCool"
                     name="occa"
+                    value={1}
+                    onChange={onChange}
                   />
-                  <label htmlFor="occa2">Birthday</label>
+                  <label htmlFor="occa1" id="MakeMeACursonr">
+                    Birthday
+                  </label>
                 </div>
                 <div>
                   <input
@@ -403,7 +428,9 @@ function BookingForm(props) {
                     type="radio"
                     id="occa2"
                     className="BeCool"
-                    name="occas"
+                    name="occa"
+                    value={2}
+                    onChange={onChange}
                   />
                   <label htmlFor="occa2" id="MakeMeACursonr">
                     Anniversary
@@ -416,6 +443,8 @@ function BookingForm(props) {
                     id="occa3"
                     className="BeCool"
                     name="occa"
+                    value={3}
+                    onChange={onChange}
                   />
                   <label htmlFor="occa3" id="someleft">
                     Other
@@ -426,17 +455,31 @@ function BookingForm(props) {
                 <label htmlFor="reason" id="someleftt">
                   You come for
                 </label>
-                <select required className="THeSelectedOpetions">
+                <select
+                  required
+                  className="THeSelectedOpetions"
+                  onChange={handleChangeSelect}
+                  value={value}
+                >
                   <option value="" disabled selected hidden>
                     Select
                   </option>
-                  <option id="SomeCursorsPls">Breakfast</option>
-                  <option id="SomeCursorsPls">Lunch</option>
-                  <option id="SomeCursorsPls">Dinner</option>
-                  <option id="SomeCursorsPls">All</option>
+                  <option value="Breakfast" id="SomeCursorsPls">
+                    Breakfast
+                  </option>
+                  <option value="Lunch" id="SomeCursorsPls">
+                    Lunch
+                  </option>
+                  <option value="Dinner" id="SomeCursorsPls">
+                    Dinner
+                  </option>
+                  <option value="All" id="SomeCursorsPls">
+                    All
+                  </option>
                 </select>
+                {console.log(value)}
               </div>
-              <button role="button" onClick={hanleSum} className="TheFinalButtonInComp">
+              <button role="button" className="TheFinalButtonInComp">
                 Confirm your table
               </button>
             </form>

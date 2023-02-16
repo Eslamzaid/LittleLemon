@@ -74,7 +74,7 @@ function SearchF(props) {
             return (
               <div key={id} className="Cards">
                 <div className="FirstPart">
-                  <img src={image} alt={alt} id="Theimgs"/>
+                  <img src={image} alt={alt} id="Theimgs" />
                 </div>
                 <div className="BottomPart">
                   <div className="BottomPartFirst">

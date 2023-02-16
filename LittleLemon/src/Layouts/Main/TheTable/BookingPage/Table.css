@@ -393,6 +393,7 @@
     justify-content: space-between;
     align-items: center;
     height: 3.8em;
+
 }
 
 .BeCool {
@@ -401,10 +402,11 @@
 
 .occasion {
     margin-left: 1em;
+
 }
 
 #someleft {
-    margin-right: 2em;
+    margin-right: 0.5em;
     cursor: pointer;
 }
 
