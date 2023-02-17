@@ -48,7 +48,6 @@ function BookingForm(props) {
     setRadioValue(ev.target.value);
   };
 
-
   const [value, setValue] = useState("Select");
 
   const handleChangeSelect = (e) => {
@@ -116,44 +115,50 @@ function BookingForm(props) {
   };
 
   const TheAlert = () => {
-    swal(
-      <div>
-        <h1>Your table is booked!</h1>
-        <table>
-          <tbody>
-            <tr>
-              <td>We hope to see you on</td>
-              <td>{message}</td>
-            </tr>
-            <tr>
-              <td>On time</td>
-              <td>{message2}</td>
-            </tr>
-            <tr>
-              <td>Your Anniversary is</td>
-              <td>
-                {radioValue == 1
-                  ? "Birthday"
-                  : "" || radioValue == 2
-                  ? "Anniversary"
-                  : "" || radioValue == 3
-                  ? "Other"
-                  : ""}
-              </td>
-            </tr>
-            <tr>
-              <td>You came for</td>
-              <td>{value}</td>
-            </tr>
-            <tr>
-              <td>
-                <h2>Your total is ${state2.guests + state.total}</h2>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    );
+    swal({
+      icon: 'success',
+      content: (
+        <div className="TheSwal">
+          <h1>Your table is booked!</h1>
+          <table>
+            <tbody className="THeTable">
+              <tr>
+                <td>We hope to see you on</td>
+                <td>{message}</td>
+              </tr>
+              <tr>
+                <td>On time</td>
+                <td>{message2}</td>
+              </tr>
+              <tr>
+                <td>Your Anniversary is</td>
+                <td>
+                  {radioValue == 1
+                    ? "Birthday"
+                    : "" || radioValue == 2
+                    ? "Anniversary"
+                    : "" || radioValue == 3
+                    ? "Other"
+                    : ""}
+                </td>
+              </tr>
+              <tr>
+                <td>You came for</td>
+                <td>{value}</td>
+              </tr>
+              <tr>
+                <td>
+                  <h2>Your total is</h2>
+                </td>
+                <td>
+                  <h2>${state2.guests + state.total}</h2>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      ),
+    });
   };
 
   const HandleSubmit2 = () => {

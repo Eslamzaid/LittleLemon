@@ -485,3 +485,16 @@
     margin-top: 1em;
     cursor: pointer;
 }
+
+/** The swal alert  */
+
+.swal-modal {
+    min-width: 50rem;
+    text-align: center;
+    padding: 10em;
+}
+
+.swal-overlay {
+    background-color: rgba(63,255,106,0.69);
+    background-color: rgba(131, 82, 82, 0.69);
+}
