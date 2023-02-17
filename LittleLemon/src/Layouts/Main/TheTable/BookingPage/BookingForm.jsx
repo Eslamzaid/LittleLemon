@@ -15,7 +15,6 @@ import X from "./../../../../assets/Icons/Addiction.png";
 import M from "./../../../../assets/Icons/Substraction.png";
 import ToUp from "./../../../../assets/Icons/ToUp.png";
 import Check from "./../../../../assets/Icons/Group.png";
-import EslamZaid from "../Sources";
 import Tippy from "@tippyjs/react/headless";
 import swal from "@sweetalert/with-react";
 import "./Table.css";
@@ -45,13 +44,8 @@ function BookingForm(props) {
   const [message2, setMessage2] = useState("");
   const [radioValue, setRadioValue] = useState(0);
 
-  console.log(message);
-  console.log(message2);
-  console.log(radioValue);
-
   const onChange = (ev) => {
     //save your value here with state variable
-    console.log(ev.target.value);
     setRadioValue(ev.target.value);
   };
 
@@ -126,41 +120,68 @@ function BookingForm(props) {
     }
   };
 
-  const HandleSubmit2 = (e) => {
+  const TheAlert = () => {
+    swal(
+      <div>
+        <h1>Your table is booked!</h1>
+        <table>
+          <tbody>
+            <tr>
+              <td>We hope to see you on</td>
+              <td>{message}</td>
+            </tr>
+            <tr>
+              <td>On time</td>
+              <td>{message2}</td>
+            </tr>
+            <tr>
+              <td>Your Anniversary is</td>
+              <td>
+                {radioValue == 1
+                  ? "Birthday"
+                  : "" || radioValue == 2
+                  ? "Anniversary"
+                  : "" || radioValue == 3
+                  ? "Other"
+                  : ""}
+              </td>
+            </tr>
+            <tr>
+              <td>You came for</td>
+              <td>{value}</td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Your total is ${state2.guests + state.total}</h2>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
+  };
+
+  const HandleSubmit2 = () => {
     if (
       message === "" ||
       message2 === "" ||
       radioValue === 0 ||
-      state.total === 0
+      state.total === 0 ||
+      value == "Select"
     ) {
       //TODO Create a form validation by changing the state to false/true on
       //TODO the classname
       console.warn("Please fill in all the inputs");
     } else {
       TheAlert();
-      setTimeout(() => {
-        window.print(<EslamZaid />);
-      }, 2000);
     }
     if (message === "" || message2 === "" || radioValue === 0) {
     } else if (state.total == 0) {
       alert("Please choose what type of tables you want");
     }
-  };
-
-  const TheAlert = () => {
-    swal(
-      <div>
-        <EslamZaid
-          message={message}
-          message2={message2}
-          radioValue={radioValue}
-          value={value}
-          state2guests={state2.guests}
-          stateTotal={state.total}
-        />
-      </div>
-    );
+    if (value == "Select") {
+      alert("Please select what you come for");
+    }
   };
 
   return (
@@ -431,7 +452,6 @@ function BookingForm(props) {
                   name="Date"
                   onChange={handleChange}
                 />
-                {console.log(message)}
               </div>
               {/* The time */}
               <div className="ChooseTime">
@@ -444,7 +464,6 @@ function BookingForm(props) {
                   type="time"
                   onChange={handleChange2}
                 />
-                {console.log(message2)}
               </div>
               <div className="TheOccastion">
                 <label htmlFor="Anni" className="occasion">
@@ -502,20 +521,21 @@ function BookingForm(props) {
                   className="THeSelectedOpetions"
                   onChange={handleChangeSelect}
                   value={value}
+                  defaultValue={"Select"}
                 >
-                  <option value="Select" disabled selected hidden>
+                  <option disabled value={"Select"}>
                     Select
                   </option>
-                  <option value="Breakfast" id="SomeCursorsPls">
+                  <option value={"Breakfast"} id="SomeCursorsPls">
                     Breakfast
                   </option>
-                  <option value="Lunch" id="SomeCursorsPls">
+                  <option value={"Lunch"} id="SomeCursorsPls">
                     Lunch
                   </option>
-                  <option value="Dinner" id="SomeCursorsPls">
+                  <option value={"Dinner"} id="SomeCursorsPls">
                     Dinner
                   </option>
-                  <option value="All" id="SomeCursorsPls">
+                  <option value={"All"} id="SomeCursorsPls">
                     All
                   </option>
                 </select>
