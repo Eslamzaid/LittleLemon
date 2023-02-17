@@ -114,20 +114,27 @@ function BookingForm(props) {
     }
   };
 
+  const date = new Date().toLocaleString("en-US", { day : '2-digit'})
+  const day = date
+
   const TheAlert = () => {
     swal({
-      icon: 'success',
+      icon: "success",
       content: (
         <div className="TheSwal">
           <h1>Your table is booked!</h1>
-          <table>
+          <table className="Table">
             <tbody className="THeTable">
               <tr>
-                <td>We hope to see you on</td>
+                <td>Total guests</td>
+                <td>{numGuests}</td>
+              </tr>
+              <tr>
+                <td id="MakeItL">We hope to see you on</td>
                 <td>{message}</td>
               </tr>
               <tr>
-                <td>On time</td>
+                <td id="MakeItL">On time</td>
                 <td>{message2}</td>
               </tr>
               <tr>
@@ -143,12 +150,12 @@ function BookingForm(props) {
                 </td>
               </tr>
               <tr>
-                <td>You came for</td>
+                <td id="MakeItL">You came for</td>
                 <td>{value}</td>
               </tr>
               <tr>
                 <td>
-                  <h2>Your total is</h2>
+                  <h2 id="MakeItL">Your total is</h2>
                 </td>
                 <td>
                   <h2>${state2.guests + state.total}</h2>
@@ -411,6 +418,19 @@ function BookingForm(props) {
             <form onSubmit={handleSumbit} className="TheSeconddPart">
               <div className="NumGuests">
                 <label htmlFor="people" className="HowMany">
+                  <Tippy
+                    render={(attrs) => (
+                      <div className="box32" tabIndex="-1" {...attrs}>
+                        For one guest $30
+                      </div>
+                    )}
+                  >
+                    <img
+                      src={VVIP ? Info : BlackIcon}
+                      alt="Information"
+                      id="MakeItLeft32"
+                    />
+                  </Tippy>
                   How many People:
                 </label>
                 <div className="JustCheck">
@@ -445,7 +465,7 @@ function BookingForm(props) {
                   required
                   className="TheInputDate"
                   type="date"
-                  min="2023-02-18"
+                  min={`2023-02-${day}`}
                   max="2023-05-01"
                   name="Date"
                   onChange={handleChange}
@@ -461,6 +481,7 @@ function BookingForm(props) {
                   className="TheTiemINput"
                   type="time"
                   onChange={handleChange2}
+
                 />
               </div>
               <div className="TheOccastion">
@@ -519,7 +540,7 @@ function BookingForm(props) {
                   className="THeSelectedOpetions"
                   onChange={handleChangeSelect}
                   value={value}
-                  defaultValue={"Select"}
+                  // defaultValue={"Select"}
                 >
                   <option disabled value={"Select"}>
                     Select

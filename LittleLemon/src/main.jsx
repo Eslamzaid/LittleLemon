@@ -11,13 +11,13 @@ import App from "./App";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Root/>,
     errorElement: <ErrorPage />,
     children: [
-      {
-        path: "/home",
-        element: <Main />,
-      },
+      // {
+      //   path: "/home",
+      //   element: <Main />,
+      // },
       {
         path: "/AboutUs",
         element: <About />,

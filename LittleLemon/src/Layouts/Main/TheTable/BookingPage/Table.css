@@ -61,7 +61,7 @@
 .VVIPTrue {
     text-align: center;
     border: 1px solid transparent;
-    transition: ease-in-out  0.4s;
+    transition: ease-in-out 0.4s;
     background-color: black;
     width: fit-content;
     height: 25em;
@@ -211,6 +211,17 @@
     border-radius: 1em;
 }
 
+.box32{
+    width: inherit;
+    background-color: rgb(243, 239, 239);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#MakeItLeft32{
+    width: 1em;
+    margin: 1mm;
+}
 
 /*! Third section  */
 
@@ -486,15 +497,52 @@
     cursor: pointer;
 }
 
+#The30{
+    font-size: small;
+    margin-left: 0.3em;
+    opacity: 0.6;
+}
+
 /** The swal alert  */
+
+.TheSwal{
+
+}
 
 .swal-modal {
     min-width: 50rem;
     text-align: center;
-    padding: 10em;
 }
 
-.swal-overlay {
-    background-color: rgba(63,255,106,0.69);
-    background-color: rgba(131, 82, 82, 0.69);
+.Table{
+    width: 80%;
+    margin-left: 5em;
+    height: max-content;
+    padding: 2em 0em;
+    /* background-color: red; */
 }
+
+.Table > .THeTable > tr > td {
+    padding: 10px;
+    font-size: larger;
+    font-weight: 500;
+    text-align: left;
+    /* background-color: gray; */
+}
+
+
+.swal-overlay {
+    background-color: rgba(146, 142, 142, 0.69);
+}
+
+.swal-button {
+    background-color: #E8C46A;
+    border: none;
+    transition: 0.1s;
+}
+
+.swal-footer {
+    background-color: rgb(245, 248, 250);
+    border-top: 1px solid #E9EEF1;
+    overflow: hidden;
+  }
