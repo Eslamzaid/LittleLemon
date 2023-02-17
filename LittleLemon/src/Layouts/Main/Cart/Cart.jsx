@@ -2,17 +2,10 @@ import React from "react";
 import Minus from "./../../../assets/Icons/minus.png";
 import Plus from "./../../../assets/Icons/add.png";
 import { useCart } from "react-use-cart";
-import swal from 'sweetalert'
+import swal from "sweetalert";
 import "./Cart.css";
 
 function Cart() {
-
-  const TheAlert = () => {
-    swal({
-      title: `Your delivery is on the way!`,
-      icon: 'success',
-    })
-  }
   const {
     isEmpty,
     totalUniqueItems,
@@ -23,6 +16,15 @@ function Cart() {
     removeItem,
     emptyCart,
   } = useCart();
+
+  const TheAlert = () => {
+    emptyCart();
+    swal({
+      title: `Your delivery is on the way!`,
+      icon: "success",
+    });
+  };
+
   if (isEmpty)
     return (
       <div>
@@ -96,8 +98,12 @@ function Cart() {
         </div>
         <div>
           <h2 className="Fasty">Total price: ${cartTotal}</h2>
-          <button className="ClearingCart" onClick={() => emptyCart()}>Clear cart</button>
-          <button className="ClearingCart" onClick={TheAlert}>Buy now</button>
+          <button className="ClearingCart" onClick={() => emptyCart()}>
+            Clear cart
+          </button>
+          <button className="ClearingCart" onClick={TheAlert}>
+            Buy now
+          </button>
         </div>
       </div>
     </section>
