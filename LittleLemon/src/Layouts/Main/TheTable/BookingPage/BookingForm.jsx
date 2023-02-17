@@ -1,4 +1,4 @@
-import React, { useReducer, useRef, useState } from "react";
+import React, { useReducer, useState } from "react";
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
@@ -16,6 +16,7 @@ import M from "./../../../../assets/Icons/Substraction.png";
 import ToUp from "./../../../../assets/Icons/ToUp.png";
 import Check from "./../../../../assets/Icons/Group.png";
 import Tippy from "@tippyjs/react/headless";
+import swal from "@sweetalert/with-react";
 import "./Table.css";
 
 const reducer1 = (state, action) => {
@@ -43,6 +44,12 @@ function BookingForm(props) {
   const [message2, setMessage2] = useState("");
 
   const [radioValue, setRadioValue] = useState(0);
+  var [theTrue, setTheTrue] = useState(null);
+
+  console.log(message);
+  console.log(message2);
+  console.log(radioValue);
+
   const onChange = (ev) => {
     //save your value here with state variable
     console.log(ev.target.value);
@@ -118,6 +125,68 @@ function BookingForm(props) {
     if (state.total == 1000 || state.total == 500) {
       dispatch({ type: "PreM" });
     }
+  };
+
+  const HandleSubmit2 = () => {
+    if (
+      message === "" ||
+      message2 === "" ||
+      radioValue === 0 ||
+      state.total === 0
+    ) {
+      //TODO Create a form validation by changing the state to false/true on
+      //TODO the classname
+      console.warn("Please fill in all the inputs");
+    } else {
+      TheAlert();
+    }
+    if (message === "" || message2 === "" || radioValue === 0) {
+    } else if (state.total == 0) {
+      alert("Please choose what type of tables you want");
+    }
+  };
+
+  const TheAlert = () => {
+    swal(
+      <div>
+        <h1>Your table is booked!</h1>
+        <table>
+          <tbody>
+            <tr>
+              <td>We hope to see you on</td>
+              <td>{message}</td>
+            </tr>
+            <tr>
+              <td>On time</td>
+              <td>{message2}</td>
+            </tr>
+            <tr>
+              <td>Your Anniversary is</td>
+              <td>
+                {radioValue == 1
+                  ? "Birthday"
+                  : "" || radioValue == 2
+                  ? "Anniversary"
+                  : "" || radioValue == 3
+                  ? "Other"
+                  : ""}
+              </td>
+            </tr>
+            <tr>
+              <td>
+                You came for 
+              </td>
+              <td>{value}</td>
+            </tr>
+            <tr>
+              <td>
+                <h2>Your total is ${state2.guests + state.total}</h2>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
   };
 
   return (
@@ -359,12 +428,7 @@ function BookingForm(props) {
                       id="MakeMeACursonr"
                     />
                   </button>
-                  <input
-                    id="people"
-                    readOnly
-                    required
-                    value={numGuests}
-                  ></input>
+                  <input id="people" readOnly value={numGuests}></input>
                   <button
                     className="TheIncDecButton"
                     type="button"
@@ -376,13 +440,13 @@ function BookingForm(props) {
               </div>
               <div className="PickUpADate">
                 <label id="Date" htmlFor="Date">
-                  Date
+                  Date:
                 </label>
                 <input
                   required
                   className="TheInputDate"
                   type="date"
-                  min="2023-02-15"
+                  min="2023-02-18"
                   max="2023-05-01"
                   name="Date"
                   onChange={handleChange}
@@ -392,21 +456,19 @@ function BookingForm(props) {
               {/* The time */}
               <div className="ChooseTime">
                 <label className="TheTime" htmlFor="Time">
-                  Time
+                  Time :
                 </label>
                 <input
-                  className="TheTiemINput"
                   required
+                  className="TheTiemINput"
                   type="time"
-                  min="09:00"
-                  max="18:00"
                   onChange={handleChange2}
                 />
                 {console.log(message2)}
               </div>
               <div className="TheOccastion">
                 <label htmlFor="Anni" className="occasion">
-                  Occasion
+                  Occasion :
                 </label>
                 <div>
                   <input
@@ -453,7 +515,7 @@ function BookingForm(props) {
               </div>
               <div className="TheOptions">
                 <label htmlFor="reason" id="someleftt">
-                  You come for
+                  You come for :
                 </label>
                 <select
                   required
@@ -461,7 +523,7 @@ function BookingForm(props) {
                   onChange={handleChangeSelect}
                   value={value}
                 >
-                  <option value="" disabled selected hidden>
+                  <option value="Select" disabled selected hidden>
                     Select
                   </option>
                   <option value="Breakfast" id="SomeCursorsPls">
@@ -477,9 +539,8 @@ function BookingForm(props) {
                     All
                   </option>
                 </select>
-                {console.log(value)}
               </div>
-              <button role="button" className="TheFinalButtonInComp">
+              <button onClick={HandleSubmit2} className="TheFinalButtonInComp">
                 Confirm your table
               </button>
             </form>
@@ -533,9 +594,9 @@ function BookingForm(props) {
               <img src={ToUp} id="SOWhat" alt="Go up" />
             </button>
           </div>
-          <h1>{state.total}</h1>
+          {/* <h1>{state.total}</h1>
           <h1>{state2.guests}</h1>
-          <h1>{state2.guests + state.total}</h1>
+          <h1>{state2.guests + state.total}</h1> */}
         </div>
       </section>
     </article>
