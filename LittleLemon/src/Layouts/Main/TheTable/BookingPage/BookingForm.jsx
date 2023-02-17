@@ -45,16 +45,11 @@ function BookingForm(props) {
   const [radioValue, setRadioValue] = useState(0);
 
   const onChange = (ev) => {
-    //save your value here with state variable
     setRadioValue(ev.target.value);
   };
 
-  const getInitialState = () => {
-    const value = "Select";
-    return value;
-  };
 
-  const [value, setValue] = useState(getInitialState);
+  const [value, setValue] = useState("Select");
 
   const handleChangeSelect = (e) => {
     setValue(e.target.value);
@@ -175,12 +170,10 @@ function BookingForm(props) {
     } else {
       TheAlert();
     }
-    if (message === "" || message2 === "" || radioValue === 0) {
-    } else if (state.total == 0) {
+    if (state.total == 0) {
       alert("Please choose what type of tables you want");
-    }
-    if (value == "Select") {
-      alert("Please select what you come for");
+    } else if (value == "Select") {
+      alert("Please select what you will come for");
     }
   };
 
