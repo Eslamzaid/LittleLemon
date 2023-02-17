@@ -15,6 +15,7 @@ import X from "./../../../../assets/Icons/Addiction.png";
 import M from "./../../../../assets/Icons/Substraction.png";
 import ToUp from "./../../../../assets/Icons/ToUp.png";
 import Check from "./../../../../assets/Icons/Group.png";
+import EslamZaid from "../Sources";
 import Tippy from "@tippyjs/react/headless";
 import swal from "@sweetalert/with-react";
 import "./Table.css";
@@ -42,9 +43,7 @@ function BookingForm(props) {
   var [Pre, setPre] = useState(false);
   const [message, setMessage] = useState("");
   const [message2, setMessage2] = useState("");
-
   const [radioValue, setRadioValue] = useState(0);
-  var [theTrue, setTheTrue] = useState(null);
 
   console.log(message);
   console.log(message2);
@@ -127,7 +126,7 @@ function BookingForm(props) {
     }
   };
 
-  const HandleSubmit2 = () => {
+  const HandleSubmit2 = (e) => {
     if (
       message === "" ||
       message2 === "" ||
@@ -139,6 +138,9 @@ function BookingForm(props) {
       console.warn("Please fill in all the inputs");
     } else {
       TheAlert();
+      setTimeout(() => {
+        window.print(<EslamZaid />);
+      }, 2000);
     }
     if (message === "" || message2 === "" || radioValue === 0) {
     } else if (state.total == 0) {
@@ -149,42 +151,14 @@ function BookingForm(props) {
   const TheAlert = () => {
     swal(
       <div>
-        <h1>Your table is booked!</h1>
-        <table>
-          <tbody>
-            <tr>
-              <td>We hope to see you on</td>
-              <td>{message}</td>
-            </tr>
-            <tr>
-              <td>On time</td>
-              <td>{message2}</td>
-            </tr>
-            <tr>
-              <td>Your Anniversary is</td>
-              <td>
-                {radioValue == 1
-                  ? "Birthday"
-                  : "" || radioValue == 2
-                  ? "Anniversary"
-                  : "" || radioValue == 3
-                  ? "Other"
-                  : ""}
-              </td>
-            </tr>
-            <tr>
-              <td>
-                You came for 
-              </td>
-              <td>{value}</td>
-            </tr>
-            <tr>
-              <td>
-                <h2>Your total is ${state2.guests + state.total}</h2>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <EslamZaid
+          message={message}
+          message2={message2}
+          radioValue={radioValue}
+          value={value}
+          state2guests={state2.guests}
+          stateTotal={state.total}
+        />
       </div>
     );
   };
@@ -206,9 +180,11 @@ function BookingForm(props) {
             <Tippy
               render={(attrs) => (
                 <div className="box" tabIndex="-1" {...attrs}>
-                  Very important person, A very important person or personage is
+                  {/* Very important person, A very important person or personage is
                   a person who is accorded special privileges due to their high
-                  social status, influence or importance.
+                  social status, influence or importance. */}
+                  This will provide you with all types of food and Resorts,
+                  <br /> It will coast you <strong>$1000</strong>
                 </div>
               )}
             >
@@ -267,8 +243,10 @@ function BookingForm(props) {
             <Tippy
               render={(atttrs) => (
                 <div className="boox" tabIndex="-2" {...atttrs}>
-                  VIP or very important person, usually of being famous or
-                  influential.
+                  {/* VIP or very important person, usually of being famous or
+                  influential. */}
+                  This will provide you with all types of food but with limited
+                  amount of Resorts, It will coast you <strong>$500</strong>
                 </div>
               )}
             >
@@ -320,7 +298,9 @@ function BookingForm(props) {
             <Tippy
               render={(attttrs) => (
                 <div className="booox" tabIndex="-3" {...attttrs}>
-                  This will fit <strong>all</strong> your regular needs
+                  {/* This will fit <strong>all</strong> your regular needs */}
+                  This will provide you with limited amount of food and Resorts,
+                  It will coast you <strong>$250</strong>
                 </div>
               )}
             >
