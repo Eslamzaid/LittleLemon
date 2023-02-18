@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <section className="thegridder">
-        <div>
+        <div className="FirstDiv">
           <ul>
             <li>
               <span className="TheTopers">Product</span>

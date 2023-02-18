@@ -5,10 +5,15 @@ footer > section > div > p {
 }
 
 .thegridder{
-
+    display: grid;
+    grid-template-columns: 30em 30em 30em 10em;
 }
 
 .TheTopers{
     font-size: x-large;
     font-weight: 500;
+}
+
+.FirstDiv{
+    background-color: red;
 }
