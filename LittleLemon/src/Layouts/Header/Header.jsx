@@ -12,7 +12,6 @@ const Header = () => {
   const [responsive, setResponsive] = useState(false);
   const [navBar, setNavbar] = useState(false);
 
-
   const changeBackground = () => {
     if (window.scrollY >= 100) {
       setNavbar(true);
