@@ -15,7 +15,7 @@ function Main() {
     <main>
       <Hero connectMenu={focusInput} />
       <SearchF connect={OrderNow} />
-      <BookingPage connectMenu={focusInput} />
+      <BookingPage  />
       <Slider />
     </main>
   );
