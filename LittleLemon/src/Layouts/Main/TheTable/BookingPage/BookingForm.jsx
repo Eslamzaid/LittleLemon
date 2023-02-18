@@ -1,4 +1,4 @@
-import React, { useReducer, useState } from "react";
+import React, { useContext, useReducer, useState } from "react";
 import ThePotatoes from "./../../../../assets/Main/ThePotates.png";
 import ThePizza from "./../../../../assets/Main/thePizza.png";
 import BlackChare from "./../../../../assets/Main/BlackChare.png";
@@ -18,6 +18,7 @@ import Check from "./../../../../assets/Icons/Group.png";
 import Tippy from "@tippyjs/react/headless";
 import swal from "@sweetalert/with-react";
 import "./Table.css";
+import { theMainCon } from "../../../Layouts";
 
 const reducer1 = (state, action) => {
   if (action.type === "VVIP") return { total: state.total + 1000 };
@@ -117,6 +118,8 @@ function BookingForm(props) {
   const date = new Date().toLocaleString("en-US", { day: "2-digit" });
   const day = date;
 
+  const thePrepi = useContext(theMainCon);
+
   const TheAlert = () => {
     swal({
       icon: "success",
@@ -191,6 +194,7 @@ function BookingForm(props) {
 
   return (
     <article className="fathofAll">
+      <button className="invisible" ref={thePrepi.three}></button>
       <section className="FirstSection">
         <img src={ThePotatoes} alt="Potato" />
         <div className="TheTextt">

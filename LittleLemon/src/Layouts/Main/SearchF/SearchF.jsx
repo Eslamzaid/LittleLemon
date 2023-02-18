@@ -7,7 +7,7 @@ import { useCart } from "react-use-cart";
 import "./SearchF.css";
 import { theMainCon } from "../../Layouts";
 
-function SearchF(props) {
+function SearchF() {
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
   const [tru, setTrue] = useState(false);
@@ -44,7 +44,6 @@ function SearchF(props) {
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
         <button ref={thePrepi.one} className="invisible"></button>
-        <button ref={props.connect} className="invisible"></button>
         <div className="theLin">
           <PopUp trigger={tru} manger={setTrue} />
           <div

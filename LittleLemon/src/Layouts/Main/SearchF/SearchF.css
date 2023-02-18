@@ -158,10 +158,10 @@
     cursor: pointer;
     width: 250px;
     overflow: hidden;
-    transition:  0.2s;
+    transition: 0.2s;
 }
 
-#Theimgs:hover{
+#Theimgs:hover {
     width: 500px;
     transition: ease-in 0.2s;
 }
@@ -216,5 +216,9 @@
 }
 
 .invisible {
-    border: none;
+    border: transparent;
+    background-color: transparent;
+    width: 0px;
+    opacity: 0;
+    height: 0px;
 }

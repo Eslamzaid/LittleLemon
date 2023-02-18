@@ -40,19 +40,23 @@ const Header = () => {
           </div>
           <div className="TheNavLinksFather">
             <li
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
+              // className={({ isActive }) =>
+              //   isActive ? "lactive-class" : "not-active-class"
+              // }
               id="TheLinks"
               onClick={thePrepi.two}
             >
               Home
             </li>
             <li
-              className={({ isActive }) =>
-                isActive ? "lactive-class" : "not-active-class"
-              }
-            ></li>
+              // className={({ isActive }) =>
+              //   isActive ? "lactive-class" : "not-active-class"
+              // }
+              id="TheLinks"
+              onClick={thePrepi.four}
+            >
+              Book a table
+            </li>
             <li>
               <NavLink
                 className={({ isActive }) =>
