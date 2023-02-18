@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import MenuD from "./SearchD";
 import Sho from "./../../../assets/Icons/shopping.png";
 import Plus from "./../../../assets/Icons/Plus.png";
 import PopUp from "../PopUp/PopUp";
 import { useCart } from "react-use-cart";
 import "./SearchF.css";
+import { theMainCon } from "../../Layouts";
 
 function SearchF(props) {
   const [quiry, setQuiry] = useState("");
@@ -21,6 +22,7 @@ function SearchF(props) {
 
     setItem(updateItems);
   };
+  const thePrepi = useContext(theMainCon);
 
   return (
     <article className="TheFather">
@@ -41,7 +43,7 @@ function SearchF(props) {
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
-        <button ref={props.connect1R} className="invisible"></button>
+        <button ref={thePrepi.one} className="invisible"></button>
         <button ref={props.connect} className="invisible"></button>
         <div className="theLin">
           <PopUp trigger={tru} manger={setTrue} />

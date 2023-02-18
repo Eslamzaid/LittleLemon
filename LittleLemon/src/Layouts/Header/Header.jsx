@@ -1,14 +1,13 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
-import About from "../../RComponenets/About/About";
-import Main from "../Main/Main";
 import { useState } from "react";
 import { Routes, Route, NavLink, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
+import { theMainCon } from "../Layouts";
 
-const Header = (props) => {
+const Header = () => {
   const [responsive, setResponsive] = useState(false);
   const [navBar, setNavbar] = useState(false);
 
@@ -25,6 +24,8 @@ const Header = (props) => {
   const handleOnClick = () => {
     setResponsive(!responsive);
   };
+
+  const thePrepi = useContext(theMainCon);
 
   return (
     <>
@@ -43,7 +44,7 @@ const Header = (props) => {
                 isActive ? "lactive-class" : "not-active-class"
               }
               id="TheLinks"
-              onClick={props.connect1M}
+              onClick={thePrepi.two}
             >
               Home
             </li>

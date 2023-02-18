@@ -1,19 +1,20 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Hero from "./Hero/Hero";
 import SearchF from "./SearchF/SearchF";
 import "./Main.css";
 import BookingPage from "./TheTable/BookingPage";
 import Slider from "./TheSlid/Slider";
 
-function Main(props) {
+function Main() {
   const OrderNow = useRef(null);
   const focusInput = () => {
     OrderNow.current.focus();
   };
+
   return (
     <main>
       <Hero connectMenu={focusInput} />
-      <SearchF connect={OrderNow} connect1R={props.connect1} />
+      <SearchF connect={OrderNow} />
       <BookingPage connectMenu={focusInput} />
       <Slider />
     </main>
