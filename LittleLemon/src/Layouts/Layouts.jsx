@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import Main from "./Main/Main";
 import "./Layouts.css";
 import { CartProvider } from "react-use-cart";
+import Footer from "./Footer/Footer";
 
 function Layouts() {
   return (
@@ -10,6 +11,7 @@ function Layouts() {
     <CartProvider>
       <Header />
     </CartProvider>
+      <Footer/>
     </>
   );
 }
