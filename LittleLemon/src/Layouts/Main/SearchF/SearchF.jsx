@@ -26,7 +26,6 @@ function SearchF(props) {
     <article className="TheFather">
       <section className="FSection">
         <h1>Our menu</h1>
-        <button ref={props.connect} className="invisible"></button>
         <div className="FSButton">
           <input
             type="text"
@@ -42,6 +41,8 @@ function SearchF(props) {
         <button onClick={() => filterMenu("lunch")}>Lunch</button>
         <button onClick={() => filterMenu("evening")}>Evening</button>
         <button onClick={() => filterMenu("dinner")}>Dinner</button>
+        <button ref={props.connect1R} className="invisible"></button>
+        <button ref={props.connect} className="invisible"></button>
         <div className="theLin">
           <PopUp trigger={tru} manger={setTrue} />
           <div
@@ -62,6 +63,7 @@ function SearchF(props) {
           </div>
         </div>
       </section>
+
       <section className="TSection">
         {item
           .filter(

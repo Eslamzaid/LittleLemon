@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
 import About from "../../RComponenets/About/About";
 import Main from "../Main/Main";
@@ -8,7 +8,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import "./Header.css";
 
-const Header = () => {
+const Header = (props) => {
   const [responsive, setResponsive] = useState(false);
   const [navBar, setNavbar] = useState(false);
 
@@ -38,17 +38,20 @@ const Header = () => {
             </li>
           </div>
           <div className="TheNavLinksFather">
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "lactive-class" : "not-active-class"
-                }
-                id="TheLinks"
-                to="/"
-              >
-                Home
-              </NavLink>
+            <li
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+              id="TheLinks"
+              onClick={props.connect1M}
+            >
+              Home
             </li>
+            <li
+              className={({ isActive }) =>
+                isActive ? "lactive-class" : "not-active-class"
+              }
+            ></li>
             <li>
               <NavLink
                 className={({ isActive }) =>
@@ -111,10 +114,10 @@ const Header = () => {
           )}
         </div>
       </nav>
-      <Routes>
+      {/* <Routes>
         <Route path="*" element={<Main />} />
         <Route path="/AboutUs" element={<About />} />
-      </Routes>
+      </Routes> */}
     </>
   );
 };
