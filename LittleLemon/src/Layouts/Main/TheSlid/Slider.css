@@ -1,5 +1,5 @@
 /*! The father of all */
-.TheFathher{
+.TheFathher {
     background-color: #E8C46A;
     width: 100%;
     max-width: 150rem;
@@ -8,30 +8,33 @@
     min-height: 30em;
 }
 
-#OurPartners{
-    margin: 2em 0em;
+#OurPartners {
+    margin: 1.8em 0em;
+    font-size: xx-large;
+    
 }
 
+.LRImages {
+    position: relative;
+}
 
-
-.FEslamSection{
+.FEslamSection {
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.LRImages{
-    width: 5.5em;
-    position: relative;
+.LRImages {
+    width: 6em;
 }
 
 
-.TheImgges{
+.TheImgges {
     min-height: 15em;
-    margin: 0em 10em;
+    margin: 0em 5em;
 }
 
-#SoemWIthg{
+#SoemWIthg {
     width: fit-content;
 }

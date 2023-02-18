@@ -2,19 +2,19 @@ import React from "react";
 import RightHalf from "./../../../assets/Main/righthalf.png";
 import LeftHalf from "./../../../assets/Main/lefthalg.png";
 import PauseOnHover from "./TheContent";
-import './Slider.css'
+import "./Slider.css";
 
 const Slider = () => {
   return (
     <section className="TheFathher">
       <div className="FEslamSection">
-        <img src={LeftHalf} className="LRImages" alt="Our partners" />
+        <div className="LRImages"></div>
         <h2 id="OurPartners">Our competitors</h2>
-        <img src={RightHalf} className="LRImages" alt="Our partners" />
+        <div className="LRImages"></div>
       </div>
-        <div>
-            <PauseOnHover/>
-        </div>
+      <div>
+        <PauseOnHover />
+      </div>
     </section>
   );
 };
