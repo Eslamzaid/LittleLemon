@@ -1,10 +1,10 @@
 import React from "react";
-import "./Footer.css";
 import Linkedin from "./../../assets/Icons/Linkedin.png";
 import Github from "./../../assets/Icons/Github.png";
 import Twitter from "./../../assets/Icons/Twitter.png";
 import LB from "./.../../../../assets/Asset 9@4x.png";
 import Send from "./../../assets/Main/Send.png";
+import "./Footer.css";
 
 const Footer = () => {
   return (
