@@ -61,17 +61,6 @@ const Header = () => {
                 About
               </NavLink>
             </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "lactive-class" : "not-active-class"
-                }
-                id="TheLinks"
-                to="/Reservations"
-              >
-                Reservations
-              </NavLink>
-            </li>
           </div>
         </ul>
         <div className="TheMegaP">
