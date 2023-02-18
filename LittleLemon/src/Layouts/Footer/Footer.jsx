@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css";
+
 import Send from "./../../assets/Main/Send.png";
 
 const Footer = () => {
@@ -49,6 +50,10 @@ const Footer = () => {
             for you to get the best results. Just insight
           </p>
         </div>
+      </section>
+      <section>
+        <div>Terms Privacy Cookiesu</div>
+        <div><a href="https://www.linkedin.com/in/eslamzaid/" target="_blank">LInkedi</a></div>
       </section>
     </footer>
   );

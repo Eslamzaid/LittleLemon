@@ -22,7 +22,7 @@ footer>section>div>p {
     margin-left: 10em;
     display: grid;
     grid-template-columns: 20em 20em 20em 30em;
-    grid-template-rows: 1fr;
+    grid-template-rows: 1fr 1fr ;
     row-gap: 3em;
 }
 
