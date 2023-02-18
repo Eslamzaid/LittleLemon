@@ -3,6 +3,7 @@ import Hero from "./Hero/Hero";
 import SearchF from "./SearchF/SearchF";
 import "./Main.css";
 import BookingPage from "./TheTable/BookingPage";
+import Slider from "./TheSlid/Slider";
 
 function Main() {
   const OrderNow = useRef(null);
@@ -14,6 +15,7 @@ function Main() {
       <Hero connectMenu={focusInput} />
       <SearchF connect={OrderNow} />
       <BookingPage connectMenu={focusInput}/>
+      <Slider/>
     </main>
   );
 }
