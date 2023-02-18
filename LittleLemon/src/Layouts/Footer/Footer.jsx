@@ -1,6 +1,9 @@
 import React from "react";
 import "./Footer.css";
-
+import Linkedin from "./../../assets/Icons/Linkedin.png";
+import Github from "./../../assets/Icons/Github.png";
+import Twitter from "./../../assets/Icons/Twitter.png";
+import LB from "./.../../../../assets/Asset 9@4x.png";
 import Send from "./../../assets/Main/Send.png";
 
 const Footer = () => {
@@ -51,9 +54,36 @@ const Footer = () => {
           </p>
         </div>
       </section>
-      <section>
-        <div>Terms Privacy Cookiesu</div>
-        <div><a href="https://www.linkedin.com/in/eslamzaid/" target="_blank">LInkedi</a></div>
+      <img id="Soohi" src={LB} alt="Little lemon" />
+      <section className="theGridder">
+        <p className="Terms">Terms Privacy Cookies</p>
+        <div className="Term2">
+          <a
+            id="TheonlyHerfs"
+            href="https://www.linkedin.com/in/eslamzaid/"
+            target="_blank"
+          >
+            <img
+              style={{ cursor: "pointer" }}
+              src={Linkedin}
+              alt="My Linkedin"
+            />
+          </a>
+          <a
+            id="TheonlyHerfs"
+            href="https://twitter.com/SrEslamzaid"
+            target="_blank"
+          >
+            <img style={{ cursor: "pointer" }} src={Twitter} alt="My twitter" />
+          </a>
+          <a
+            id="TheonlyHerfs"
+            href="https://github.com/Eslamzaid"
+            target="_blank"
+          >
+            <img style={{ cursor: "pointer" }} src={Github} alt="My Linkedin" />
+          </a>
+        </div>
       </section>
     </footer>
   );

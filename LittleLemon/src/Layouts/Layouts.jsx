@@ -7,12 +7,12 @@ import Footer from "./Footer/Footer";
 
 function Layouts() {
   return (
-    <>
+    <div className="Makethimcener">
     <CartProvider>
       <Header />
     </CartProvider>
       <Footer/>
-    </>
+    </div>
   );
 }
 
