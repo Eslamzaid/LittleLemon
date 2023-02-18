@@ -54,8 +54,8 @@ const Footer = () => {
           </p>
         </div>
       </section>
-      <img id="Soohi" src={LB} alt="Little lemon" />
       <section className="theGridder">
+        <img id="Soohi" src={LB} alt="Little lemon" />
         <p className="Terms">Terms Privacy Cookies</p>
         <div className="Term2">
           <a
