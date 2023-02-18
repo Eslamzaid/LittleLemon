@@ -1,19 +1,108 @@
 /*! The father of all */
 
-footer > section > div > p {
+footer {
+    margin-bottom: 10em;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+footer>section>div>p {
     font-size: smaller;
 }
 
-.thegridder{
-    display: grid;
-    grid-template-columns: 30em 30em 30em 10em;
+.SomeSOME {
+    margin-top: 4.65em;
 }
 
-.TheTopers{
-    font-size: x-large;
+/** the grid */
+.thegridder {
+    margin-left: 10em;
+    display: grid;
+    grid-template-columns: 20em 20em 20em 30em;
+    grid-template-rows: 1fr;
+    row-gap: 3em;
+}
+
+/*? the First text or spans  */
+
+/* Father of it */
+#FirstTop {
+    margin-bottom: 1em;
+}
+
+.TheTopers {
+    font-size: large;
     font-weight: 500;
 }
 
-.FirstDiv{
-    background-color: red;
+.SomeSpace {
+    width: fit-content;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: black;
+    margin: 0.8em 0em;
+    padding: 0.5em 0em;
+    border-radius: 25px;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.SomeSpace::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2em;
+    width: 100em;
+    /* height: 100%; */
+    border: 1px solid black;
+    transition: ease-in-out 1s;
+    z-index: 1111;
+    transform: translateX(-100%);
+}
+
+.SomeSpace:hover::before {
+    transform: translateX(0);
+}
+
+.SomeSpace:hover {
+    color: black;
+    opacity: 1;
+}
+
+/*? The button  */
+.THeLOLO {
+    background-color: #E8C46A;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2em 5em;
+}
+
+.Thhbu {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+#Victory {
+    opacity: 0.7;
+    font-weight: 500;
+    margin-left: 1em;
+    width: 100%;
+    text-align: left;
+}
+
+.TheFinalP {
+    opacity: 0.7;
+    font-weight: 400;
 }

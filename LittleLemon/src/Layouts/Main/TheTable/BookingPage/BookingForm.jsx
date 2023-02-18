@@ -114,8 +114,8 @@ function BookingForm(props) {
     }
   };
 
-  const date = new Date().toLocaleString("en-US", { day : '2-digit'})
-  const day = date
+  const date = new Date().toLocaleString("en-US", { day: "2-digit" });
+  const day = date;
 
   const TheAlert = () => {
     swal({
@@ -481,7 +481,6 @@ function BookingForm(props) {
                   className="TheTiemINput"
                   type="time"
                   onChange={handleChange2}
-
                 />
               </div>
               <div className="TheOccastion">

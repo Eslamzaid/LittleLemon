@@ -7,77 +7,47 @@ const Footer = () => {
     <footer>
       <section className="thegridder">
         <div className="FirstDiv">
-          <ul>
-            <li>
+          <ul className="SomeSOME">
+            <li id="FirstTop">
               <span className="TheTopers">Product</span>
             </li>
-            <li>Autocapture</li>
-            <li>Data Governance</li>
-            <li>Virtual Events</li>
-            <li>Behavioral Analytics</li>
-            <li>Connect</li>
+            <li className="SomeSpace">Autocapture</li>
+            <li className="SomeSpace">Data Governance</li>
+            <li className="SomeSpace">Virtual Events</li>
+            <li className="SomeSpace">Behavioral Analytics</li>
+            <li className="SomeSpace">Connect</li>
           </ul>
         </div>
         <div>
-          <ul>
-            <li>
+          <ul className="SomeSOME">
+            <li id="FirstTop">
               <span className="TheTopers">Explore</span>
             </li>
-            <li>Resources</li>
-            <li>Blog</li>
-            <li>Documents</li>
+            <li className="SomeSpace">Resources</li>
+            <li className="SomeSpace">Blog</li>
+            <li className="SomeSpace">Documents</li>
           </ul>
         </div>
         <div>
-          <ul>
-            <li>
+          <ul className="SomeSOME">
+            <li id="FirstTop">
               <span className="TheTopers">Company</span>
             </li>
-            <li>About us</li>
-            <li>Partners</li>
-            <li>Contact us</li>
+            <li className="SomeSpace">About us</li>
+            <li className="SomeSpace">Partners</li>
+            <li className="SomeSpace">Contact us</li>
           </ul>
         </div>
-        <div>
+        <div className="THeLOLO">
           <span className="TheTopers">Subscribe</span>
-          <button>
-            Email Address <img src={Send} alt="Subscribe" />
+          <button className="Thhbu">
+            <span id="Victory">Email Address</span>{" "}
+            <img src={Send} id="THeDeve" alt="Subscribe" />
           </button>
-          <p>
+          <p className="TheFinalP">
             Hello, we are ABC. trying to make an effort to put the right people
             for you to get the best results. Just insight
           </p>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <span className="TheTopers">Careers</span>
-            </li>
-            <li>Autocapture</li>
-            <li>Data Governance</li>
-            <li>Virtual Events</li>
-            <li>Virtual Users </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <span className="TheTopers">Internships</span>
-            </li>
-            <li>Resources</li>
-            <li>Blog</li>
-            <li>Documents </li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li>
-              <span className="TheTopers">About us</span>
-            </li>
-            <li>Partners</li>
-            <li>Customers</li>
-            <li>Contact us</li>
-          </ul>
         </div>
       </section>
     </footer>
