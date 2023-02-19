@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Children, useContext } from "react";
 import Linkedin from "./../../assets/Icons/Linkedin.png";
 import Github from "./../../assets/Icons/Github.png";
 import Twitter from "./../../assets/Icons/Twitter.png";
 import LB from "./.../../../../assets/Asset 9@4x.png";
 import Send from "./../../assets/Main/Send.png";
 import "./Footer.css";
+import { theMainCon } from "../Layouts";
 
 const Footer = () => {
+  const thePrepi = useContext(theMainCon);
   return (
     <footer>
+      <button className="invisible" ref={thePrepi.nine}></button>
       <section className="thegridder">
         <div className="FirstDiv">
           <ul className="SomeSOME">
@@ -44,10 +47,15 @@ const Footer = () => {
         </div>
         <div className="THeLOLO">
           <span className="TheTopers">Subscribe</span>
-          <button className="Thhbu">
-            <span id="Victory">Email Address</span>{" "}
-            <img src={Send} id="THeDeve" alt="Subscribe" />
-          </button>
+          <div>
+            <input
+              type="email"
+              className="Thhbu"
+              placeholder="Email us"
+              autoFocus="false"
+            ></input>
+            {/* <img src={Send} id="THeDeve" alt="Subscribe" /> */}
+          </div>
           <p className="TheFinalP">
             Hello, we are ABC. trying to make an effort to put the right people
             for you to get the best results. Just insight

@@ -28,6 +28,11 @@ function Layouts() {
     OHero.current.focus();
   };
 
+  const Final = useRef();
+  const FinalFocus = () => {
+    Final.current.focus();
+  };
+
   return (
     <theMainCon.Provider
       value={{
@@ -39,6 +44,8 @@ function Layouts() {
         six: focusInput3,
         seven: OHero,
         eight: focusHero,
+        nine: Final,
+        ten: FinalFocus
       }}
     >
       <div className="Makethimcener">

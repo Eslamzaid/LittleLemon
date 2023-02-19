@@ -612,8 +612,8 @@ function BookingForm(props) {
                 </tr>
               </tbody>
             </table>
-            <button className="TheLastButtton" onClick={props.sendItUp}>
-              <img src={ToUp} id="SOWhat" alt="Go up" />
+            <button className="TheLastButtton">
+              <img src={ToUp} onClick={thePrepi.two   } id="SOWhat" alt="Go up" />
             </button>
           </div>
           {/* <h1>{state.total}</h1>

@@ -35,9 +35,7 @@ const Header = () => {
         <ul className="desktop-view">
           <div>
             <li>
-              <NavLink to="/">
-                <img width="200rem" src={theLogo} alt="Our restaurant logo" />
-              </NavLink>
+              <img width="200rem" src={theLogo} alt="Our restaurant logo" />
             </li>
           </div>
           <div className="TheNavLinksFather">
@@ -50,16 +48,8 @@ const Header = () => {
             <li id="TheLinks" onClick={thePrepi.four}>
               Book a table
             </li>
-            <li>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive ? "lactive-class" : "not-active-class"
-                }
-                id="TheLinks"
-                to="/AboutUs"
-              >
-                About
-              </NavLink>
+            <li id="TheLinks" onClick={thePrepi.ten}>
+              Contact us
             </li>
           </div>
         </ul>
@@ -112,10 +102,6 @@ const Header = () => {
           )}
         </div>
       </nav>
-      {/* <Routes>
-        <Route path="*" element={<Main />} />
-        <Route path="/AboutUs" element={<About />} />
-      </Routes> */}
     </>
   );
 };

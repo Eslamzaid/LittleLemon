@@ -12,7 +12,6 @@ import { theMainCon } from "../../Layouts";
 
 function Hero(props) {
   const LetsSee = useContext(theMainCon);
-  const TheHerop = LetsSee;
   return (
     <article className="TheHero">
       <section className="TheFirstBoy">

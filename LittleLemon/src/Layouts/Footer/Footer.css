@@ -97,7 +97,15 @@ footer>section>div>p {
     justify-content: space-between;
     align-items: center;
     border-radius: 5px;
+    height: 3.7em;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: url('./../../assets/Main/Send.png') no-repeat right;
+    background-color: white;
+    padding-left: 1em;
 }
+
 
 #Victory {
     opacity: 0.7;
