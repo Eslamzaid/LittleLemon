@@ -7,14 +7,10 @@ import Slider from "./TheSlid/Slider";
 
 
 function Main() {
-  const OrderNow = useRef(null);
-  const focusInput = () => {
-    OrderNow.current.focus();
-  };
   return (
     <main>
-      <Hero connectMenu={focusInput} />
-      <SearchF connect={OrderNow} />
+      <Hero />
+      <SearchF />
       <BookingPage  />
       <Slider />
     </main>
