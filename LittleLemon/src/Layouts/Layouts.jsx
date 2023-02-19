@@ -4,6 +4,7 @@ import Main from "./Main/Main";
 import "./Layouts.css";
 import { CartProvider } from "react-use-cart";
 import Footer from "./Footer/Footer";
+import './Layouts.css'
 
 export const theMainCon = createContext();
 
