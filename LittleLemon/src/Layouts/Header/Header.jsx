@@ -1,4 +1,4 @@
-import React, { useContext, } from "react";
+import React, { useContext } from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
 import { useState } from "react";
 import { Routes, Route, NavLink, redirect } from "react-router-dom";
@@ -27,6 +27,8 @@ const Header = () => {
 
   const thePrepi = useContext(theMainCon);
 
+  const THePP = thePrepi
+
   return (
     <>
       <nav className={navBar ? "active" : "navtransition: 0.5s;"}>
@@ -44,7 +46,7 @@ const Header = () => {
               //   isActive ? "lactive-class" : "not-active-class"
               // }
               id="TheLinks"
-              // onClick={thePrepi.eight}
+              onClick={thePrepi.eight}
             >
               Home
             </li>

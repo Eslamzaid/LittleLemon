@@ -5,7 +5,7 @@ import "./Layouts.css";
 import { CartProvider } from "react-use-cart";
 import Footer from "./Footer/Footer";
 
-export const theMainCon = createContext("Let's see");
+export const theMainCon = createContext();
 
 function Layouts() {
   const OrderNow = useRef(null);
@@ -23,23 +23,25 @@ function Layouts() {
     OrderNow3.current.focus();
   };
 
-  // const OHero = useRef();
-  // const focusHero = () => {
-  //   OHero.current.focus();
-  // };
+  const OHero = useRef();
+  const focusHero = () => {
+    OHero.current.focus();
+  };
 
   return (
     <theMainCon.Provider
-      value={{
-        one: OrderNow,
-        two: focusInput,
-        three: OrderNow2,
-        four: focusInput2,
-        five: OrderNow3,
-        six: focusInput3,
-        // seven: OHero,
-        // eight: focusHero,
-      }}
+      value={
+        {
+          one: OrderNow,
+          two: focusInput,
+          three: OrderNow2,
+          four: focusInput2,
+          five: OrderNow3,
+          six: focusInput3,
+          seven: OHero,
+          eight: focusHero,
+        }
+      }
     >
       <div className="Makethimcener">
         <CartProvider>

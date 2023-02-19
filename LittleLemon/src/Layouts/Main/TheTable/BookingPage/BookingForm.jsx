@@ -203,6 +203,7 @@ function BookingForm(props) {
         <img src={ThePizza} alt="Pizza" />
       </section>
       {/*! Second Part */}
+      <button className="invisible" ref={thePrepi.three}></button>
       <section className="SecondSection">
         <div className="FGroup">
           <div className={VVIP ? "VVIPTrue" : "OuterShell"}>
@@ -381,7 +382,6 @@ function BookingForm(props) {
           </div>
         </div>
       </section>
-      <button className="invisible" ref={thePrepi.three}></button>
       {/*! Third section  */}
       <section className="TheLast">
         <div className="TheLastFirstDiv">

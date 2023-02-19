@@ -10,13 +10,11 @@ import Home from "./../../../assets/Icons/icons8-home-page-50.png";
 import "./Hero.css";
 import { theMainCon } from "../../Layouts";
 
-
-const thePrepi = useContext(theMainCon);
-
 function Hero(props) {
+  const LetsSee = useContext(theMainCon);
+  const TheHerop = LetsSee;
   return (
     <article className="TheHero">
-      {/* <button className="invisible" ref={thePrepi.seven}></button> */}
       <section className="TheFirstBoy">
         <div className="TheFirstGrand">
           <h2>
@@ -28,6 +26,10 @@ function Hero(props) {
           <p>Oh yeahh...</p>
           <button onClick={props.connectMenu}>Order Now</button>
         </div>
+        <button
+          className="invisible"
+          ref={LetsSee.seven}
+        ></button>
         <div className="TheSecondGrandP1">
           <img id="TheBurgerImg" src={TheBurger} alt="Delicious Burger" />
         </div>
@@ -56,8 +58,8 @@ function Hero(props) {
             <img src={BigArrow} alt="Big arrow" />
           </div>
           <div className="TheParts">
-          <img src={Home} alt="A simple home"/>
-          <p>Happy meal</p>
+            <img src={Home} alt="A simple home" />
+            <p>Happy meal</p>
           </div>
         </div>
       </section>
