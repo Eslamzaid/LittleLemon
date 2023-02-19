@@ -30,18 +30,16 @@ function Layouts() {
 
   return (
     <theMainCon.Provider
-      value={
-        {
-          one: OrderNow,
-          two: focusInput,
-          three: OrderNow2,
-          four: focusInput2,
-          five: OrderNow3,
-          six: focusInput3,
-          seven: OHero,
-          eight: focusHero,
-        }
-      }
+      value={{
+        one: OrderNow,
+        two: focusInput,
+        three: OrderNow2,
+        four: focusInput2,
+        five: OrderNow3,
+        six: focusInput3,
+        seven: OHero,
+        eight: focusHero,
+      }}
     >
       <div className="Makethimcener">
         <CartProvider>

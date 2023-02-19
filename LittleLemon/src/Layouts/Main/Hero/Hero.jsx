@@ -26,10 +26,7 @@ function Hero(props) {
           <p>Oh yeahh...</p>
           <button onClick={props.connectMenu}>Order Now</button>
         </div>
-        <button
-          className="invisible"
-          ref={LetsSee.seven}
-        ></button>
+        <button className="invisible" ref={LetsSee.seven}></button>
         <div className="TheSecondGrandP1">
           <img id="TheBurgerImg" src={TheBurger} alt="Delicious Burger" />
         </div>

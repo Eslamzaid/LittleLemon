@@ -27,7 +27,7 @@ const Header = () => {
 
   const thePrepi = useContext(theMainCon);
 
-  const THePP = thePrepi
+  const THePP = thePrepi;
 
   return (
     <>
@@ -41,31 +41,13 @@ const Header = () => {
             </li>
           </div>
           <div className="TheNavLinksFather">
-            <li
-              // className={({ isActive }) =>
-              //   isActive ? "lactive-class" : "not-active-class"
-              // }
-              id="TheLinks"
-              onClick={thePrepi.eight}
-            >
+            <li id="TheLinks" onClick={thePrepi.eight}>
               Home
             </li>
-            <li
-              // className={({ isActive }) =>
-              //   isActive ? "lactive-class" : "not-active-class"
-              // }
-              id="TheLinks"
-              onClick={thePrepi.two}
-            >
+            <li id="TheLinks" onClick={thePrepi.two}>
               Order
             </li>
-            <li
-              // className={({ isActive }) =>
-              //   isActive ? "lactive-class" : "not-active-class"
-              // }
-              id="TheLinks"
-              onClick={thePrepi.four}
-            >
+            <li id="TheLinks" onClick={thePrepi.four}>
               Book a table
             </li>
             <li>
