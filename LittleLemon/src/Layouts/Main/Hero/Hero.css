@@ -99,17 +99,22 @@
 
 .TheSecondGrand {
     width: fit-content;
-    display: flex;  
+    display: flex;
     align-items: center;
     gap: 1rem;
     justify-content: center;
     padding: 1rem;
     /* border: 1px solid black; */
-} 
+}
 
 /** The grand children */
 
-.TheParts{
+.TheParts {
     text-align: center;
     font-weight: 700;
+}
+
+/*! Media   */
+@media screen and (max-width: 793px) {
+    
 }
