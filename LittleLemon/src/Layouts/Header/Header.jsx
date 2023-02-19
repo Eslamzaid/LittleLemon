@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, } from "react";
 import theLogo from "./../../assets/Logo-removebg-preview.png";
 import { useState } from "react";
 import { Routes, Route, NavLink, redirect } from "react-router-dom";
@@ -44,9 +44,18 @@ const Header = () => {
               //   isActive ? "lactive-class" : "not-active-class"
               // }
               id="TheLinks"
-              onClick={thePrepi.two}
+              // onClick={thePrepi.eight}
             >
               Home
+            </li>
+            <li
+              // className={({ isActive }) =>
+              //   isActive ? "lactive-class" : "not-active-class"
+              // }
+              id="TheLinks"
+              onClick={thePrepi.two}
+            >
+              Order
             </li>
             <li
               // className={({ isActive }) =>

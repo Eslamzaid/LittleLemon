@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import TheBurger from "./../../../assets/Main/TheBurger.png";
 import Booking from "./../../../assets/Icons/icons8-mobile-order-64.png";
 import FArrow from "./../../../assets/Icons/Arrow 1.png";
@@ -8,10 +8,15 @@ import Prepare from "./../../../assets/Icons/icons8-weber-50.png";
 import Shipping from "./../../../assets/Icons/icons8-free-shipping-50.png";
 import Home from "./../../../assets/Icons/icons8-home-page-50.png";
 import "./Hero.css";
+import { theMainCon } from "../../Layouts";
+
+
+const thePrepi = useContext(theMainCon);
 
 function Hero(props) {
   return (
     <article className="TheHero">
+      {/* <button className="invisible" ref={thePrepi.seven}></button> */}
       <section className="TheFirstBoy">
         <div className="TheFirstGrand">
           <h2>

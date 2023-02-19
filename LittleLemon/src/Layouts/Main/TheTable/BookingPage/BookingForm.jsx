@@ -194,7 +194,6 @@ function BookingForm(props) {
 
   return (
     <article className="fathofAll">
-      <button className="invisible" ref={thePrepi.three}></button>
       <section className="FirstSection">
         <img src={ThePotatoes} alt="Potato" />
         <div className="TheTextt">
@@ -382,6 +381,7 @@ function BookingForm(props) {
           </div>
         </div>
       </section>
+      <button className="invisible" ref={thePrepi.three}></button>
       {/*! Third section  */}
       <section className="TheLast">
         <div className="TheLastFirstDiv">

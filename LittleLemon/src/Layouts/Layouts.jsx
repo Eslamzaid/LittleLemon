@@ -22,6 +22,12 @@ function Layouts() {
   const focusInput3 = () => {
     OrderNow3.current.focus();
   };
+
+  // const OHero = useRef();
+  // const focusHero = () => {
+  //   OHero.current.focus();
+  // };
+
   return (
     <theMainCon.Provider
       value={{
@@ -31,6 +37,8 @@ function Layouts() {
         four: focusInput2,
         five: OrderNow3,
         six: focusInput3,
+        // seven: OHero,
+        // eight: focusHero,
       }}
     >
       <div className="Makethimcener">
