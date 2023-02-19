@@ -39,7 +39,7 @@ function Hero(props) {
               src={Booking}
               alt="Book from the phone"
             />
-            <p className="TThT">Booking from Mobile</p>
+            <p className="TThTe">Booking from Mobile</p>
           </div>
           <div className="hi">
             <img className="HEHE" src={FArrow} alt="Simple arrow" />
