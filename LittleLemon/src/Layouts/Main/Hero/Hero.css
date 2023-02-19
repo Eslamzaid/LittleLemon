@@ -116,27 +116,73 @@
 
 /*! Media   */
 @media screen and (max-width: 793px) {
-    .TheSecondGrandP1{
+    .TheSecondGrandP1 {
         display: none;
     }
 
-    .TheHero{
+    .TheHero {
         width: 100%;
     }
 
-    .TheFirstBoy{
-        width: 100%;
-        justify-content: center;
-        /* background-color: #495E57; */
+    .TheFirstGrand {
+        width: 80%;
+        background-color: white;
+        align-items: center;
     }
-    .TheFirstGrand > h2{
+
+    .TheFirstBoy {
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .TheBuutonnna {
+        /* margin-left :  10em; */
+        width: 100%;
+    }
+
+    .TheFirstGrand>h2 {
         font-size: large;
+        text-align: center !important;
         width: 100%;
         text-align: center;
-        /* background-color: red; */
     }
-    br{
+
+    br {
         display: none;
     }
 
+    .TheParts {
+        margin: 1em 0em;
+    }
+
+    .hi {
+        rotate: 90deg;
+        width: fit-content;
+        height: fit-content;
+        margin: 1em 0em;
+    }
+
+    .HEHE {
+        width: 5em;
+    }
+
+    .TheSecondBoy {
+        background-color: white;
+    }
+
+    .TThT {
+        font-size: medium;
+    }
+
+    .TheArrowTop {
+        width: 2.5em;
+    }
+
+    .TheSecondGrand {
+        flex-direction: column;
+        height: fit-content;
+        background-color: white;
+    }
 }

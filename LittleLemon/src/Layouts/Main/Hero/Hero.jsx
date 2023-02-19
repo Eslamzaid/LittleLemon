@@ -22,7 +22,9 @@ function Hero(props) {
             <br /> focused on traditional
             <br /> recipes served with a modern twist.
           </h2>
-          <button onClick={props.connectMenu}>Order Now</button>
+          <button id="TheBuutonnna" onClick={props.connectMenu}>
+            Order Now
+          </button>
         </div>
         <button className="invisible" ref={LetsSee.seven}></button>
         <div className="TheSecondGrandP1">
@@ -32,29 +34,37 @@ function Hero(props) {
       <section className="TheSecondBoy">
         <div className="TheSecondGrand">
           <div className="TheParts">
-            <img src={Booking} alt="Book from the phone" />
-            <p>Booking from Mobile</p>
+            <img
+              className="TheArrowTop"
+              src={Booking}
+              alt="Book from the phone"
+            />
+            <p className="TThT">Booking from Mobile</p>
           </div>
-          <div>
-            <img src={FArrow} alt="Simple arrow" />
-          </div>
-          <div className="TheParts">
-            <img src={Prepare} alt="A grilling mashine" />
-            <p>Preparing Your order</p>
-          </div>
-          <div>
-            <img src={SArrow} alt="A simple arrow" />
+          <div className="hi">
+            <img className="HEHE" src={FArrow} alt="Simple arrow" />
           </div>
           <div className="TheParts">
-            <img src={Shipping} alt="Shipping car" />
-            <p>Shipping</p>
+            <img
+              className="TheArrowTop"
+              src={Prepare}
+              alt="A grilling mashine"
+            />
+            <p className="TThT">Preparing Your order</p>
           </div>
-          <div>
-            <img src={BigArrow} alt="Big arrow" />
+          <div className="hi">
+            <img className="HEHE" src={SArrow} alt="A simple arrow" />
           </div>
           <div className="TheParts">
-            <img src={Home} alt="A simple home" />
-            <p>Happy meal</p>
+            <img className="TheArrowTop" src={Shipping} alt="Shipping car" />
+            <p className="TThT">Shipping</p>
+          </div>
+          <div className="hi">
+            <img className="HEHE" src={BigArrow} alt="Big arrow" />
+          </div>
+          <div className="TheParts">
+            <img className="TheArrowTop" src={Home} alt="A simple home" />
+            <p className="TThT">Happy meal</p>
           </div>
         </div>
       </section>
