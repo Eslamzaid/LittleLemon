@@ -52,9 +52,7 @@ const Footer = () => {
               type="email"
               className="Thhbu"
               placeholder="Email us"
-              autoFocus="false"
             ></input>
-            {/* <img src={Send} id="THeDeve" alt="Subscribe" /> */}
           </div>
           <p className="TheFinalP">
             Hello, we are ABC. trying to make an effort to put the right people

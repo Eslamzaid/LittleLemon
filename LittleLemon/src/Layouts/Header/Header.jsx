@@ -35,7 +35,7 @@ const Header = () => {
         <ul className="desktop-view">
           <div>
             <li>
-              <img width="200rem" src={theLogo} alt="Our restaurant logo" />
+                <img width="200rem" src={theLogo} alt="Our restaurant logo" />
             </li>
           </div>
           <div className="TheNavLinksFather">
@@ -102,6 +102,10 @@ const Header = () => {
           )}
         </div>
       </nav>
+      {/* <Routes>
+        <Route path="*" element={<Main />} />
+        <Route path="/AboutUs" element={<About />} />
+      </Routes> */}
     </>
   );
 };
