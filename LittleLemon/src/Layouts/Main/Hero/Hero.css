@@ -116,5 +116,24 @@
 
 /*! Media   */
 @media screen and (max-width: 793px) {
-    
+    .TheSecondGrandP1{
+        display: none;
+    }
+
+    .TheHero{
+        width: 100%;
+    }
+
+    .TheFirstBoy{
+        width: 100%;
+        justify-content: center;
+        /* background-color: #495E57; */
+    }
+    .TheFirstGrand > h2{
+        font-size: medium;
+        width: 100%;
+        text-align: center;
+        /* background-color: red; */
+    }
+
 }

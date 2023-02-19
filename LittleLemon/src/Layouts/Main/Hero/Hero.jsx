@@ -22,7 +22,6 @@ function Hero(props) {
             <br /> focused on traditional
             <br /> recipes served with a modern twist.
           </h2>
-          <p>Oh yeahh...</p>
           <button onClick={props.connectMenu}>Order Now</button>
         </div>
         <button className="invisible" ref={LetsSee.seven}></button>
