@@ -319,3 +319,10 @@
         height: 25rem;
     }
 }
+
+@media screen and (min-width: 412px) and (max-width: 430px) {
+    .TSection {
+        padding-left: 1.2em;
+        padding-right: 3.4em;
+    }
+}
