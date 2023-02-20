@@ -42,7 +42,6 @@
     border: none;
     cursor: pointer;
     border: none;
-    /* border: 1px solid red; */
 }
 
 .FSButton input::placeholder {
@@ -65,7 +64,7 @@
     justify-content: left;
     gap: 0.5rem;
     padding: 1rem 0rem;
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
 }
 
 .SSection button {
@@ -98,6 +97,7 @@
     color: black;
     cursor: pointer;
     transition: ease-in-out 0.2s;
+    font-size: 1em;
 }
 
 .TheLin:hover {
@@ -201,6 +201,10 @@
 
 }
 
+#BYEBYE {
+    display: none;
+}
+
 .BottomPartFirst {
     text-align: center;
     margin-left: 2rem;
@@ -224,11 +228,37 @@
 }
 
 
+#Willbechaned {
+    margin: 1em 0em;
+}
+
+#Willbechaned2 {
+    display: none;
+}
+
 /*! Media  */
 
 @media screen and (max-width: 793px) {
+
+    #BYEBYE {
+        display: block;
+    }
+
+    .TheFather {
+        width: 100%;
+        /* display: flex;
+        flex-direction: column;
+        align-items: center; */
+    }
+
     .FSButton {
         width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 25%;
+        border: white;
     }
 
     .SSection {
@@ -243,26 +273,48 @@
 
     }
 
+
+    #Willbechaned2 {
+        display: block;
+        font-size: small;
+        color: #75746f;
+        opacity: 0.6;
+    }
+
     .TSection {
-        /* grid-template-rows: 1fr 1fr; */
         /* width: fit-content; */
         /* margin: 0; */
-        margin-bottom: 6em;
+        /* padding-left: 3.4em;
+        padding-right: 19.5em; */
         display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6em;
         overflow: scroll;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        width: 30em;
-        padding-left: 3.9em;
+        width: 100%;
         position: relative;
-        right: 5em;
         z-index: 1;
+        gap: 5.9vw;
+    }
 
-        /* max-height: 35em; */
+    #Theimgs {
+        width: 250PX;
+        pointer-events: none;
+    }
+
+    #theSpecial {
+        margin-left: 15.5vw;
+    }
+
+    #theSpecial2 {
+        /* margin-right: 7em; */
+
     }
 
     .Cards {
-        /* flex-direction: row; */
-        margin: 1em 2rem;
+        margin: 0.7em 2rem;
+        height: 25rem;
     }
 }

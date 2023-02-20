@@ -36,6 +36,7 @@ function SearchF() {
             onChange={(e) => setQuiry(e.target.value)}
           ></input>
         </div>
+        <hr id="BYEBYE" />
       </section>
       <section className="SSection">
         <button onClick={() => setItem(MenuD)}>All</button>
@@ -54,10 +55,11 @@ function SearchF() {
           >
             <div className="LeftSide">
               <h3 className="LeftSideCu">
-                {totalItems == 0 ? "Cart is empty" : "Check out"}
-              </h3>
-              <h3 className="LeftSideCu">
-                {totalItems == 0 ? "" : `(${totalItems})`}
+                {totalItems == 0
+                  ? "Cart is empty"
+                  : totalItems == 0
+                  ? ""
+                  : ` Check out (${totalItems})`}
               </h3>
             </div>
             <img src={Sho} id="Shopping" />
@@ -65,6 +67,8 @@ function SearchF() {
         </div>
       </section>
 
+      <h3 id="Willbechaned">Results: {item.length}</h3>
+      <p id="Willbechaned2">Swipe rigth to explore more dishes</p>
       <section className="TSection">
         {item
           .filter(
@@ -73,9 +77,10 @@ function SearchF() {
               itemm.name.includes(quiry)
           )
           .map((ele) => {
-            const { id, image, name, price, alt } = ele;
+            const { id, image, name, price, alt, theSpecial, theSpecial2 } =
+              ele;
             return (
-              <div key={id} className="Cards">
+              <div key={id} id={theSpecial || theSpecial2} className="Cards">
                 <div className="FirstPart">
                   <img src={image} alt={alt} id="Theimgs" />
                 </div>
@@ -93,7 +98,6 @@ function SearchF() {
               </div>
             );
           })}
-          {item.length == 15 ? <h1>hi</h1> : <h2>SO</h2>}
       </section>
     </article>
   );

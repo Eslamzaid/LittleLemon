@@ -6,6 +6,7 @@ const MenuD = [
         name: 'T-Sandwich',
         category: 'breakfast',
         price: 9,
+        theSpecial: 'theSpecial'
     },
     {
         id: 2,
@@ -118,6 +119,7 @@ const MenuD = [
         name: "Rish salad",
         category: "dinner",
         price: 40,
+        theSpecial2: 'theSpecial2'
     },
 ]
 
