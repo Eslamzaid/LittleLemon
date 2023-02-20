@@ -26,7 +26,6 @@ const Header = () => {
 
   const thePrepi = useContext(theMainCon);
 
-
   return (
     <>
       <nav className={navBar ? "active" : ""}>
@@ -59,24 +58,15 @@ const Header = () => {
               src={theLogo}
               alt="Our restaurant logo"
             />
-             {responsive ? (
-              <FontAwesomeIcon
-                className="MakeItLeft"
-                icon={faXmark}
-                onClick={handleOnClick}
-              />
+            {responsive ? (
+              <FontAwesomeIcon icon={faXmark} onClick={handleOnClick} />
             ) : (
-              <FontAwesomeIcon
-                className="MakeItLeft"
-                icon={faBars}
-                onClick={handleOnClick}
-              />
+              <FontAwesomeIcon icon={faBars} onClick={handleOnClick} />
             )}
           </div>
           {responsive ? (
             <ul className="phone-view">
               <div className="TheMiniFather">
-                
                 <li id="TheLinksPh" onClick={thePrepi.eight}>
                   Home
                 </li>
@@ -96,30 +86,8 @@ const Header = () => {
           )}
         </div>
       </nav>
-      {/* <Routes>
-        <Route path="*" element={<Main />} />
-        <Route path="/AboutUs" element={<About />} />
-      </Routes> */}
     </>
   );
 };
 
 export default Header;
-
-{
-  /* <li>
-<NavLink id="TheLinksPh" className="MakeIt" to="/home">
-  Home
-</NavLink>
-</li>
-<li>
-<NavLink id="TheLinksPh" to="/AboutUs">
-  About
-</NavLink>
-</li>
-<li>
-<NavLink id="TheLinksPh" to="/Reservations">
-  Reservations
-</NavLink>
-</li> */
-}
