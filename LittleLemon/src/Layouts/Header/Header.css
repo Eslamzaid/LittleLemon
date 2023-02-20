@@ -127,7 +127,8 @@ nav ul li:not(:first-child) {
     color: rgb(0, 0, 0);
     border: 1px solid transparent;
     opacity: 1;
-    padding: 0.5em;
+    /* padding: 0.5em; */
+    height: fit-content;
 }
 
 #TheLinksPh {
@@ -197,6 +198,10 @@ nav ul li:not(:first-child) {
         /* border: 1px solid black; */
     }
 
+    #TheXANDE{
+        background-color: red;
+    }
+
     .TheMegaP {
         display: flex;
         width: 100%;
@@ -214,6 +219,8 @@ nav ul li:not(:first-child) {
         align-items: center;
         width: 90%;
         /* border: 1px solid red; */
+    }
+    #TheLinksPh{
 
     }
 }

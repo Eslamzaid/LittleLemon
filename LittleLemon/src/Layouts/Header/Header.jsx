@@ -59,25 +59,33 @@ const Header = () => {
               alt="Our restaurant logo"
             />
             {responsive ? (
-              <FontAwesomeIcon icon={faXmark} onClick={handleOnClick} />
+              <FontAwesomeIcon className="fa-2xl" icon={faXmark} onClick={handleOnClick} />
             ) : (
-              <FontAwesomeIcon icon={faBars} onClick={handleOnClick} />
+              <FontAwesomeIcon className="fa-2xl" icon={faBars} onClick={handleOnClick} />
             )}
           </div>
           {responsive ? (
             <ul className="phone-view">
               <div className="TheMiniFather">
                 <li id="TheLinksPh" onClick={thePrepi.eight}>
-                  Home
+                  <span onClick={() => setResponsive(() => !responsive)}>
+                    Home
+                  </span>
                 </li>
                 <li id="TheLinksPh" onClick={thePrepi.two}>
-                  Order
+                  <span onClick={() => setResponsive(() => !responsive)}>
+                    Order
+                  </span>
                 </li>
                 <li id="TheLinksPh" onClick={thePrepi.four}>
-                  Book a table
+                  <span onClick={() => setResponsive(() => !responsive)}>
+                    Book a table
+                  </span>
                 </li>
                 <li id="TheLinksPh" onClick={thePrepi.ten}>
-                  Contact us
+                  <span onClick={() => setResponsive(() => !responsive)}>
+                    Contact us
+                  </span>
                 </li>
               </div>
             </ul>
