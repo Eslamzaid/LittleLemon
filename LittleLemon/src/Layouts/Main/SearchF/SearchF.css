@@ -222,13 +222,6 @@
     border-left: 1px solid black;
 }
 
-.invisible {
-    border: transparent;
-    background-color: transparent;
-    width: 0px;
-    opacity: 0;
-    height: 0px;
-}
 
 
 #Willbechaned {

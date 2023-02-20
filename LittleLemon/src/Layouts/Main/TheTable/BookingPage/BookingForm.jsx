@@ -192,16 +192,16 @@ function BookingForm() {
 
   return (
     <article className="fathofAll">
+      {/* <button className="invisible" ref={thePrepi.three}></button> */}
       <section className="FirstSection">
         <img src={ThePotatoes} alt="Potato" />
         <div className="TheTextt">
           <h2>Book Your Table Now</h2>
           <p>Personalize your journey</p>
         </div>
-        <img src={ThePizza} alt="Pizza" />
+        <img src={ThePizza} id="THENASHBA" alt="Pizza" />
       </section>
       {/*! Second Part */}
-      <button className="invisible" ref={thePrepi.three}></button>
       <section className="SecondSection">
         <div className="FGroup">
           <div className={VVIP ? "VVIPTrue" : "OuterShell"}>

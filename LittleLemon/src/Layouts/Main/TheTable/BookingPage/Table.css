@@ -546,3 +546,48 @@
 }
 
 /*! Media quires */
+
+@media (width <=767px) {
+
+    .FirstSection {
+        width: 100%;
+        justify-content: space-evenly;
+        overflow: hidden;
+    }
+
+    .FirstSection>img:first-of-type {
+        display: none;
+    }
+
+    .TheTextt {
+        padding: 1em;
+        font-size: small;
+        /* background-color: red; */
+        width: 400em;
+
+    }
+
+    #THENASHBA {
+        display: none;
+    }
+
+    .invisible {
+        /* visibility:hidden; */
+        /* border: none; */
+        /* background-color: transparent;
+        width: 0px;
+        height: 0px; */
+        background-color: transparent;
+        border: none;
+        opacity: 0;
+        /* position: absolute; */
+
+    }
+
+    .invisible:focus {
+        outline: none;
+        border: none;
+        background-color: transparent;
+    }
+
+}
