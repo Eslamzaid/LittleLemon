@@ -64,7 +64,7 @@
     justify-content: left;
     gap: 0.5rem;
     padding: 1rem 0rem;
-    /* border-bottom: 1px solid black; */
+    border-bottom: 1px solid black;
 }
 
 .SSection button {
@@ -85,7 +85,6 @@
     width: 15rem;
     height: fit-content;
     cursor: pointer;
-    /* border: 1px solid black; */
 }
 
 .TheLin {
@@ -266,6 +265,7 @@
         grid-template-rows: 1.8em 1.8em 1.8em 1.8em 1.8em;
         justify-content: center;
         gap: 1;
+        border: none;
     }
 
     .SSection button {
@@ -309,7 +309,6 @@
     }
 
     #theSpecial2 {
-        /* margin-right: 7em; */
 
     }
 
