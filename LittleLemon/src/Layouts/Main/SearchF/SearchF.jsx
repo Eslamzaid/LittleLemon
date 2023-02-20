@@ -11,6 +11,11 @@ function SearchF() {
   const [quiry, setQuiry] = useState("");
   const [item, setItem] = useState(MenuD);
   const [tru, setTrue] = useState(false);
+  let [setTHecla, setsetTHecla] = useState(true);
+  let [setTHecla1, setsetTHecla1] = useState(false);
+  let [setTHecla2, setsetTHecla2] = useState(false);
+  let [setTHecla3, setsetTHecla3] = useState(false);
+  let [setTHecla4, setsetTHecla4] = useState(false);
 
   const { addItem, totalItems } = useCart();
 
@@ -24,6 +29,50 @@ function SearchF() {
   };
   const thePrepi = useContext(theMainCon);
 
+  const handleTHeFun1 = () => {
+    setsetTHecla(() => !setTHecla);
+    setsetTHecla1(() => (setTHecla1 = false));
+    setsetTHecla2(() => (setTHecla2 = false));
+    setsetTHecla3(() => (setTHecla3 = false));
+    setsetTHecla4(() => (setTHecla4 = false));
+    setItem(MenuD);
+  };
+
+  const handleTHeFun2 = () => {
+    setsetTHecla(() => (setTHecla1 = false));
+    setsetTHecla1(() => !setTHecla1);
+    setsetTHecla2(() => (setTHecla2 = false));
+    setsetTHecla3(() => (setTHecla3 = false));
+    setsetTHecla4(() => (setTHecla4 = false));
+    filterMenu("breakfast");
+  };
+
+  const handleTHeFun3 = () => {
+    setsetTHecla(() => (setTHecla = false));
+    setsetTHecla1(() => (setTHecla1 = false));
+    setsetTHecla2(() => !setTHecla2);
+    setsetTHecla3(() => (setTHecla3 = false));
+    setsetTHecla4(() => (setTHecla4 = false));
+    filterMenu("lunch");
+  };
+
+  const handleTHeFun4 = () => {
+    setsetTHecla(() => (setTHecla = false));
+    setsetTHecla1(() => (setTHecla1 = false));
+    setsetTHecla2(() => (setTHecla2 = false));
+    setsetTHecla3(() => !setTHecla3);
+    setsetTHecla4(() => (setTHecla4 = false));
+    filterMenu("evening");
+  };
+
+  const handleTHeFun5 = () => {
+    setsetTHecla(() => (setTHecla = false));
+    setsetTHecla1(() => (setTHecla1 = false));
+    setsetTHecla2(() => (setTHecla2 = false));
+    setsetTHecla3(() => (setTHecla3 = false));
+    setsetTHecla4(() => !setTHecla4);
+    filterMenu("dinner");
+  };
   return (
     <article className="TheFather">
       <section className="FSection">
@@ -39,11 +88,36 @@ function SearchF() {
         <hr id="BYEBYE" />
       </section>
       <section className="SSection">
-        <button onClick={() => setItem(MenuD)}>All</button>
-        <button onClick={() => filterMenu("breakfast")}>Breakfast</button>
-        <button onClick={() => filterMenu("lunch")}>Lunch</button>
-        <button onClick={() => filterMenu("evening")}>Evening</button>
-        <button onClick={() => filterMenu("dinner")}>Dinner</button>
+        <button
+          className={setTHecla ? "SThat" : "SItIwAct"}
+          onClick={() => handleTHeFun1()}
+        >
+          All
+        </button>
+        <button
+          className={setTHecla1 ? "SThat" : "SItIwAct"}
+          onClick={() => handleTHeFun2()}
+        >
+          Breakfast
+        </button>
+        <button
+          className={setTHecla2 ? "SThat" : "SItIwAct"}
+          onClick={() => handleTHeFun3()}
+        >
+          Lunch
+        </button>
+        <button
+          className={setTHecla3 ? "SThat" : "SItIwAct"}
+          onClick={() => handleTHeFun4()}
+        >
+          Evening
+        </button>
+        <button
+          className={setTHecla4 ? "SThat" : "SItIwAct"}
+          onClick={() => handleTHeFun5()}
+        >
+          Dinner
+        </button>
         <button ref={thePrepi.one} className="invisible"></button>
         <div className="theLin">
           <PopUp trigger={tru} manger={setTrue} />

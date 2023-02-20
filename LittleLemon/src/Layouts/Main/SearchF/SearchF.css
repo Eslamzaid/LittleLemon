@@ -67,18 +67,22 @@
     border-bottom: 1px solid black;
 }
 
-.SSection button {
+.SItIwAct {
     border: none;
-    background-color: transparent;
+    background-color: white;
+    border: none;
     padding: 1.5rem 1.5rem;
 }
 
-.SSection>button:focus {
-    font-size: 1.5rem;
+.SThat {
+    font-size: 1.2rem;
     font-weight: 700;
+    background-color: white;
+    border: none;
     padding: 0rem;
-    transition: 0.2s;
+    padding: 1rem 1rem;
 }
+
 
 .SSection>div {
     margin-left: auto;
@@ -308,9 +312,7 @@
         margin-left: 15.5vw;
     }
 
-    #theSpecial2 {
-
-    }
+    #theSpecial2 {}
 
     .Cards {
         margin: 0.7em 2rem;
