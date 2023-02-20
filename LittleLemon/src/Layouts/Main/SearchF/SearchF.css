@@ -5,7 +5,7 @@
 
 /* !! The father of all children */
 .TheFather {
-    margin-top: 2.5rem;
+    /* margin-top: 2.5rem; */
     width: 70%;
     text-align: center;
     max-width: 100rem;
@@ -26,7 +26,7 @@
 
 .FSection h1 {
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .FSButton {
@@ -221,4 +221,48 @@
     width: 0px;
     opacity: 0;
     height: 0px;
+}
+
+
+/*! Media  */
+
+@media screen and (max-width: 793px) {
+    .FSButton {
+        width: fit-content;
+    }
+
+    .SSection {
+        display: grid;
+        grid-template-rows: 1.8em 1.8em 1.8em 1.8em 1.8em;
+        justify-content: center;
+        gap: 1;
+    }
+
+    .SSection button {
+        padding: 10px;
+
+    }
+
+    .TSection {
+        /* grid-template-rows: 1fr 1fr; */
+        /* width: fit-content; */
+        /* margin: 0; */
+        margin-bottom: 6em;
+        display: flex;
+        overflow: scroll;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 30em;
+        padding-left: 3.9em;
+        position: relative;
+        right: 5em;
+        z-index: 1;
+
+        /* max-height: 35em; */
+    }
+
+    .Cards {
+        /* flex-direction: row; */
+        margin: 1em 2rem;
+    }
 }

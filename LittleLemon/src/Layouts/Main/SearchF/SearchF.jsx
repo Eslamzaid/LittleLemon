@@ -93,6 +93,7 @@ function SearchF() {
               </div>
             );
           })}
+          {item.length == 15 ? <h1>hi</h1> : <h2>SO</h2>}
       </section>
     </article>
   );

@@ -26,7 +26,6 @@ const Header = () => {
 
   const thePrepi = useContext(theMainCon);
 
-  console.log(responsive)  
 
   return (
     <>
