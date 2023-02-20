@@ -211,14 +211,14 @@
     border-radius: 1em;
 }
 
-.box32{
+.box32 {
     width: inherit;
     background-color: rgb(243, 239, 239);
     padding: 1em;
     border-radius: 1em;
 }
 
-#MakeItLeft32{
+#MakeItLeft32 {
     width: 1em;
     margin: 1mm;
 }
@@ -497,7 +497,7 @@
     cursor: pointer;
 }
 
-#The30{
+#The30 {
     font-size: small;
     margin-left: 0.3em;
     opacity: 0.6;
@@ -505,16 +505,14 @@
 
 /** The swal alert  */
 
-.TheSwal{
-
-}
+.TheSwal {}
 
 .swal-modal {
     min-width: 50rem;
     text-align: center;
 }
 
-.Table{
+.Table {
     width: 80%;
     margin-left: 5em;
     height: max-content;
@@ -522,7 +520,7 @@
     /* background-color: red; */
 }
 
-.Table > .THeTable > tr > td {
+.Table>.THeTable>tr>td {
     padding: 10px;
     font-size: larger;
     font-weight: 500;
@@ -545,4 +543,6 @@
     background-color: rgb(245, 248, 250);
     border-top: 1px solid #E9EEF1;
     overflow: hidden;
-  }
+}
+
+/*! Media quires */

@@ -37,7 +37,7 @@ const reducer2 = (state2, action2) => {
     };
 };
 
-function BookingForm(props) {
+function BookingForm() {
   var [VVIP, setVVIP] = useState(false);
   var [VIP, setVIP] = useState(false);
   var [Pre, setPre] = useState(false);
@@ -56,11 +56,9 @@ function BookingForm(props) {
   };
 
   const handleChange = (event) => {
-    // 👇 Get input value from "event"
     setMessage(event.target.value);
   };
   const handleChange2 = (event) => {
-    // 👇 Get input value from "event"
     setMessage2(event.target.value);
   };
 
