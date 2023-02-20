@@ -286,10 +286,6 @@
     }
 
     .TSection {
-        /* width: fit-content; */
-        /* margin: 0; */
-        /* padding-left: 3.4em;
-        padding-right: 19.5em; */
         display: flex;
         align-items: center;
         justify-content: space-between;
