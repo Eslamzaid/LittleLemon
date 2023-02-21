@@ -192,7 +192,7 @@ function BookingForm() {
 
   return (
     <article className="fathofAll">
-      {/* <button className="invisible" ref={thePrepi.three}></button> */}
+      <button className="invisible" ref={thePrepi.three}></button>
       <section className="FirstSection">
         <img src={ThePotatoes} alt="Potato" />
         <div className="TheTextt">
@@ -611,7 +611,7 @@ function BookingForm() {
               </tbody>
             </table>
             <button className="TheLastButtton">
-              <img src={ToUp} onClick={thePrepi.two   } id="SOWhat" alt="Go up" />
+              <img src={ToUp} onClick={thePrepi.two} id="SOWhat" alt="Go up" />
             </button>
           </div>
           {/* <h1>{state.total}</h1>
