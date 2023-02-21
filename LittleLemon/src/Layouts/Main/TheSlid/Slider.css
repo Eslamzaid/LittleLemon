@@ -11,7 +11,7 @@
 #OurPartners {
     margin: 1.8em 0em;
     font-size: xx-large;
-    
+
 }
 
 .LRImages {
@@ -27,6 +27,12 @@
 
 .LRImages {
     width: 6em;
+}
+
+@media (width <=869px) {
+    .TheBIgdog {
+        width: 500vw;
+    }
 }
 
 

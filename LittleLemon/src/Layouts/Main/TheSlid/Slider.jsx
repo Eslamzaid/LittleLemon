@@ -9,7 +9,7 @@ const Slider = () => {
     <section className="TheFathher">
       <div className="FEslamSection">
         <div className="LRImages"></div>
-        <h2 id="OurPartners">Our competitors</h2>
+        <h2 id="OurPartners">Our friends</h2>
         <div className="LRImages"></div>
       </div>
       <div>
