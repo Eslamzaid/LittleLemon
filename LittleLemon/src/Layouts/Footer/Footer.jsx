@@ -14,7 +14,7 @@ const Footer = () => {
       <button className="invisible" ref={thePrepi.nine}></button>
       <section className="thegridder">
         <div className="FirstDiv">
-          <ul className="SomeSOME">
+          <ul className="SomeSOME" id="aone">
             <li id="FirstTop">
               <span className="TheTopers">Product</span>
             </li>
@@ -26,7 +26,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <ul className="SomeSOME">
+          <ul className="SomeSOME" id="bone">
             <li id="FirstTop">
               <span className="TheTopers">Explore</span>
             </li>
@@ -36,7 +36,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <ul className="SomeSOME">
+          <ul className="SomeSOME" id="atwo">
             <li id="FirstTop">
               <span className="TheTopers">Company</span>
             </li>
@@ -45,7 +45,7 @@ const Footer = () => {
             <li className="SomeSpace">Contact us</li>
           </ul>
         </div>
-        <div className="THeLOLO">
+        <div className="THeLOLO" id="c">
           <span className="TheTopers">Subscribe</span>
           <div>
             <input

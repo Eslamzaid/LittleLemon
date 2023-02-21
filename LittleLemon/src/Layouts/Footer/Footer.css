@@ -148,3 +148,61 @@ footer>section>div>p {
 #TheonlyHerfs {
     margin: 0em 1em;
 }
+
+/*! Media */
+@media (width <=869px) {
+    footer {
+        margin-bottom: 4em;
+    }
+
+    .thegridder {
+        row-gap: 0em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25em 20em 17em;
+        grid-template-areas: "aa bb"
+            "ac ."
+            "c c";
+    }
+
+    .SomeSOME {
+        margin: 2em 2.5em;
+    }
+
+    #FirstTop {
+        margin: 0;
+    }
+
+    #aone {
+        grid-area: aa;
+    }
+
+    #bone {
+        grid-area: bb;
+    }
+
+    #atwo {
+        grid-area: ac;
+    }
+
+    #c {
+        grid-area: c;
+    }
+
+    .theGridder {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em 0em;
+    }
+
+    .Terms {
+        font-size: medium;
+        line-height: 3em;
+    }
+
+    #Soohi{
+        display: none;
+
+    }
+}
