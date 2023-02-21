@@ -527,7 +527,7 @@ function BookingForm() {
                     onChange={onChange}
                   />
                   <label htmlFor="occa2" id="MakeMeACursonr">
-                    Anniversary
+                    Holiday
                   </label>
                 </div>
                 <div>
@@ -582,7 +582,11 @@ function BookingForm() {
           <div className="FSSeciont">
             <img src={CarHome} alt="Order Online" />
             <h3>Order Online</h3>
-            <p>Fast and affordable order from any place and time</p>
+            <div className="SHORTENme2">
+              <p className="SHORTENme">
+                Fast and affordable order from any place and time
+              </p>
+            </div>
             <table className="TheSmallTable2">
               <tbody>
                 <tr>
