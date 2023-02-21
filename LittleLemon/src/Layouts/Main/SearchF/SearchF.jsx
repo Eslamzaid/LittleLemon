@@ -119,6 +119,7 @@ function SearchF() {
           Dinner
         </button>
         <button ref={thePrepi.one} className="invisible"></button>
+        <button ref={thePrepi.theFi} className="invisible"></button>
         <div className="theLin">
           <PopUp trigger={tru} manger={setTrue} />
           <div

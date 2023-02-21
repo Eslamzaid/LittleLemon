@@ -22,7 +22,7 @@ function Hero(props) {
             <br /> focused on traditional
             <br /> recipes served with a modern twist.
           </h2>
-          <button id="TheBuutonnna" onClick={props.connectMenu}>
+          <button id="TheBuutonnna" onClick={LetsSee.UiBu}>
             Order Now
           </button>
         </div>

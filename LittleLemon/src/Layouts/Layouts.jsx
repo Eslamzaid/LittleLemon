@@ -4,7 +4,7 @@ import Main from "./Main/Main";
 import "./Layouts.css";
 import { CartProvider } from "react-use-cart";
 import Footer from "./Footer/Footer";
-import './Layouts.css'
+import "./Layouts.css";
 
 export const theMainCon = createContext();
 
@@ -34,6 +34,11 @@ function Layouts() {
     Final.current.focus();
   };
 
+  const UlFinal = useRef();
+  const UlFinalFocus = () => {
+    UlFinal.current.focus();
+  };
+
   return (
     <theMainCon.Provider
       value={{
@@ -46,7 +51,9 @@ function Layouts() {
         seven: OHero,
         eight: focusHero,
         nine: Final,
-        ten: FinalFocus
+        ten: FinalFocus,
+        theFi: UlFinal,
+        UiBu: UlFinalFocus,
       }}
     >
       <div className="Makethimcener">
@@ -61,4 +68,3 @@ function Layouts() {
 }
 
 export default Layouts;
-
