@@ -47,6 +47,7 @@
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem;
+    padding-bottom: 4rem;
     gap: 5em;
     height: fit-content;
 }
@@ -190,26 +191,25 @@
 }
 
 .box {
-    width: 30em;
     background-color: rgb(243, 239, 239);
     padding: 1em;
     border-radius: 1em;
 }
 
+/* 
 .boox {
-    width: 30em;
     background-color: rgb(243, 239, 239);
     padding: 1em;
     border-radius: 1em;
 }
 
 .booox {
-    width: 30em;
+    width: ;
     text-align: center;
     background-color: rgb(243, 239, 239);
     padding: 1em;
     border-radius: 1em;
-}
+} */
 
 .box32 {
     width: inherit;
@@ -561,17 +561,18 @@
     outline: white;
 }
 
+.LetsGoo {
+    color: #E8C46A;
+    opacity: 1;
+}
+
 /*! Media quires */
 
-@media (width <=767px) {
+@media (width <= 869px) {
 
     .FirstSection {
-        justify-content: space-evenly;
-        /* overflow: hidden; */
-    }
-
-    .FirstSection>img:first-of-type {
-        display: none;
+        /* background-color: red; */
+        height: fit-content;
     }
 
     .TheTextt {
@@ -584,14 +585,12 @@
         display: none;
     }
 
-    .invisibble {
-        background-color: red;
+    /* .invisibble {
         font-size: 100em;
     }
 
     .invisible {
         border: none;
-        background-color: red;
         cursor: pointer;
         all: unset;
     }
@@ -604,6 +603,86 @@
         font: inherit;
         cursor: pointer;
         outline: white;
+    } */
+
+    .SecondSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3;
+        padding: 1em 0em;
+        padding-bottom: 2.7em;
+        width: 100%;
+    }
+
+    .FGroup {
+        background-color: #707070;
+    }
+
+    .OuterShell {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .VVIPTrue {
+        height: fit-content;
+    }
+
+    .VVVIPTrue {
+        height: fit-content;
+    }
+
+    .VVIPTrue {
+        height: fit-content;
+    }
+
+    .TheContent1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: fit-content;
+        width: 100%;
+        height: fit-content;
+    }
+
+    #TheH2 {
+        font-size: xx-large;
+    }
+
+    #TheH22 {
+        font-size: xx-large;
+    }
+
+    #SppnImg {
+        width: 1.5em;
+    }
+
+    .ChairImg {
+        width: 22%;
+        bottom: 0;
+
+    }
+
+    .TheText {
+        margin-right: 0px;
+        margin: 1.7rem;
+    }
+
+
+    .LetsGoo {
+        color: #E8C46A;
+        opacity: 1;
+    }
+
+    .box {
+        width: 100%;
+        /* padding: 1em; */
+    }
+
+
+    .TheBigButton2 {
+        /* border: 1px solid black; */
     }
 
 }

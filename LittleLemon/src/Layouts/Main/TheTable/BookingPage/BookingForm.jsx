@@ -194,7 +194,7 @@ function BookingForm() {
     <article className="fathofAll">
       <button className="invisible" ref={thePrepi.three}></button>
       <section className="FirstSection">
-        <img src={ThePotatoes} alt="Potato" />
+        <img src={ThePotatoes} alt="Potato" id="Potato" />
         <div className="TheTextt">
           <h2>Book Your Table Now</h2>
           <p>Personalize your journey</p>
@@ -208,9 +208,6 @@ function BookingForm() {
             <Tippy
               render={(attrs) => (
                 <div className="box" tabIndex="-1" {...attrs}>
-                  {/* Very important person, A very important person or personage is
-                  a person who is accorded special privileges due to their high
-                  social status, influence or importance. */}
                   This will provide you with all types of food and Resorts,
                   <br /> It will coast you <strong>$1000</strong>
                 </div>
@@ -233,9 +230,13 @@ function BookingForm() {
                   VVIP <img src={Special} alt="White chare" id="SppnImg" />
                 </h2>
                 <p className={VVIP ? "ThenoicyPP" : "ThenoicyP"}>
-                  VVIP or V.V.I.P.) is also used, especially with reference to
-                  VIPs with very high rank or spending power. It is used
-                  especially when anyone can buy VIP treatment,{" "}
+                  VVIP is the ultimate package
+                  <span className={VVIP ? "LetsGoo" : "NOP"}> we offer</span>,
+                  it have everything you can dream of, for example
+                  <span className={VVIP ? "LetsGoo" : "NOP"}>
+                    {" "}
+                    yates, the JERA museam and a flight to space!
+                  </span>
                 </p>
               </div>
             </div>
@@ -270,10 +271,11 @@ function BookingForm() {
           <div className={VIP ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(atttrs) => (
-                <div className="boox" tabIndex="-2" {...atttrs}>
+                <div className="box" tabIndex="-2" {...atttrs}>
                   {/* VIP or very important person, usually of being famous or
                   influential. */}
                   This will provide you with all types of food but with limited
+                  <br />
                   amount of Resorts, It will coast you <strong>$500</strong>
                 </div>
               )}
@@ -293,9 +295,15 @@ function BookingForm() {
               <div className="TheText">
                 <h2 id={VIP ? "TheH22" : "TheH2"}>VIP</h2>
                 <p className={VIP ? "ThenoicyPP" : "ThenoicyP"}>
-                  VIP is the right choice if you want to enjoy with your family
-                  or friends, it will provide you with all the Premium features
-                  and FREE ticket for the JERA museum.
+                  VIP is the right choice if you want to{" "}
+                  <span className={VIP ? "LetsGoo" : "NOP"}>
+                    {" "}
+                    enjoy with your family or friends,
+                  </span>{" "}
+                  it will provide you with all the{" "}
+                  <span className={VIP ? "LetsGoo" : "NOP"}>
+                    Premium features and FREE ticket for the JERA museum.
+                  </span>
                 </p>
               </div>
             </div>
@@ -325,9 +333,10 @@ function BookingForm() {
           <div className={Pre ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(attttrs) => (
-                <div className="booox" tabIndex="-3" {...attttrs}>
+                <div className="box" tabIndex="-3" {...attttrs}>
                   {/* This will fit <strong>all</strong> your regular needs */}
                   This will provide you with limited amount of food and Resorts,
+                  <br />
                   It will coast you <strong>$250</strong>
                 </div>
               )}
@@ -347,9 +356,13 @@ function BookingForm() {
               <div className="TheText">
                 <h2 id={Pre ? "TheH22" : "TheH2"}>Premium</h2>
                 <p className={Pre ? "ThenoicyPP" : "ThenoicyP"}>
-                  Premium will fit all your needs, car parking, hotel, three
-                  tickets for the opera and a lot more, if you are flying solo
-                  it will be the right choice.
+                  Premium will fit{" "}
+                  <span className={Pre ? "LetsGoo" : "NOP"}>
+                    all your needs, car parking, hotel, three tickets for the
+                    opera
+                  </span>{" "}
+                  and a lot more, if you are flying solo it will be the right
+                  choice.
                 </p>
               </div>
             </div>
