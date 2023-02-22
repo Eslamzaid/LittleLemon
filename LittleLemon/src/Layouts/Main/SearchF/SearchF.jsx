@@ -75,6 +75,8 @@ function SearchF() {
   };
   return (
     <article className="TheFather">
+      <button ref={thePrepi.one} className="invisible"></button>
+        <button ref={thePrepi.theFi} className="invisible"></button>
       <section className="FSection">
         <h1>Our menu</h1>
         <div className="FSButton">
