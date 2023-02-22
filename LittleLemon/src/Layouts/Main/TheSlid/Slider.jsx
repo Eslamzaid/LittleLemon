@@ -5,6 +5,10 @@ import PauseOnHover from "./TheContent";
 import "./Slider.css";
 
 const Slider = () => {
+  var letsGoo = 4
+  if (window.screen.availWidth <= 830){
+    letsGoo = 1
+  }
   return (
     <section className="TheFathher">
       <div className="FEslamSection">

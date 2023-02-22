@@ -154,7 +154,7 @@
 }
 
 /*! Media   */
-@media (width <= 767px) {
+@media screen and (max-width: 834px) {
     .TheSecondGrandP1 {
         display: none;
     }

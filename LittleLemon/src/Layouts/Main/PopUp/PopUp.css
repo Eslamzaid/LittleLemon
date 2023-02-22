@@ -15,7 +15,7 @@
 
 .SecondFather {
     position: relative;
-    padding:5rem;
+    padding: 5rem;
     height: fit-content;
     max-height: 50rem;
     overflow-y: scroll;
@@ -35,12 +35,11 @@
     cursor: pointer;
 }
 
-#CloseBTN{
+#CloseBTN {
     cursor: pointer;
 }
 
 /*! Media  */
-@media (width <= 767px) {
-    .SecondFather {
-    }
+@media screen and (max-width: 834px) {
+    .SecondFather {}
 }
