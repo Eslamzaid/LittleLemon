@@ -1,0 +1,224 @@
+/*! The father of all */
+
+footer {
+    margin-bottom: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+    max-width: 150rem;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+footer>section>div>p {
+    font-size: smaller;
+}
+
+.SomeSOME {
+    margin-top: 4.65em;
+}
+
+/** the grid */
+.thegridder {
+    /* margin-left: 10em; */
+    display: grid;
+    grid-template-columns: 20em 20em 20em 30em;
+    grid-template-rows: 1fr;
+    row-gap: 3em;
+}
+
+/*? the First text or spans  */
+
+/* Father of it */
+#FirstTop {
+    margin-bottom: 1em;
+}
+
+.TheTopers {
+    font-size: large;
+    font-weight: 500;
+}
+
+.SomeSpace {
+    width: fit-content;
+    text-decoration: none;
+    border: 1px solid transparent;
+    color: black;
+    margin: 0.8em 0em;
+    padding: 0.5em 0em;
+    border-radius: 25px;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.SomeSpace::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 2em;
+    width: 100em;
+    /* height: 100%; */
+    border: 1px solid black;
+    transition: ease-in-out 1s;
+    z-index: 1111;
+    transform: translateX(-100%);
+}
+
+.SomeSpace:hover::before {
+    transform: translateX(0);
+}
+
+.SomeSpace:hover {
+    color: black;
+    opacity: 1;
+}
+
+/*? The button  */
+.THeLOLO {
+    background-color: #E8C46A;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2em 5em;
+}
+
+.Thhbu {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    height: 3.7em;
+    overflow: hidden;
+    width: 100%;
+    cursor: pointer;
+    background: url('./../../assets/Main/Send.png') no-repeat right;
+    background-color: white;
+    padding-left: 1em;
+}
+
+
+#Victory {
+    opacity: 0.7;
+    font-weight: 500;
+    margin-left: 1em;
+    width: 100%;
+    text-align: left;
+}
+
+.TheFinalP {
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.theGridder {
+    display: grid;
+    grid-template-columns: 20em 50em;
+    width: 75.7%;
+    margin-top: 2em;
+    padding: 0em 3em;
+    padding-top: 3em;
+    border-top: 1px solid #929191;
+    text-align: center;
+    max-width: 150rem;
+}
+
+#Soohi {
+    position: absolute;
+    right: 2em;
+    width: 4em;
+}
+
+.Terms {
+    font-size: large;
+    word-spacing: 2em;
+}
+
+#TheonlyHerfs {
+    margin: 0em 1em;
+}
+
+/*! Media */
+@media only screen and (min-width: 836px) and (max-width: 1720px) {
+    footer {
+        /* background-color: red; */
+    }
+
+    .thegridder {
+        margin-left: 5em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .theGridder {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 836px) {
+    footer {
+        margin-bottom: 4em;
+    }
+
+    .thegridder {
+        row-gap: 0em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25em 20em 17em;
+        grid-template-areas: "aa bb"
+            "ac ."
+            "c c";
+    }
+
+    .SomeSOME {
+        margin: 2em 2.5em;
+    }
+
+    #FirstTop {
+        margin: 0;
+    }
+
+    #aone {
+        grid-area: aa;
+    }
+
+    #bone {
+        grid-area: bb;
+    }
+
+    #atwo {
+        grid-area: ac;
+    }
+
+    #c {
+        grid-area: c;
+    }
+
+    .theGridder {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        padding: 1em 0em;
+    }
+
+    .Terms {
+        font-size: medium;
+        line-height: 3em;
+    }
+
+    #Soohi {
+        display: none;
+
+    }
+}

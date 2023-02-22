@@ -3,6 +3,7 @@
 :root {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  -moz-scroll-behavior: smooth;
   /* text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
@@ -16,4 +17,9 @@
 
   margin: 0px;
   padding: 0px;
+  width: 100%;
 }
+
+html {
+  scroll-behavior: smooth
+  }

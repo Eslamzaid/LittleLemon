@@ -1,0 +1,358 @@
+:root {
+    --bac: #F4CE14;
+    --trad: 4em;
+}
+
+/* !! The father of all children */
+.TheFather {
+    /* margin-top: 2.5rem; */
+    width: 70%;
+    text-align: center;
+    max-width: 100rem;
+    /* background-color: red; */
+}
+
+
+
+/*! The section of the father */
+
+/*? First section */
+.FSection {
+    padding: 2rem 0rem;
+    /* background-color: green; */
+}
+
+/** The children of the first section */
+
+.FSection h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.FSButton {
+    text-align: start;
+    border-bottom: 1px solid black;
+    width: 15rem;
+    opacity: 0.6;
+}
+
+.FSButton input {
+    padding: 0.8rem 2.2rem;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border: none;
+}
+
+.FSButton input::placeholder {
+    color: black;
+    font-weight: 100;
+}
+
+
+.icon {
+    background: url("./../../../assets/TheSeach.png") no-repeat 0.2rem;
+    background-size: 25px;
+}
+
+
+/*? Third section */
+/** The children of the second section */
+.SSection {
+    display: flex;
+    align-items: baseline;
+    justify-content: left;
+    gap: 0.5rem;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid black;
+}
+
+.SItIwAct {
+    border: none;
+    background-color: white;
+    border: none;
+    padding: 1.5rem 1.5rem;
+}
+
+.SThat {
+    font-size: 1.2rem;
+    font-weight: 700;
+    background-color: white;
+    border: none;
+    padding: 0rem;
+    padding: 1rem 1rem;
+}
+
+
+.SSection>div {
+    margin-left: auto;
+    width: 15rem;
+    height: fit-content;
+    cursor: pointer;
+}
+
+.TheLin {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+    font-size: 1em;
+}
+
+.TheLin:hover {
+    background-color: white;
+    transition: ease-in-out 0.2s;
+}
+
+.LeftSideCu {
+    cursor: pointer;
+}
+
+.LeftSideCu:hover {
+    transition: ease-in-out 0.2s;
+    background-color: white;
+}
+
+[aria-pressed="false"] {
+    background-color: white;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: white;
+    border: 3px solid black;
+    padding: 0.5em;
+}
+
+[aria-pressed="true"] {
+    border: 1px solid black;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid rgb(44, 44, 44);
+    padding: 0.5em;
+}
+
+#Shopping {
+    cursor: pointer;
+    width: 2rem;
+}
+
+/*? Second section */
+@media screen and (max-width: 834px) {
+    [aria-pressed="true"] {
+        border: none;
+    }
+
+    [aria-pressed="false"] {
+        border: none;
+    }
+}
+
+/** The children of the third section */
+
+
+.TSection {
+    display: grid;
+    grid-template-columns: repeat(4, 20rem);
+    grid-template-rows: minmax(1fr);
+    border-top-left-radius: var(--trad);
+    border-top-right-radius: var(--trad);
+    overflow: hidden;
+    min-height: 25vh;
+    gap: 1rem;
+    margin-bottom: 10pc;
+    margin-top: 2pc;
+}
+
+#Theimgs {
+    cursor: pointer;
+    width: 250px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+#Theimgs:hover {
+    width: 300px;
+    transition: ease-in 0.2s;
+}
+
+#Plus {
+    cursor: pointer;
+}
+
+.Cards {
+    background-color: white;
+    margin: 1rem 1rem;
+    border-radius: 1em;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30rem;
+}
+
+.FirstPart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px black;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.BottomPart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid black;
+    height: 5rem;
+
+}
+
+#BYEBYE {
+    display: none;
+}
+
+.BottomPartFirst {
+    text-align: center;
+    margin-left: 2rem;
+}
+
+.BottomPartSecond>button {
+    background-color: transparent;
+    border: none;
+    margin-right: 1rem;
+    width: 100%;
+    height: 100%;
+    border-left: 1px solid black;
+}
+
+
+
+#Willbechaned {
+    margin: 1em 0em;
+}
+
+#Willbechaned2 {
+    display: none;
+}
+
+/*! Media  */
+
+@media screen and (max-width: 834px) {
+
+    #BYEBYE {
+        display: block;
+    }
+
+    .TheFather {
+        width: 100%;
+        /* display: flex;   
+        flex-direction: column;
+        align-items: center; */
+    }
+
+    .FSButton {
+        width: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        margin-left: 25%;
+        border: white;
+    }
+
+    .SSection {
+        display: grid;
+        grid-template-rows: 1.8em 1.8em 1.8em 1.8em 1.8em;
+        justify-content: center;
+        gap: 1;
+        border: none;
+    }
+
+    .SSection button {
+        padding: 10px;
+
+    }
+
+
+    #Willbechaned2 {
+        display: block;
+        font-size: small;
+        color: #75746f;
+        opacity: 0.6;
+    }
+
+    .TSection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 6em;
+        overflow: scroll;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        gap: 5.9vw;
+    }
+
+    #Theimgs {
+        width: 250PX;
+        pointer-events: none;
+    }
+
+    #theSpecial {
+        margin-left: 15.5vw;
+    }
+
+    #theSpecial2 {}
+
+    .Cards {
+        margin: 0.7em 1.9rem;
+        height: 25rem;
+    }
+}
+
+@media only screen and (min-width: 1420px) and (max-width: 1900px) {
+    .TSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow: scroll;
+    }
+
+    #Theimgs {
+        width: 12vw;
+    }
+
+    #Theimgs:hover {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1420px) {
+    .TSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(1fr);
+        overflow: scroll;
+    }
+
+    #Theimgs:hover {
+        width: 300px;
+        transition: ease-in 0.2s;
+    }
+
+}
+
+@media screen and (min-width: 412px) and (max-width: 430px) {
+    .TSection {
+        overflow: scroll;
+        padding-left: 1.2em;
+        padding-right: 3.4em;
+    }
+}

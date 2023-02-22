@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Loading from "./Funct/Loading/Loading";
 import Layouts from "./Layouts/Layouts";
-import Header from "./Layouts/Header/Header";
 import "./App.css";
-import { BrowserRouter } from "react-router-dom";
 
 function App() {
   //! The Loader
@@ -18,3 +16,4 @@ function App() {
 }
 
 export default App;
+

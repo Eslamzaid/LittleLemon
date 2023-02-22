@@ -19,7 +19,9 @@ export default function ErrorPage() {
         <i>{error.statusText || error.message}</i>
       </p>
       <button className="TheButton">
-        <Link id="THeTextDoc" to="/">Go HomePage</Link>
+        <Link id="THeTextDoc" to="/">
+          Go HomePage
+        </Link>
       </button>
     </div>
   );

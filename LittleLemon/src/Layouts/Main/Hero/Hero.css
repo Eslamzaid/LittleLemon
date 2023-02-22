@@ -1,0 +1,237 @@
+/* ! The father of all */
+
+.TheHero {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 150rem;
+}
+
+
+/*************! The First part of the CSS ******************/
+
+/*? The second father */
+
+.TheFirstBoy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+/** The children */
+.TheFirstGrand {
+    height: 21rem;
+    width: 50%;
+    text-align: left;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.TheFirstGrand {
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/** The grand children */
+
+#TheBurgerImg {
+    width: 35rem;
+    margin-top: 2rem;
+    pointer-events: none;
+}
+
+
+#TheBurgerImg {
+    -webkit-animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(1000px);
+        transform: translateX(1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.TheFirstGrand h2 {
+    font-size: 1.7rem;
+    /* margin: 1em 0em; */
+}
+
+.TheFirstGrand p {
+    font-weight: 500;
+    font-size: 0.8em;
+    opacity: 0.6;
+    /* margin: 0.1em 0em; */
+}
+
+.TheFirstGrand button {
+    background-color: #495E57;
+    font-size: 1em;
+    font-weight: 600;
+    color: white;
+    border: none;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    border: 2px solid transparent;
+    margin-top: 2rem;
+    transition: 0.2s;
+    /* margin-top: 0.5em; */
+}
+
+.TheFirstGrand button:hover {
+    background-color: #F4CE14;
+    color: black;
+    transition: 0.2s;
+    border: 2px solid black;
+}
+
+
+/**************! The second part of the CSS *****************/
+
+/*? The second father */
+
+.TheSecondBoy {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4CE14;
+    border-radius: 40px;
+    margin-top: 0.6rem;
+    margin-bottom: 3rem;
+    /* border: 1px solid black;     */
+}
+
+/** The children */
+
+.TheSecondGrand {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    padding: 1rem;
+    /* border: 1px solid black; */
+}
+
+/** The grand children */
+
+.TheParts {
+    text-align: center;
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+    .HEHE {
+        min-width: 3vmin;
+        max-width: 5vmin;
+    }
+
+    .TheFirstGrand > h2 {
+        font-size: larger;
+    }
+
+}
+
+/*! Media   */
+@media screen and (max-width: 834px) {
+    .TheSecondGrandP1 {
+        display: none;
+    }
+
+    .TheHero {
+        width: 100%;
+    }
+
+    .TheFirstGrand {
+        width: 80%;
+        background-color: white;
+        align-items: center;
+    }
+
+    .TheFirstBoy {
+        justify-content: center;
+        align-items: end;
+        width: 100%;
+        padding: 0px;
+    }
+
+    .TheBuutonnna {
+        /* margin-left :  10em; */
+        width: 100%;
+    }
+
+    .TheFirstGrand>h2 {
+        font-size: large;
+        text-align: center !important;
+        width: 100%;
+        text-align: center;
+    }
+
+    br {
+        display: none;
+    }
+
+    .TheParts {
+        margin: 1em 0em;
+    }
+
+    .hi {
+        rotate: 90deg;
+        width: fit-content;
+        height: fit-content;
+        margin: 1em 0em;
+    }
+
+    .HEHE {
+        width: 5em;
+    }
+
+    .TheSecondBoy {
+        background-color: white;
+    }
+
+    .TThTe {
+        font-size: medium;
+    }
+
+    .TheArrowTop {
+        width: 2.5em;
+    }
+
+    .TheSecondGrand {
+        flex-direction: column;
+        height: fit-content;
+        background-color: white;
+    }
+}

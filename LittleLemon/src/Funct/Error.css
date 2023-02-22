@@ -11,7 +11,7 @@
     flex-flow: column;
 }
 
-#error-page h1 {
+.TheMe {
     font-size: 10rem;
 }
 
@@ -35,16 +35,37 @@
     margin: 1rem 0rem;
 }
 
-#THeTextDoc{
+#THeTextDoc {
     text-decoration: none;
     color: black;
+    cursor: pointer;
 
 }
+
 .TheButton {
     border: none;
-    padding: 1rem;    
+    padding: 1rem;
     font-size: 1rem;
     background: none;
     background-color: #F4CE15;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 836px) {
+    .TheMe {
+        font-size: 5vmin;
+        font-size: 8vmax;
+    }
+
+    .SomeSpace1 {
+        font-size: xx-large;
+    }
+
+    .Shorter {
+        font-size: 1em;
+        width: fit-content;
+        margin: 1em 3rem;
+    }
+
 }

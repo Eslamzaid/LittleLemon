@@ -1,0 +1,55 @@
+/*! The father of all */
+
+.TheFatherOfAll {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1059;
+}
+
+.SecondFather {
+    position: relative;
+    padding: 5rem;
+    height: fit-content;
+    max-height: 50rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 100%;
+    max-width: fit-content;
+    background-color: #fff;
+}
+
+.Close-bth {
+    position: absolute;
+    top: 10px;
+    right: 1em;
+    pad: 1.5rem 1.5rem;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#CloseBTN {
+    cursor: pointer;
+}
+
+/*! Media  */
+@media screen and (max-width: 834px) {
+    .Close-bth {
+        top: 4vw;
+        right: 4vw;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .Close-bth {
+        right: 8em;
+        top: 4vw;
+    }
+}

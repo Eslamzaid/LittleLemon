@@ -1,0 +1,754 @@
+/*! Father of all */
+
+.fathofAll {
+    margin-bottom: 10em;
+    overflow: hidden;
+}
+
+/** The First section of the first group */
+
+.FirstSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #E8C46A;
+}
+
+.FirstSection>img:first-of-type {
+    width: 12em;
+    position: relative;
+    rotate: 50deg;
+    left: -6em;
+    top: 3em;
+    opacity: 0.8;
+    overflow: hidden;
+}
+
+.TheTextt {
+    padding: 2em;
+    text-align: center;
+}
+
+.TheTextt>h2 {
+    font-size: 3em;
+    font-weight: 600;
+}
+
+.TheTextt>p {
+    color: #FFFFFF;
+    opacity: 0.7;
+}
+
+/** Second section of the first group  */
+
+.SecondSection {
+    background-color: #E8C46A;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 4rem;
+    gap: 5em;
+    height: fit-content;
+}
+
+.OuterShell {
+    text-align: center;
+    border: 1px solid transparent;
+    background-color: white;
+    transition: ease-in-out 0.4s;
+}
+
+.VVIPTrue {
+    text-align: center;
+    border: 1px solid transparent;
+    transition: ease-in-out 0.4s;
+    background-color: black;
+    width: fit-content;
+    height: fit-content;
+}
+
+/*? First Group  */
+
+.ChairImg {
+    transition: ease-in-out 0.2s;
+    position: relative;
+    width: 7em;
+    bottom: 0.2em;
+}
+
+#MakeItLeft {
+    float: right;
+    margin: 0.5em;
+    cursor: help;
+}
+
+.TheContent1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 35em;
+    margin-top: 5em;
+}
+
+.TheText {
+    margin-right: 1.7rem;
+}
+
+#TheH2 {
+    font-size: 4em;
+    text-align: left;
+}
+
+#TheH22 {
+    font-size: 4em;
+    text-align: left;
+    color: white;
+}
+
+#SppnImg {
+    position: relative;
+    top: 10px;
+}
+
+
+.ThenoicyP {
+    color: #707070;
+    opacity: 0.8;
+    text-align: left;
+    width: 21.5em;
+    font-size: 0.9rem;
+}
+
+.ThenoicyPP {
+    color: white;
+    opacity: 0.8;
+    text-align: left;
+    width: 21.5em;
+    font-size: 0.9rem;
+}
+
+.TheBigButton {
+    background-color: black;
+    margin: 1rem 0em;
+    padding: 0.5em;
+    width: 78%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.TheBigButton2 {
+    background-color: white;
+    margin: 1rem 0em;
+    padding: 1em;
+    width: 78%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+#ContinueText2 {
+    font-size: x-large;
+    font-weight: 550;
+    cursor: pointer;
+}
+
+#WhiteandWeirdChare {
+    margin-left: 1em;
+    position: relative;
+    top: 0.2em;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#WhiteandWeirdCh {
+    margin-left: 1em;
+    position: relative;
+    top: 0.35em;
+    cursor: pointer;
+    rotate: 90deg;
+    transition: all 0.3s;
+}
+
+#ContinueText {
+    color: white;
+    font-size: x-large;
+    font-weight: 550;
+    position: relative;
+    bottom: 0.2em;
+    cursor: pointer;
+}
+
+#BlackArrow {
+    position: relative;
+    top: 0.45em;
+    cursor: pointer;
+}
+
+#MakeItLeft {
+    position: relative;
+    width: 1.8em;
+}
+
+.box {
+    background-color: rgb(243, 239, 239);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+
+.box32 {
+    width: inherit;
+    background-color: rgb(243, 239, 239);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+#MakeItLeft32 {
+    width: 1em;
+    margin: 1mm;
+}
+
+/*! Third section  */
+
+
+/*? Father of all */
+
+.TheLast {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 40em;
+    margin-top: 2em;
+}
+
+.TheLastFirstDiv {
+    width: 56.5%;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+.TheLastFirstDiv>h3 {
+    font-size: xx-large;
+}
+
+#smallLemon {
+    align-self: flex-end;
+    width: 2em;
+}
+
+
+.TheContainer {
+    display: grid;
+    grid-template-columns: 22em 2fr 22em;
+    grid-template-rows: 36em;
+    width: 90%;
+    gap: 3em;
+}
+
+.FirstOf1 {
+    background-color: white;
+    border: 1px solid black;
+    text-align: center;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.TheSmallTable {
+    margin: 2.8em 0em;
+    text-align: center;
+    width: 100%;
+    padding-left: 1em;
+    height: 10em;
+    font-size: large;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+
+.TheStepFatherOfButton {
+    width: 100%;
+    border-top: 1px solid black;
+    padding: 0.5em;
+    /* background-color: red; */
+}
+
+#TheReadMoreBu {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    font-weight: 600;
+    font-size: 0.8em;
+    cursor: pointer;
+}
+
+
+/** Second part   */
+
+.TheSeconddPart {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 35em;
+    border: 1px solid black;
+}
+
+.HowMany {
+    margin-left: 1em;
+}
+
+.NumGuests {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+}
+
+.JustCheck {
+    border-left: 1px solid black;
+    width: 8.4em;
+    padding: 0.8em 0em;
+}
+
+#people {
+    background-color: transparent;
+    border: none;
+    width: 1.2em;
+    text-align: center;
+    font-size: 1.2em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+    position: relative;
+    bottom: 4px;
+}
+
+.TheIncDecButton {
+    border: none;
+    background-color: transparent;
+    margin-top: 10px;
+}
+
+#MakeMeACursonr {
+    cursor: pointer;
+}
+
+/*? The Date */
+
+.PickUpADate {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+#Date {
+    margin-left: 1em;
+}
+
+.TheInputDate {
+    border: none;
+    border-left: 1px solid;
+    width: 10em;
+    padding: 0.9em;
+    height: 100%;
+    cursor: pointer;
+}
+
+/*? Choose time  */
+
+.ChooseTime {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+.TheTime {
+    margin-left: 1em;
+}
+
+.TheTiemINput {
+    border: none;
+    border-left: 1px solid;
+    width: 10em;
+    padding: 0.9em;
+    height: 100%;
+    cursor: pointer;
+}
+
+.TheOccastion {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+
+}
+
+.BeCool {
+    cursor: pointer;
+}
+
+.occasion {
+    margin-left: 1em;
+
+}
+
+#someleft {
+    margin-right: 0.5em;
+    cursor: pointer;
+}
+
+.TheOptions {
+    border: 1px solid black;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.8em;
+}
+
+#someleftt {
+    margin-left: 1em;
+}
+
+.THeSelectedOpetions {
+    border: none;
+    border-left: 1px solid;
+    width: 10em;
+    width: 10em;
+    padding: 0.9em;
+    height: 100%;
+    cursor: pointer;
+}
+
+#SomeCursorsPls {
+    cursor: pointer;
+}
+
+.TheFinalButtonInComp {
+    border: none;
+    border: 1px solid black;
+    background-color: white;
+    width: 80%;
+    font-size: x-large;
+    padding: 0.5em 0em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/*? Third section  */
+
+.FSSeciont {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.TheSmallTable2 {
+    text-align: center;
+    width: 100%;
+    padding-left: 4em;
+    text-align: center;
+    height: 10em;
+    font-size: large;
+    font-weight: 700;
+    opacity: 0.8;
+}
+
+.accordion-flush {
+    position: relative;
+    top: 2mm;
+    right: 2mm;
+}
+
+.TheLastButtton {
+    border: none;
+    background-color: white;
+    border-top: 1px solid black;
+    width: 100%;
+}
+
+#SOWhat {
+    width: 2em;
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+#The30 {
+    font-size: small;
+    margin-left: 0.3em;
+    opacity: 0.6;
+}
+
+/** The swal alert  */
+
+.TheSwal {}
+
+.swal-modal {
+    min-width: 50rem;
+    text-align: center;
+}
+
+.Table {
+    width: 80%;
+    margin-left: 5em;
+    height: max-content;
+    padding: 2em 0em;
+    /* background-color: red; */
+}
+
+.Table>.THeTable>tr>td {
+    padding: 10px;
+    font-size: larger;
+    font-weight: 500;
+    text-align: left;
+    /* background-color: gray; */
+}
+
+
+.swal-overlay {
+    background-color: rgba(146, 142, 142, 0.69);
+}
+
+.swal-button {
+    background-color: #E8C46A;
+    border: none;
+    transition: 0.1s;
+}
+
+.swal-footer {
+    background-color: rgb(245, 248, 250);
+    border-top: 1px solid #E9EEF1;
+    overflow: hidden;
+}
+
+.invisible {
+    border: none;
+    background-color: red;
+    cursor: pointer;
+    all: unset;
+}
+
+.invisible:focus {
+    all: unset;
+    background: white;
+    color: white;
+    border: white;
+    font: inherit;
+    cursor: pointer;
+    outline: white;
+}
+
+.LetsGoo {
+    color: #E8C46A;
+    opacity: 1;
+}
+
+/*! Media quires */
+
+@media only screen and (min-width: 1721px) and (max-width: 3200px) {
+
+    .TheTextt {
+        position: absolute;
+        width: 100%;
+        max-width: 150rem;
+    }
+}
+
+@media only screen and (min-width: 870px) and (max-width: 1720px) {
+    .SecondSection {
+        padding: 1rem 8rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* gap: 0.5rem; */
+    }
+
+    .TheContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 36em;
+    }
+
+
+    .TheTextt {
+        position: absolute;
+        width: 100%;
+        max-width: 150rem;
+    }
+}
+
+@media (max-width: 869px) {
+
+    .FirstSection {
+        /* background-color: red; */
+        height: fit-content;
+    }
+
+    .TheTextt {
+        font-size: small;
+        width: 100%;
+    }
+
+    #THENASHBA,
+    #Potato {
+        display: none;
+    }
+
+
+    .SecondSection {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3;
+        padding: 1em 0em;
+        padding-bottom: 2.7em;
+        width: 100%;
+    }
+
+    .FGroup {
+        background-color: #707070;
+    }
+
+    .OuterShell {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .VVIPTrue {
+        height: fit-content;
+    }
+
+    .VVVIPTrue {
+        height: fit-content;
+    }
+
+    .VVIPTrue {
+        height: fit-content;
+    }
+
+    .TheContent1 {
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: fit-content;
+        width: 100%;
+        height: fit-content;
+    }
+
+    #TheH2 {
+        font-size: xx-large;
+    }
+
+    #TheH22 {
+        font-size: xx-large;
+    }
+
+    #SppnImg {
+        width: 1.5em;
+    }
+
+    .ChairImg {
+        width: 22%;
+        bottom: 0;
+
+    }
+
+    .TheText {
+        margin-right: 0px;
+        margin: 1.7rem;
+    }
+
+
+    .LetsGoo {
+        color: #E8C46A;
+        opacity: 1;
+    }
+
+    .box {
+        width: 100%;
+        /* padding: 1em; */
+    }
+
+
+    /*? The inputs  */
+
+    .TheLastFirstDiv {
+        width: 100%;
+    }
+
+    .TheContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 29em 1fr 1fr;
+    }
+
+    .FirstOf1 {
+        margin-top: 1em;
+    }
+
+    .TheSmallTable {
+        margin: 1em 0em;
+        height: fit-content;
+    }
+
+    /** Second part  */
+    .HowMany {
+        margin: 0px;
+        font-size: medium;
+    }
+
+    #MakeItLeft32 {
+        margin-left: 0.2em;
+        font-size: 1em;
+    }
+
+    .JustCheck {
+        border: none;
+    }
+
+    .BeCool {
+        width: 0.6em;
+    }
+
+    #MakeMeACursonr {
+        font-size: smaller;
+    }
+
+    #someleft {
+        font-size: smaller;
+    }
+
+    /** Last section */
+    .SHORTENme2 {
+        text-align: center;
+        width: 80%;
+        margin-left: 10%;
+    }
+}

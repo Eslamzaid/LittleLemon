@@ -2,4 +2,13 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  cursor: url("./assets/lemon.png"), auto;
 }
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+body{
+  width: 100% !important;
+}
+
