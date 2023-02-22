@@ -2,7 +2,7 @@ import React from "react";
 import Minus from "./../../../assets/Icons/minus.png";
 import Plus from "./../../../assets/Icons/add.png";
 import { useCart } from "react-use-cart";
-import swal from "sweetalert";
+import Swal from "sweetalert2";
 import "./Cart.css";
 
 function Cart() {
@@ -18,11 +18,17 @@ function Cart() {
   } = useCart();
 
   const TheAlert = () => {
-    emptyCart();
-    swal({
-      title: `Your delivery is on the way!`,
+    Swal.fire({
+      title: "Your delivery is on the way ",
+      text: `Get ready, total is $${cartTotal}`,
       icon: "success",
+      confirmButtonText: "Confirm",
+      confirmButtonColor: "#F4CE14",
     });
+
+    setTimeout(() => {
+      emptyCart();
+    }, 1500);
   };
 
   if (isEmpty)
@@ -61,11 +67,12 @@ function Cart() {
                       <img src={item.image} style={{ height: "6rem" }} />
                     </td>
                     <td id="TheNameOfDish">{item.name}</td>
-                    <td id="TheQuintity">${item.price}</td>
-                    <td>Quantity - {item.quantity}</td>
+                    <td id="TheQuintity">Price ${item.price}</td>
+                    <td id="TheQuintity">Quantity - {item.quantity}</td>
                     <td id="theTotal">Total ${item.itemTotal}</td>
                     <td>
                       <button
+                        className="Close-bth2"
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity - 1)
                         }
@@ -77,6 +84,7 @@ function Cart() {
                         />
                       </button>
                       <button
+                        className="Close-bth2"
                         onClick={() =>
                           updateItemQuantity(item.id, item.quantity + 1)
                         }
