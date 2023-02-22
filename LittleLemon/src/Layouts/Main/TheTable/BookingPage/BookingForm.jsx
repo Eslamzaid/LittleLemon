@@ -203,7 +203,7 @@ function BookingForm() {
       </section>
       {/*! Second Part */}
       <section className="SecondSection">
-        <div className="FGroup">
+        <div className="FGroup" id="NameMe1">
           <div className={VVIP ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(attrs) => (
@@ -267,7 +267,7 @@ function BookingForm() {
             </button>
           </div>
         </div>
-        <div className="FGroup">
+        <div className="FGroup" id="NameMe2">
           <div className={VIP ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(atttrs) => (
@@ -329,7 +329,7 @@ function BookingForm() {
             </button>
           </div>
         </div>
-        <div className="FGroup">
+        <div className="FGroup" id="NameMe3">
           <div className={Pre ? "VVIPTrue" : "OuterShell"}>
             <Tippy
               render={(attttrs) => (

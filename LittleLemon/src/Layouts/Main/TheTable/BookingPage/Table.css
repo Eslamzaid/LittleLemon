@@ -65,7 +65,7 @@
     transition: ease-in-out 0.4s;
     background-color: black;
     width: fit-content;
-    height: 25em;
+    height: fit-content;
 }
 
 /*? First Group  */
@@ -196,20 +196,6 @@
     border-radius: 1em;
 }
 
-/* 
-.boox {
-    background-color: rgb(243, 239, 239);
-    padding: 1em;
-    border-radius: 1em;
-}
-
-.booox {
-    width: ;
-    text-align: center;
-    background-color: rgb(243, 239, 239);
-    padding: 1em;
-    border-radius: 1em;
-} */
 
 .box32 {
     width: inherit;
@@ -259,7 +245,8 @@
 
 .TheContainer {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 22em 2fr 22em;
+    grid-template-rows: 36em;
     width: 90%;
     gap: 3em;
 }
@@ -287,7 +274,7 @@
 }
 
 .TheSmallTable {
-    margin: 3em 0em;
+    margin: 2.8em 0em;
     text-align: center;
     width: 100%;
     padding-left: 1em;
@@ -302,6 +289,7 @@
     width: 100%;
     border-top: 1px solid black;
     padding: 0.5em;
+    /* background-color: red; */
 }
 
 #TheReadMoreBu {
@@ -585,6 +573,38 @@
 
 /*! Media quires */
 
+@media only screen and (min-width: 1721px) and (max-width: 3200px) {
+    .SecondSection {}
+
+    .TheTextt {
+        position: absolute;
+        width: 100%;
+        max-width: 150rem;
+    }
+}
+
+@media only screen and (min-width: 870px) and (max-width: 1720px) {
+    .SecondSection {
+        padding: 1rem 8rem;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        /* gap: 0.5rem; */
+    }
+
+    .TheContainer {
+        grid-template-columns: 1fr;
+        grid-template-rows: 36em;
+    }
+
+
+    .TheTextt {
+        position: absolute;
+        width: 100%;
+        max-width: 150rem;
+    }
+}
+
 @media (width <=869px) {
 
     .FirstSection {
@@ -602,25 +622,6 @@
         display: none;
     }
 
-    /* .invisibble {
-        font-size: 100em;
-    }
-
-    .invisible {
-        border: none;
-        cursor: pointer;
-        all: unset;
-    }
-
-    .invisible:focus {
-        all: unset;
-        background: white;
-        color: white;
-        border: white;
-        font: inherit;
-        cursor: pointer;
-        outline: white;
-    } */
 
     .SecondSection {
         display: flex;
@@ -698,11 +699,6 @@
     }
 
 
-    .TheBigButton2 {
-        /* border: 1px solid black; */
-    }
-
-
     /*? The inputs  */
 
     .TheLastFirstDiv {
@@ -724,8 +720,6 @@
     }
 
     /** Second part  */
-    .TheSeconddPart {}
-
     .HowMany {
         margin: 0px;
         font-size: medium;
