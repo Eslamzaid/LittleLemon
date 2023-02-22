@@ -198,7 +198,7 @@ nav ul li:not(:first-child) {
         /* border: 1px solid black; */
     }
 
-    #TheXANDE{
+    #TheXANDE {
         background-color: red;
     }
 
@@ -220,7 +220,6 @@ nav ul li:not(:first-child) {
         width: 90%;
         /* border: 1px solid red; */
     }
-    #TheLinksPh{
 
-    }
+    #TheLinksPh {}
 }

@@ -59,9 +59,17 @@ const Header = () => {
               alt="Our restaurant logo"
             />
             {responsive ? (
-              <FontAwesomeIcon className="fa-2xl" icon={faXmark} onClick={handleOnClick} />
+              <FontAwesomeIcon
+                className="fa-2xl"
+                icon={faXmark}
+                onClick={handleOnClick}
+              />
             ) : (
-              <FontAwesomeIcon className="fa-2xl" icon={faBars} onClick={handleOnClick} />
+              <FontAwesomeIcon
+                className="fa-2xl"
+                icon={faBars}
+                onClick={handleOnClick}
+              />
             )}
           </div>
           {responsive ? (
