@@ -104,7 +104,7 @@
 }
 
 .TheLin:hover {
-    background-color: #f5d327;
+    background-color: white;
     transition: ease-in-out 0.2s;
 }
 
@@ -114,14 +114,14 @@
 
 .LeftSideCu:hover {
     transition: ease-in-out 0.2s;
-    background-color: #f5d327;
+    background-color: white;
 }
 
 [aria-pressed="false"] {
     background-color: white;
     border: 1px solid transparent;
     cursor: pointer;
-    background-color: #F4CE14;
+    background-color: white;
     border: 3px solid black;
     padding: 0.5em;
 }
@@ -129,8 +129,8 @@
 [aria-pressed="true"] {
     border: 1px solid black;
     cursor: pointer;
-    background-color: #f8de5d;
-    border: 2px solid rgb(44, 44, 44);
+    background-color: white;
+    border: 2px solid rgb(44, 44, 44);  
     padding: 0.5em;
 }
 
@@ -140,7 +140,14 @@
 }
 
 /*? Second section */
-
+@media screen and (max-width: 834px) {
+    [aria-pressed="true"] {
+        border: none;
+    }
+    [aria-pressed="false"] {
+        border: none;
+    }
+}
 /** The children of the third section */
 
 
