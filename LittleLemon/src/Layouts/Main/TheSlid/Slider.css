@@ -29,14 +29,27 @@
 }
 
 @media screen and (max-width: 834px) {
+    .FEslamSection {
+    }
+
     .TheBIgdog {
         width: 100%;
+    }
+
+    #SoemWIthg{
+        width: 10em;
+        height: 10em;
+    }
+    .TheImgges {
+        margin: 0;
+        padding: 1em;
+        min-height: fit-content;
     }
 }
 
 .TheImgges {
     min-height: 12em;
-    margin: 0em 1em;
+    margin: 0em 4em;
 }
 
 #SoemWIthg {
