@@ -9,10 +9,10 @@ import Slider from "./TheSlid/Slider";
 function Main() {
   return (
     <main>
-      {/* <Hero /> */}
-      {/* <SearchF /> */}
+      <Hero />
+      <SearchF />
       <BookingPage  />
-      {/* <Slider /> */}
+      <Slider />
     </main>
   );
 }
