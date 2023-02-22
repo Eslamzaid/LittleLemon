@@ -76,7 +76,7 @@ function SearchF() {
   return (
     <article className="TheFather">
       <button ref={thePrepi.one} className="invisible"></button>
-        <button ref={thePrepi.theFi} className="invisible"></button>
+      <button ref={thePrepi.theFi} className="invisible"></button>
       <section className="FSection">
         <h1>Our menu</h1>
         <div className="FSButton">
@@ -143,7 +143,6 @@ function SearchF() {
           </div>
         </div>
       </section>
-
       <h3 id="Willbechaned">Results: {item.length}</h3>
       <p id="Willbechaned2">Swipe rigth to explore more dishes</p>
       <section className="TSection">
@@ -157,7 +156,7 @@ function SearchF() {
             const { id, image, name, price, alt, theSpecial, theSpecial2 } =
               ele;
             return (
-              <div key={id} id={theSpecial || theSpecial2} className="Cards">
+              <div key={id}  className="Cards">
                 <div className="FirstPart">
                   <img src={image} alt={alt} id="Theimgs" />
                 </div>

@@ -251,7 +251,7 @@
 
     .TheFather {
         width: 100%;
-        /* display: flex;
+        /* display: flex;   
         flex-direction: column;
         align-items: center; */
     }
@@ -293,7 +293,6 @@
         justify-content: space-between;
         margin-bottom: 6em;
         overflow: scroll;
-
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         width: 100%;
