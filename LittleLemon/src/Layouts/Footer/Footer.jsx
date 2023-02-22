@@ -11,7 +11,6 @@ const Footer = () => {
   const thePrepi = useContext(theMainCon);
   return (
     <footer>
-      <button className="invisible" ref={thePrepi.nine}></button>
       <section className="thegridder">
         <div className="FirstDiv">
           <ul className="SomeSOME" id="aone">
@@ -91,6 +90,7 @@ const Footer = () => {
           </a>
         </div>
       </section>
+      <button className="invisible" ref={thePrepi.nine}></button>
     </footer>
   );
 };
