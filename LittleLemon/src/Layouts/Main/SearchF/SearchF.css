@@ -130,7 +130,7 @@
     border: 1px solid black;
     cursor: pointer;
     background-color: white;
-    border: 2px solid rgb(44, 44, 44);  
+    border: 2px solid rgb(44, 44, 44);
     padding: 0.5em;
 }
 
@@ -144,10 +144,12 @@
     [aria-pressed="true"] {
         border: none;
     }
+
     [aria-pressed="false"] {
         border: none;
     }
 }
+
 /** The children of the third section */
 
 
@@ -172,7 +174,7 @@
 }
 
 #Theimgs:hover {
-    width: 500px;
+    width: 300px;
     transition: ease-in 0.2s;
 }
 
@@ -290,7 +292,7 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 6em;
-        overflow: scroll;
+        overflow: hidden;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         width: 100%;
@@ -314,6 +316,36 @@
         margin: 0.7em 1.9rem;
         height: 25rem;
     }
+}
+
+@media only screen and (min-width: 1420px) and (max-width: 1900px) {
+    .TSection {
+        display: grid;
+        grid-template-columns:1fr 1fr 1fr 1fr;
+        overflow: visible;
+    }
+
+    #Theimgs {
+        width: 12vw;
+    }
+
+    #Theimgs:hover {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1420px) {
+    .TSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: minmax(1fr);
+    }
+
+    #Theimgs:hover {
+    width: 300px;
+    transition: ease-in 0.2s;
+}
+
 }
 
 @media screen and (min-width: 412px) and (max-width: 430px) {
