@@ -10,7 +10,7 @@ import Home from "./../../../assets/Icons/icons8-home-page-50.png";
 import "./Hero.css";
 import { theMainCon } from "../../Layouts";
 
-function Hero(props) {
+function Hero() {
   const LetsSee = useContext(theMainCon);
   return (
     <article className="TheHero">

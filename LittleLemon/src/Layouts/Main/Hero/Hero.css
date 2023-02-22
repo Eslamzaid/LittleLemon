@@ -6,9 +6,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* margin-top: 10rem; */
-    /* border: 1px solid gray; */
-    max-width: 200rem;
+    max-width: 150rem;
 }
 
 
@@ -151,6 +149,18 @@
 .TheParts {
     text-align: center;
     font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1300px) {
+    .HEHE {
+        min-width: 3vmin;
+        max-width: 5vmin;
+    }
+
+    .TheFirstGrand > h2 {
+        font-size: larger;
+    }
+
 }
 
 /*! Media   */
