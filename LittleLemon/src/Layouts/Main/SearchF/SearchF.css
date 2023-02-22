@@ -292,7 +292,8 @@
         align-items: center;
         justify-content: space-between;
         margin-bottom: 6em;
-        overflow: hidden;
+        overflow: scroll;
+
         border-top-left-radius: 0;
         border-top-right-radius: 0;
         width: 100%;
@@ -321,8 +322,8 @@
 @media only screen and (min-width: 1420px) and (max-width: 1900px) {
     .TSection {
         display: grid;
-        grid-template-columns:1fr 1fr 1fr 1fr;
-        overflow: visible;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        overflow: scroll;
     }
 
     #Theimgs {
@@ -339,17 +340,19 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: minmax(1fr);
+        overflow: scroll;
     }
 
     #Theimgs:hover {
-    width: 300px;
-    transition: ease-in 0.2s;
-}
+        width: 300px;
+        transition: ease-in 0.2s;
+    }
 
 }
 
 @media screen and (min-width: 412px) and (max-width: 430px) {
     .TSection {
+        overflow: scroll;
         padding-left: 1.2em;
         padding-right: 3.4em;
     }

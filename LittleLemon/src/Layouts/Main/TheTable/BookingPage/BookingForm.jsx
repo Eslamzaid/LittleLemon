@@ -192,7 +192,6 @@ function BookingForm() {
 
   return (
     <article className="fathofAll">
-      
       <section className="FirstSection">
         <img src={ThePotatoes} alt="Potato" id="Potato" />
         <div className="TheTextt">
@@ -637,7 +636,6 @@ function BookingForm() {
           <h1>{state2.guests + state.total}</h1> */}
         </div>
       </section>
-      
     </article>
   );
 }

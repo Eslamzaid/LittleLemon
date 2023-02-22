@@ -151,22 +151,22 @@ footer>section>div>p {
 
 /*! Media */
 @media only screen and (min-width: 836px) and (max-width: 1720px) {
-    footer{
+    footer {
         /* background-color: red; */
     }
 
-    .thegridder{
+    .thegridder {
         margin-left: 5em;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
     }
 
-    .theGridder{
+    .theGridder {
         grid-template-columns: 1fr 1fr;
     }
 }
 
-@media (width <=836px) {
+@media (max-width: 836px) {
     footer {
         margin-bottom: 4em;
     }

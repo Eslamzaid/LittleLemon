@@ -41,5 +41,15 @@
 
 /*! Media  */
 @media screen and (max-width: 834px) {
-    .SecondFather {}
+    .Close-bth {
+        top: 4vw;
+        right: 4vw;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .Close-bth {
+        right: 8em;
+        top: 4vw;
+    }
 }
