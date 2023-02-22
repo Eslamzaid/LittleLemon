@@ -173,7 +173,7 @@ nav ul li:not(:first-child) {
 
 /*! Media quires  */
 /** This media is for    big screens */
-@media screen and (max-width: 793px) {
+@media screen and (max-width: 836px) {
 
     /*? The Desktop */
     .desktop-view {
