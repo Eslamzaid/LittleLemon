@@ -43,3 +43,10 @@
     }
 
 }
+
+@media screen and (max-width: 836px) {
+    .tracking-in-expand {
+        font-size: 14vw;
+        overflow-wrap: break-word;
+    }
+}

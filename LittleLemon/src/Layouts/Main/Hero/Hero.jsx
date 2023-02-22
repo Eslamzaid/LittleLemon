@@ -14,6 +14,7 @@ function Hero() {
   const LetsSee = useContext(theMainCon);
   return (
     <article className="TheHero">
+      <button className="invisible" ref={LetsSee.seven}></button>
       <section className="TheFirstBoy">
         <div className="TheFirstGrand">
           <h2>
@@ -26,7 +27,6 @@ function Hero() {
             Order Now
           </button>
         </div>
-        <button className="invisible" ref={LetsSee.seven}></button>
         <div className="TheSecondGrandP1">
           <img id="TheBurgerImg" src={TheBurger} alt="Delicious Burger" />
         </div>
